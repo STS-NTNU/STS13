@@ -1,4 +1,4 @@
-STS12
+STS1#
 =====
 
-Semantic Textual Similarity task 2012
+Semantic Textual Similarity task 2013
