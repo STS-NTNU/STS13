@@ -1,0 +1,9 @@
+*.pyc
+*~
+*.wpr
+*.wpu
+*/_*
+_*
+*.DS_Store
+!__init__.py
+
