@@ -12,11 +12,12 @@ from sts.score import correlation
 
 # Takelab system
 
-for data in "MSRpar", "MSRvid", "SMTeuroparl":
+for data in "MSRpar", "MSRvid", "SMTeuroparl", "surprise.OnWN", "surprise.SMTnews":
     fig = plt.figure()
     ax = fig.add_subplot(111)
     
     gold = read_gold_standard("../../data/STS2012-test/STS.gs.{}.txt".format(data))
+    
     out = read_system_output("takelab-out/{}-output.txt".format(data.lower()))
     
     ax.plot(gold, out, ".")
@@ -26,7 +27,7 @@ for data in "MSRpar", "MSRvid", "SMTeuroparl":
     ax.set_ylim(-0.5,5.5)
     ax.set_xlabel("Gold")
     ax.set_ylabel("System")
-    ax.set_title("TakeLab.TST12.Test.{} (r={})".format(data, r))
+    ax.set_title("TakeLab.TST12.Test.{} (n={}, r={})".format(data, len(out), r))
     ax.grid(True)
     
 
