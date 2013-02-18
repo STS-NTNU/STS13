@@ -1,0 +1,5250 @@
+**1: diff=3.46, gold=4.8,  sys=1.33**
+
+  * A kangroo is eating something.
+  * A kangaroo is eating.
+
+---
+
+**2: diff=3.02, gold=3.8,  sys=0.77**
+
+  * A woman is resting in a floating raft.
+  * A woman relaxes in an inner tube.
+
+---
+
+**3: diff=2.95, gold=4.25,  sys=1.29**
+
+  * A rabbit is playing with a toy rabbit.
+  * A bunny is playing with a stuffed bunny.
+
+---
+
+**4: diff=2.86, gold=4.75,  sys=1.88**
+
+  * The lady peeled the potatoe.
+  * A woman is peeling a potato.
+
+---
+
+**5: diff=2.85, gold=5.0,  sys=2.14**
+
+  * A band is performing on a stage.
+  * A band is playing onstage.
+
+---
+
+**6: diff=2.56, gold=4.0,  sys=1.43**
+
+  * A woman puts cosmetics on her eyelid.
+  * The woman is pencilling on eye shadow.
+
+---
+
+**7: diff=2.44, gold=4.0,  sys=1.55**
+
+  * The lady sliced a tomatoe.
+  * Someone is cutting a tomato.
+
+---
+
+**8: diff=2.22, gold=4.5,  sys=2.27**
+
+  * The lady cut the tail and body of a shrimp.
+  * A woman is cleaning a shrimp.
+
+---
+
+**9: diff=2.21, gold=0.8,  sys=3.01**
+
+  * A man is carrying another man.
+  * A man sprays another man with water from a hose.
+
+---
+
+**10: diff=2.21, gold=4.5,  sys=2.28**
+
+  * Someone is shredding cabbage leaves with a knife.
+  * Someone is chopping some cabbage leaves.
+
+---
+
+**11: diff=2.17, gold=3.8,  sys=1.62**
+
+  * A boy is checking a calender.
+  * A boy is looking at a calendar.
+
+---
+
+**12: diff=2.05, gold=1.5,  sys=3.55**
+
+  * Three young men run, jump, and kick off of a Coke machine.
+  * Three men are jumping off a wall.
+
+---
+
+**13: diff=2.04, gold=3.8,  sys=1.75**
+
+  * A man is playing a guitar.
+  * A guy is playing an instrument.
+
+---
+
+**14: diff=2.01, gold=0.6,  sys=2.61**
+
+  * A woman is playing a game with a man.
+  * A man is playing piano.
+
+---
+
+**15: diff=1.99, gold=4.6,  sys=2.60**
+
+  * A badger is burrowing a hole.
+  * A badger is digging the earth.
+
+---
+
+**16: diff=1.96, gold=2.53,  sys=0.56**
+
+  * A chef is cleaning up a bowl of soup.
+  * A man is wiping the edge of a bowl off.
+
+---
+
+**17: diff=1.89, gold=2.81,  sys=0.92**
+
+  * A couple are running towards the ocean.
+  * A man and and woman are running together, holding hands.
+
+---
+
+**18: diff=1.84, gold=3.53,  sys=1.68**
+
+  * A woman is chopping a hard egg.
+  * A person is cutting  boiled egg into pieces.
+
+---
+
+**19: diff=1.81, gold=3.8,  sys=1.98**
+
+  * A man is peeling a potato.
+  * A man peeled a potatoe.
+
+---
+
+**20: diff=1.80, gold=1.75,  sys=3.55**
+
+  * The dog pulled the dogs tail and then his leg.
+  * A monkey pulled a dogs tail.
+
+---
+
+**21: diff=1.77, gold=4.8,  sys=3.02**
+
+  * A man cuts up potatos.
+  * A man slices potatoes.
+
+---
+
+**22: diff=1.77, gold=4.8,  sys=3.02**
+
+  * The woman is cracking eggs into a bowl.
+  * The lady broke raw eggs into a bowl.
+
+---
+
+**23: diff=1.77, gold=3.75,  sys=1.97**
+
+  * A turtle walks over the ground.
+  * A large turtle crawls in the grass.
+
+---
+
+**24: diff=1.76, gold=4.25,  sys=2.48**
+
+  * Two zebras are playing.
+  * Zebras are socializing.
+
+---
+
+**25: diff=1.75, gold=3.4,  sys=1.64**
+
+  * A small monkey walks through water.
+  * A monkey is wading across a marsh.
+
+---
+
+**26: diff=1.71, gold=4.0,  sys=2.28**
+
+  * A man and woman are walking together through the woods.
+  * A man and woman are walking arm in arm through a wooded area.
+
+---
+
+**27: diff=1.71, gold=3.4,  sys=1.68**
+
+  * An explosion is booming in the desert.
+  * A nuclear weapon explodes in a desert.
+
+---
+
+**28: diff=1.69, gold=4.8,  sys=3.10**
+
+  * A woman is cutting meat into pieces.
+  * A woman is cutting up some meat.
+
+---
+
+**29: diff=1.68, gold=3.2,  sys=1.51**
+
+  * A woman is swimming in the beach.
+  * A woman splashes around in the ocean's waves.
+
+---
+
+**30: diff=1.67, gold=2.0,  sys=3.67**
+
+  * A man swims underwater.
+  * A woman is swimming underwater.
+
+---
+
+**31: diff=1.63, gold=3.2,  sys=1.56**
+
+  * A woman is cooking something.
+  * A woman is pouring ingredients into a frying pan.
+
+---
+
+**32: diff=1.60, gold=2.2,  sys=3.80**
+
+  * A dog licks up a baby's drool.
+  * A dog licks a baby.
+
+---
+
+**33: diff=1.55, gold=3.0,  sys=1.44**
+
+  * A person is drawing on a large touchscreen.
+  * A man is drawing on a digital dry erase board.
+
+---
+
+**34: diff=1.55, gold=4.0,  sys=2.44**
+
+  * A man is sitting and smoking.
+  * A man is smoking a cigarette.
+
+---
+
+**35: diff=1.55, gold=4.8,  sys=3.24**
+
+  * A woman is chopping up garlic.
+  * The woman is dicing garlic.
+
+---
+
+**36: diff=1.53, gold=3.6,  sys=2.06**
+
+  * A woman is adding pasta to a pot of water.
+  * A woman is making noodles.
+
+---
+
+**37: diff=1.51, gold=4.4,  sys=2.88**
+
+  * A man is slicing open a fish.
+  * A man is cutting up a fish.
+
+---
+
+**38: diff=1.48, gold=4.5,  sys=3.01**
+
+  * A man is fitting silencer on a pistol.
+  * A man is adding a silencer to a gun.
+
+---
+
+**39: diff=1.48, gold=4.0,  sys=2.51**
+
+  * A rider is running and jumping her horse.
+  * A woman jumps hurdles on a horse.
+
+---
+
+**40: diff=1.48, gold=2.2,  sys=3.68**
+
+  * A little boy is singing and playing a guitar.
+  * A man is singing and playing the guitar.
+
+---
+
+**41: diff=1.47, gold=0.25,  sys=1.72**
+
+  * A man is talking on a phone.
+  * A man is singing to a woman.
+
+---
+
+**42: diff=1.47, gold=2.2,  sys=3.67**
+
+  * A man is playing on a guitar and singing.
+  * A woman is playing an acoustic guitar and singing.
+
+---
+
+**43: diff=1.45, gold=3.75,  sys=2.29**
+
+  * A man is walking with a horse.
+  * A man is leading a horse around by it's halter.
+
+---
+
+**44: diff=1.44, gold=2.0,  sys=3.44**
+
+  * A  man is dancing.
+  * A man and woman is dancing.
+
+---
+
+**45: diff=1.42, gold=4.4,  sys=2.97**
+
+  * A cheetah is running behind its prey.
+  * A cheetah chases prey on across a field.
+
+---
+
+**46: diff=1.41, gold=3.8,  sys=2.38**
+
+  * A man is standing in front of the window and looking outside.
+  * A man is staring out the window.
+
+---
+
+**47: diff=1.4, gold=3.6,  sys=5.0**
+
+  * The elephants sprayed water on themselves.
+  * Elephants spray themselves with water.
+
+---
+
+**48: diff=1.39, gold=3.4,  sys=2.00**
+
+  * A monkey is swinging from limb to limb.
+  * A monkey is swinging from tree to tree.
+
+---
+
+**49: diff=1.39, gold=0.5,  sys=1.89**
+
+  * A woman is doing weight exercises.
+  * A woman is doing her hair.
+
+---
+
+**50: diff=1.38, gold=5.0,  sys=3.61**
+
+  * The man cut down a tree with an axe.
+  * A man chops down a tree with an axe.
+
+---
+
+**51: diff=1.37, gold=4.0,  sys=2.62**
+
+  * Two women mix something in a food processor.
+  * Two women make something in a blender.
+
+---
+
+**52: diff=1.37, gold=2.4,  sys=1.02**
+
+  * The lady cut up a potatoe.
+  * A man is cutting a potato.
+
+---
+
+**53: diff=1.37, gold=3.6,  sys=2.22**
+
+  * A man is drawing a picture.
+  * A person is drawing.
+
+---
+
+**54: diff=1.36, gold=4.2,  sys=2.83**
+
+  * A man is eating food.
+  * A man is eating something.
+
+---
+
+**55: diff=1.35, gold=0.5,  sys=1.85**
+
+  * Two little girls are talking on the phone.
+  * A little girl is walking down the street.
+
+---
+
+**56: diff=1.35, gold=1.6,  sys=2.95**
+
+  * A man and woman are talking.
+  * A man and woman is eating.
+
+---
+
+**57: diff=1.34, gold=0.0,  sys=1.34**
+
+  * The man is playing the drums.
+  * A man pours cleaner in his sink.
+
+---
+
+**58: diff=1.34, gold=2.5,  sys=1.15**
+
+  * A man is cycling.
+  * A boy is riding a bicycle.
+
+---
+
+**59: diff=1.33, gold=3.0,  sys=1.66**
+
+  * A woman beats two eggs in a bowl.
+  * A person is mixing ingredients in a bowl.
+
+---
+
+**60: diff=1.32, gold=2.0,  sys=0.67**
+
+  * A girl is making eyelid.
+  * A woman is applying eyeshadow.
+
+---
+
+**61: diff=1.32, gold=4.2,  sys=2.87**
+
+  * A pankda is eating bamboo.
+  * A panda bear is eating some bamboo.
+
+---
+
+**62: diff=1.32, gold=2.81,  sys=1.48**
+
+  * A plane rides on a road.
+  * An airplane moves along a runway.
+
+---
+
+**63: diff=1.32, gold=4.75,  sys=3.42**
+
+  * A man chops down a tree with an axe.
+  * A man cut a tree with an axe.
+
+---
+
+**64: diff=1.31, gold=2.6,  sys=1.28**
+
+  * A cat rapidly swats a kid in the head.
+  * A cat and a boy play together.
+
+---
+
+**65: diff=1.31, gold=5.0,  sys=3.68**
+
+  * A group of people sing.
+  * Some people are singing.
+
+---
+
+**66: diff=1.30, gold=1.6,  sys=2.90**
+
+  * Three women are dancing.
+  * The man is dancing.
+
+---
+
+**67: diff=1.30, gold=3.6,  sys=4.90**
+
+  * Butter is melting in a pan.
+  * A man is melting butter in a pan.
+
+---
+
+**68: diff=1.30, gold=1.4,  sys=2.70**
+
+  * A man is riding a motorcycle.
+  * A man is riding a horse.
+
+---
+
+**69: diff=1.30, gold=1.4,  sys=2.70**
+
+  * A man is riding a motorcycle.
+  * A man is riding a horse.
+
+---
+
+**70: diff=1.30, gold=2.6,  sys=3.90**
+
+  * Batman and Robin fly a helicopter over water.
+  * A helicopter flies over water.
+
+---
+
+**71: diff=1.29, gold=3.25,  sys=1.95**
+
+  * A boy is playing a key-board.
+  * A boy is sitting in a room playing a piano by lamp light.
+
+---
+
+**72: diff=1.29, gold=5.0,  sys=3.70**
+
+  * A woman puts flour on a piece of meat.
+  * A woman is putting flour onto some meat.
+
+---
+
+**73: diff=1.28, gold=3.2,  sys=1.91**
+
+  * A cat is sliding upside down under a couch.
+  * A cat is crawling under a piece of furniture on it's back.
+
+---
+
+**74: diff=1.28, gold=4.8,  sys=3.51**
+
+  * A man sitting on the floor plays a guitar.
+  * A man sitting on the floor in a room is strumming a guitar.
+
+---
+
+**75: diff=1.28, gold=0.0,  sys=1.28**
+
+  * Animals are playing in water.
+  * Two men are playing ping pong.
+
+---
+
+**76: diff=1.24, gold=0.25,  sys=1.49**
+
+  * Someone touched the kitten chewing on a string.
+  * Someone is cutting paper.
+
+---
+
+**77: diff=1.24, gold=4.8,  sys=3.55**
+
+  * A young woman is putting stickers all over her face.
+  * A woman is applying stickers to her face.
+
+---
+
+**78: diff=1.24, gold=5.0,  sys=3.75**
+
+  * A man puts some cheese on a pizza.
+  * The man sprinkled cheese on the pizza.
+
+---
+
+**79: diff=1.23, gold=3.0,  sys=1.76**
+
+  * A man and woman are eating at a table.
+  * A couple are eating a meal and talking.
+
+---
+
+**80: diff=1.23, gold=2.5,  sys=3.73**
+
+  * The military officer barked at the recruits.
+  * An officer is talking to recruits.
+
+---
+
+**81: diff=1.23, gold=2.5,  sys=3.73**
+
+  * A kid runs away from a fish swinging around on a fishing pole.
+  * A little kid is running around a fishing pole.
+
+---
+
+**82: diff=1.23, gold=4.8,  sys=3.56**
+
+  * A woman is cutting an onion.
+  * A woman is chopping onions.
+
+---
+
+**83: diff=1.22, gold=3.8,  sys=2.57**
+
+  * A woman pours oil into a skillet from a plastic bottle while she is talking.
+  * An older woman is pouring oil into a skillet on the stove.
+
+---
+
+**84: diff=1.22, gold=3.8,  sys=2.57**
+
+  * A man is slicing a pepper.
+  * A person cuts a big green pepper apart.
+
+---
+
+**85: diff=1.22, gold=2.4,  sys=3.62**
+
+  * The girl sang into a microphone.
+  * The lady sang into the microphone.
+
+---
+
+**86: diff=1.21, gold=1.75,  sys=2.96**
+
+  * A woman plays the guitar.
+  * A man sings and plays the guitar.
+
+---
+
+**87: diff=1.18, gold=0.5,  sys=1.68**
+
+  * People are playing baseball.
+  * The cricket player hit the ball.
+
+---
+
+**88: diff=1.18, gold=5.0,  sys=3.81**
+
+  * A woman is using a sewing machine.
+  * A woman is sewing on a machine.
+
+---
+
+**89: diff=1.17, gold=5.0,  sys=3.82**
+
+  * A man is doing trick with play cards.
+  * A man is performing a card trick.
+
+---
+
+**90: diff=1.17, gold=1.0,  sys=2.17**
+
+  * A man plays a piano.
+  * A woman is playing the violin.
+
+---
+
+**91: diff=1.16, gold=0.8,  sys=1.96**
+
+  * A man walks down a path.
+  * A man walks across a tight rope.
+
+---
+
+**92: diff=1.15, gold=4.0,  sys=2.84**
+
+  * A man and woman are driving down the street in a jeep.
+  * A man and woman are driving down the road in an open air vehicle.
+
+---
+
+**93: diff=1.14, gold=1.75,  sys=2.89**
+
+  * A dog biting on a can.
+  * A dog opens a can of food.
+
+---
+
+**94: diff=1.14, gold=4.2,  sys=3.05**
+
+  * The man hit the other man with a stick.
+  * The man spanked the other man with a stick.
+
+---
+
+**95: diff=1.14, gold=0.0,  sys=1.14**
+
+  * A woman is cracking eggs.
+  * A man is talking to a woman.
+
+---
+
+**96: diff=1.14, gold=0.4,  sys=1.54**
+
+  * A woman is sitting at a desk.
+  * A woman is riding a donkey.
+
+---
+
+**97: diff=1.14, gold=2.2,  sys=3.34**
+
+  * A man is playing guitar.
+  * A lady is playing the guitar.
+
+---
+
+**98: diff=1.14, gold=1.55,  sys=2.69**
+
+  * A man is playing the guitar.
+  * A man is playing the drums.
+
+---
+
+**99: diff=1.13, gold=4.0,  sys=2.86**
+
+  * A man is smoking.
+  * The man sat in his suit and smoked.
+
+---
+
+**100: diff=1.13, gold=0.0,  sys=1.13**
+
+  * A boy is crawling into a dog house.
+  * A cat is playing on the floor.
+
+---
+
+**101: diff=1.13, gold=5.0,  sys=3.86**
+
+  * A woman is dancing in the rain.
+  * A woman dances in the rain out side.
+
+---
+
+**102: diff=1.12, gold=3.6,  sys=2.47**
+
+  * A man attacks a woman.
+  * A man slaps a woman.
+
+---
+
+**103: diff=1.11, gold=0.0,  sys=1.11**
+
+  * A man is shooting a gun.
+  * A man is spitting.
+
+---
+
+**104: diff=1.11, gold=0.75,  sys=1.86**
+
+  * A man is riding a motorcycle.
+  * A woman is riding a horse.
+
+---
+
+**105: diff=1.10, gold=4.33,  sys=3.22**
+
+  * The man is slicing the tape from the box.
+  * A man is cutting open a box.
+
+---
+
+**106: diff=1.10, gold=4.5,  sys=3.39**
+
+  * A girl is riding a horse.
+  * The girl trotted the horse.
+
+---
+
+**107: diff=1.10, gold=1.75,  sys=2.85**
+
+  * A man is playing the piano.
+  * The man is playing the violin.
+
+---
+
+**108: diff=1.10, gold=4.6,  sys=3.49**
+
+  * People step off a train.
+  * A group of people get off a train.
+
+---
+
+**109: diff=1.10, gold=1.4,  sys=2.50**
+
+  * A person is slicing an onion.
+  * A person cuts ginger.
+
+---
+
+**110: diff=1.09, gold=4.4,  sys=3.30**
+
+  * The cat is drinking milk.
+  * A cat is licking from a saucer of milk.
+
+---
+
+**111: diff=1.09, gold=0.5,  sys=1.59**
+
+  * A boy takes off his sunglasses.
+  * A boy is screaming.
+
+---
+
+**112: diff=1.08, gold=4.0,  sys=2.91**
+
+  * A woman is slicing some tofu.
+  * A woman is cutting a block of tofu into small cubes.
+
+---
+
+**113: diff=1.06, gold=0.8,  sys=1.86**
+
+  * A woman is powdering her face.
+  * The woman is tapping her fingers on the table.
+
+---
+
+**114: diff=1.06, gold=2.75,  sys=3.81**
+
+  * A man is holding up and talking about a gray You Tube T-shirt.
+  * A man is showing a t shirt.
+
+---
+
+**115: diff=1.06, gold=2.66,  sys=1.60**
+
+  * Trees are bending in storm.
+  * Trees are hit by very hard winds.
+
+---
+
+**116: diff=1.06, gold=1.0,  sys=2.06**
+
+  * A woman peels garlic with her hands.
+  * The woman is slicing herbs.
+
+---
+
+**117: diff=1.06, gold=4.6,  sys=3.53**
+
+  * Elephants are walking down a trail.
+  * A herd of elephants are walking along a trail.
+
+---
+
+**118: diff=1.06, gold=2.33,  sys=3.39**
+
+  * The cat is licking a bottle.
+  * A cat plays with a small bottle.
+
+---
+
+**119: diff=1.06, gold=3.4,  sys=2.33**
+
+  * A baby rhino is walking around his pen with his mother.
+  * A baby rhino is following an adult rhino.
+
+---
+
+**120: diff=1.05, gold=4.5,  sys=3.44**
+
+  * Someone typed on a keyboard.
+  * Someone is typing.
+
+---
+
+**121: diff=1.05, gold=0.4,  sys=1.45**
+
+  * A woman is dancing with other women.
+  * A woman is shredding chicken.
+
+---
+
+**122: diff=1.05, gold=3.75,  sys=2.69**
+
+  * Four boys are standing in front of the burning car.
+  * Four young men stand still as a car explodes behind them.
+
+---
+
+**123: diff=1.04, gold=0.0,  sys=1.04**
+
+  * A woman opens a window.
+  * A man is crawling.
+
+---
+
+**124: diff=1.04, gold=4.0,  sys=2.95**
+
+  * A car is moving through a road.
+  * A car is driving down the road.
+
+---
+
+**125: diff=1.03, gold=0.0,  sys=1.03**
+
+  * Two Sumo ringers are fighting each other.
+  * A man rides a water toy in the water.
+
+---
+
+**126: diff=1.02, gold=3.8,  sys=2.77**
+
+  * A man pours oil on some tomatos.
+  * The man poured oil on the cut tomatoes.
+
+---
+
+**127: diff=1.01, gold=3.0,  sys=1.98**
+
+  * A person is adding food in a pan.
+  * A woman puts rice into a pan.
+
+---
+
+**128: diff=1.01, gold=2.4,  sys=3.41**
+
+  * A woman is playing a guitar.
+  * A man plays a guitar.
+
+---
+
+**129: diff=1.01, gold=2.4,  sys=3.41**
+
+  * A woman is playing the guitar.
+  * A man is playing guitar.
+
+---
+
+**130: diff=1.01, gold=1.75,  sys=0.73**
+
+  * The woman is waterskiing.
+  * A woman is wake boarding on a lake.
+
+---
+
+**131: diff=1.00, gold=4.8,  sys=3.79**
+
+  * A dog is jumping on a trampoline.
+  * A dog bounces on a trampoline.
+
+---
+
+**132: diff=1.00, gold=3.75,  sys=2.74**
+
+  * Someone pours olive oil into a bowl of tomato wedges.
+  * The man poured oil on the tomato slices.
+
+---
+
+**133: diff=1.00, gold=1.75,  sys=2.75**
+
+  * A person is slicing a tomato.
+  * A person is slicing some meat.
+
+---
+
+**134: diff=1.00, gold=0.4,  sys=1.40**
+
+  * A man is hugging someone.
+  * A man is taking a picture.
+
+---
+
+**135: diff=1.00, gold=0.0,  sys=1.00**
+
+  * Someone is feeding a animal.
+  * Someone is playing a piano.
+
+---
+
+**136: diff=0.99, gold=3.8,  sys=2.80**
+
+  * Two robots share a kiss.
+  * A male and female robot are kissing.
+
+---
+
+**137: diff=0.99, gold=2.75,  sys=1.75**
+
+  * A man is looking at a computer monitor.
+  * A man is using a laptop.
+
+---
+
+**138: diff=0.99, gold=4.25,  sys=3.25**
+
+  * Some men are fighting.
+  * Two men are fighting.
+
+---
+
+**139: diff=0.98, gold=0.2,  sys=1.18**
+
+  * A man is smelling two pizzas.
+  * A woman is feeding a man.
+
+---
+
+**140: diff=0.98, gold=3.5,  sys=2.51**
+
+  * A woman is mixing ingrediants.
+  * A woman is mixing food in a bowl.
+
+---
+
+**141: diff=0.97, gold=3.8,  sys=2.82**
+
+  * A puppy is sliding backwards along the floor.
+  * A puppy is pushing itself backwards.
+
+---
+
+**142: diff=0.97, gold=3.6,  sys=2.62**
+
+  * A man is cutting pieces of butter into a mixing bowl.
+  * Pieces of butter is added in the stand mixer.
+
+---
+
+**143: diff=0.97, gold=2.6,  sys=3.57**
+
+  * Three men are playing chess.
+  * Two men are playing chess.
+
+---
+
+**144: diff=0.97, gold=5.0,  sys=4.02**
+
+  * A plane is taking off.
+  * An air plane is taking off.
+
+---
+
+**145: diff=0.96, gold=3.0,  sys=3.96**
+
+  * A person is playing a guitar.
+  * The man played his guitar.
+
+---
+
+**146: diff=0.96, gold=2.25,  sys=3.21**
+
+  * A woman is slicing up some meat.
+  * A woman is breading some meat.
+
+---
+
+**147: diff=0.95, gold=2.2,  sys=3.15**
+
+  * A woman is slicing garlics.
+  * A woman is slicing an onion.
+
+---
+
+**148: diff=0.94, gold=0.0,  sys=0.94**
+
+  * A person is cutting a meat.
+  * A person riding a mechanical bull
+
+---
+
+**149: diff=0.93, gold=1.0,  sys=1.93**
+
+  * A man is playing the piano.
+  * A woman is playing the violin.
+
+---
+
+**150: diff=0.93, gold=1.0,  sys=1.93**
+
+  * A man is petting a tied up dog.
+  * A man is showing his dog to the camera.
+
+---
+
+**151: diff=0.93, gold=3.2,  sys=2.26**
+
+  * A turtle is swimming in water.
+  * A turtle is walking underwater.
+
+---
+
+**152: diff=0.93, gold=2.6,  sys=3.53**
+
+  * The lady cracked an egg into a bowl.
+  * The man is cracking eggs into a bowl.
+
+---
+
+**153: diff=0.92, gold=2.8,  sys=1.87**
+
+  * A woman is slicing some vegetables.
+  * The woman is dicing garlic.
+
+---
+
+**154: diff=0.91, gold=0.0,  sys=0.91**
+
+  * Someone is slicing tortila's.
+  * Someone is riding a horse.
+
+---
+
+**155: diff=0.90, gold=4.75,  sys=3.84**
+
+  * A man is playing the guitar and singing.
+  * A man sings with a guitar.
+
+---
+
+**156: diff=0.90, gold=3.4,  sys=2.49**
+
+  * Medics transport a patient on a stretcher.
+  * A doctor rushes a patient on a stretcher.
+
+---
+
+**157: diff=0.90, gold=1.0,  sys=1.90**
+
+  * The lady stirred up raw eggs in the bowl.
+  * A woman is pouring eyes into a bowl.
+
+---
+
+**158: diff=0.90, gold=3.5,  sys=2.59**
+
+  * Someone fell off a horse.
+  * A man gets knocked off of a horse.
+
+---
+
+**159: diff=0.89, gold=2.6,  sys=3.49**
+
+  * A dog sat at the counter of a store.
+  * The dog is standing at the counter.
+
+---
+
+**160: diff=0.89, gold=1.2,  sys=2.09**
+
+  * A man is cutting a pipe with scissors.
+  * A man is cutting carpet with a knife.
+
+---
+
+**161: diff=0.89, gold=3.75,  sys=2.85**
+
+  * A man is getting inside a car.
+  * An elderly man is getting into a red car.
+
+---
+
+**162: diff=0.89, gold=1.91,  sys=2.80**
+
+  * A girl is riding a horse.
+  * A girl is riding a bicycle.
+
+---
+
+**163: diff=0.88, gold=3.8,  sys=2.91**
+
+  * An animal run in circles.
+  * A squirrel runs in circles.
+
+---
+
+**164: diff=0.88, gold=3.0,  sys=3.88**
+
+  * The turtle followed the fish.
+  * A sea turtle is hunting for fish.
+
+---
+
+**165: diff=0.88, gold=2.61,  sys=3.49**
+
+  * A woman is cutting an onion.
+  * A man is cutting onions.
+
+---
+
+**166: diff=0.88, gold=2.8,  sys=1.91**
+
+  * A woman is cutting some herbs.
+  * A woman is chopping cilantro.
+
+---
+
+**167: diff=0.88, gold=1.2,  sys=2.08**
+
+  * A car is driven down the road.
+  * A girl is walking down a road.
+
+---
+
+**168: diff=0.88, gold=3.75,  sys=4.63**
+
+  * The man played his guitar.
+  * A man is playing a guitar.
+
+---
+
+**169: diff=0.87, gold=1.6,  sys=2.47**
+
+  * A baby tiger is playing with a ball.
+  * A baby is playing with a doll.
+
+---
+
+**170: diff=0.87, gold=4.8,  sys=3.92**
+
+  * The lady chopped up the green onions.
+  * The lady cut up a green onion.
+
+---
+
+**171: diff=0.86, gold=0.0,  sys=0.86**
+
+  * A man is talking with other women on the beach.
+  * A man is walking down the street.
+
+---
+
+**172: diff=0.86, gold=3.75,  sys=2.88**
+
+  * A man mixes vegetables in a pot.
+  * A person is stirring vegetables in a pot.
+
+---
+
+**173: diff=0.86, gold=0.4,  sys=1.26**
+
+  * A man is walking on a rope.
+  * A man is riding a mo-pad.
+
+---
+
+**174: diff=0.85, gold=3.0,  sys=3.85**
+
+  * A man plays the guitar.
+  * The man sang and played his guitar.
+
+---
+
+**175: diff=0.85, gold=3.2,  sys=2.34**
+
+  * A boy is playing a key-board.
+  * A boy is playing the piano.
+
+---
+
+**176: diff=0.85, gold=2.0,  sys=2.85**
+
+  * A man is riding a bike.
+  * A man is riding on a horse.
+
+---
+
+**177: diff=0.85, gold=1.6,  sys=2.45**
+
+  * A man is playing a flute.
+  * A man is playing a piano.
+
+---
+
+**178: diff=0.84, gold=3.0,  sys=3.84**
+
+  * A boy is singing and playing the piano.
+  * A boy is playing the piano.
+
+---
+
+**179: diff=0.83, gold=2.75,  sys=3.58**
+
+  * A woman is adding spices on a meat.
+  * Woman is adding sugar to meat.
+
+---
+
+**180: diff=0.83, gold=1.0,  sys=1.83**
+
+  * A man is running on the road.
+  * A car is driving down the road.
+
+---
+
+**181: diff=0.83, gold=5.0,  sys=4.16**
+
+  * A person plays a keyboard.
+  * Someone is playing a keyboard.
+
+---
+
+**182: diff=0.83, gold=3.8,  sys=2.96**
+
+  * Two cartoon rabbits are kissing.
+  * A rabbit is kissing another rabbit.
+
+---
+
+**183: diff=0.82, gold=2.8,  sys=1.97**
+
+  * A woman is slicing some tuna.
+  * A woman is cutting raw fish.
+
+---
+
+**184: diff=0.82, gold=0.0,  sys=0.82**
+
+  * A woman is putting her baby in a waste bin.
+  * The woman is poking holes in the potato.
+
+---
+
+**185: diff=0.82, gold=3.75,  sys=2.92**
+
+  * One man is breaking cement on another man's chest.
+  * A man breaks cinder blocks on another man.
+
+---
+
+**186: diff=0.82, gold=1.5,  sys=2.32**
+
+  * A dog is barking at a ball.
+  * A dog swims after a tennis ball.
+
+---
+
+**187: diff=0.82, gold=1.2,  sys=0.37**
+
+  * A person is petting a monkey.
+  * A man is holding a slow loris.
+
+---
+
+**188: diff=0.81, gold=2.5,  sys=3.31**
+
+  * A girl is styling her hair.
+  * A girl is brushing her hair.
+
+---
+
+**189: diff=0.81, gold=3.6,  sys=2.78**
+
+  * A woman mixes a beauty treatment in a glass.
+  * A woman is mixing a cream in a glass with a spoon.
+
+---
+
+**190: diff=0.81, gold=3.5,  sys=4.31**
+
+  * A man is riding an electric bicycle.
+  * A man is riding a bicycle.
+
+---
+
+**191: diff=0.81, gold=3.75,  sys=4.56**
+
+  * The woman picked up the kangaroo.
+  * A woman picks up a baby kangaroo.
+
+---
+
+**192: diff=0.81, gold=2.25,  sys=1.43**
+
+  * A man is tying on a stenographers machine.
+  * the man used a stenograph.
+
+---
+
+**193: diff=0.80, gold=3.2,  sys=4.00**
+
+  * A man is playing the guitar.
+  * The man played his guitar with a friend.
+
+---
+
+**194: diff=0.80, gold=3.0,  sys=2.19**
+
+  * A group of people are dancing.
+  * Women are dancing outside.
+
+---
+
+**195: diff=0.80, gold=3.4,  sys=2.59**
+
+  * The hedgehog chewed on the towel.
+  * A hedgehog is biting at a blanket.
+
+---
+
+**196: diff=0.80, gold=3.6,  sys=2.79**
+
+  * An orangutan is riding a bus.
+  * A monkey is riding on a bus.
+
+---
+
+**197: diff=0.80, gold=4.2,  sys=3.39**
+
+  * A rabbit is running from an eagle.
+  * A hare is running from a eagle.
+
+---
+
+**198: diff=0.79, gold=3.8,  sys=4.59**
+
+  * The shirtless man sat in a chair.
+  * A shirtless man is sitting on a chair.
+
+---
+
+**199: diff=0.79, gold=2.4,  sys=3.19**
+
+  * Three teenage girls danced in the room.
+  * Some teenage girls are dancing for the camera.
+
+---
+
+**200: diff=0.79, gold=1.8,  sys=2.59**
+
+  * A woman is slicing butter.
+  * A woman slices tofu.
+
+---
+
+**201: diff=0.78, gold=4.75,  sys=3.96**
+
+  * A young child is riding a horse.
+  * A child is riding a horse.
+
+---
+
+**202: diff=0.78, gold=4.2,  sys=3.41**
+
+  * A man is pouring oil into a pan.
+  * A man is pouring oil into a skillet.
+
+---
+
+**203: diff=0.78, gold=2.0,  sys=2.78**
+
+  * A woman is peeling a potato.
+  * A woman is peeling an apple.
+
+---
+
+**204: diff=0.78, gold=0.6,  sys=1.38**
+
+  * A person is frying a meat in the pan.
+  * A man is cutting a vegetable.
+
+---
+
+**205: diff=0.78, gold=0.26,  sys=1.04**
+
+  * A woman is cutting an onion.
+  * A woman is cleaning a garden.
+
+---
+
+**206: diff=0.78, gold=5.0,  sys=4.21**
+
+  * A man with a hard hat is dancing.
+  * A man wearing a hard hat is dancing.
+
+---
+
+**207: diff=0.77, gold=2.8,  sys=2.02**
+
+  * Someone is pouring ingrediants into a pot.
+  * A man puts vegetables into a pot.
+
+---
+
+**208: diff=0.76, gold=3.6,  sys=2.83**
+
+  * An oriental lady is cutting a carrot into thin pieces.
+  * A woman is slicing a carrot.
+
+---
+
+**209: diff=0.76, gold=2.6,  sys=1.83**
+
+  * The man is using a camera to hammer a nail.
+  * Someone is banging a camera lense against a nail.
+
+---
+
+**210: diff=0.76, gold=4.0,  sys=3.23**
+
+  * A man is drilling a hole in a board.
+  * Someone is drilling a hole in a piece of wood.
+
+---
+
+**211: diff=0.76, gold=0.8,  sys=1.56**
+
+  * A man is running on a street.
+  * A man plays the guitar.
+
+---
+
+**212: diff=0.75, gold=2.75,  sys=3.50**
+
+  * A woman is playing the flute.
+  * A man is playing a flute.
+
+---
+
+**213: diff=0.74, gold=4.0,  sys=3.25**
+
+  * Paper is being cut with scissors.
+  * A piece of paper is being cut.
+
+---
+
+**214: diff=0.73, gold=1.4,  sys=0.66**
+
+  * A man is slicing a potato.
+  * A woman is cutting a jalepeno.
+
+---
+
+**215: diff=0.73, gold=3.92,  sys=3.18**
+
+  * A helicopter is landing on a helipad.
+  * A helicopter lands.
+
+---
+
+**216: diff=0.73, gold=3.8,  sys=3.06**
+
+  * The man is shooting an automatic rifle.
+  * A man is shooting a gun.
+
+---
+
+**217: diff=0.73, gold=1.0,  sys=1.73**
+
+  * A man is playing soccer.
+  * A man is playing flute.
+
+---
+
+**218: diff=0.73, gold=0.8,  sys=1.53**
+
+  * A man making a bed in a hotel.
+  * A man is holding a animal.
+
+---
+
+**219: diff=0.73, gold=3.4,  sys=2.66**
+
+  * Some men are sawing.
+  * Men are sawing logs.
+
+---
+
+**220: diff=0.73, gold=3.5,  sys=2.76**
+
+  * An elderly man is speaking at a podium.
+  * A man is making a speech at the podium.
+
+---
+
+**221: diff=0.73, gold=4.4,  sys=3.66**
+
+  * A baby panda goes down a slide.
+  * A panda slides down a slide.
+
+---
+
+**222: diff=0.72, gold=1.4,  sys=2.12**
+
+  * A man plays a guitar.
+  * A man plays the piano.
+
+---
+
+**223: diff=0.72, gold=5.0,  sys=4.27**
+
+  * A man is buttering a piece of bread.
+  * A man is applying butter to bread.
+
+---
+
+**224: diff=0.72, gold=3.0,  sys=3.72**
+
+  * A woman is talking on a cell phone.
+  * A man and woman are talking on the phone.
+
+---
+
+**225: diff=0.72, gold=2.8,  sys=2.07**
+
+  * A slow lori walks around.
+  * A animal is walking around.
+
+---
+
+**226: diff=0.72, gold=4.2,  sys=3.47**
+
+  * A black horse is running around.
+  * The horse is running.
+
+---
+
+**227: diff=0.72, gold=0.0,  sys=0.72**
+
+  * The man sat in his chair and stared.
+  * The little girl is putting her hair into a pony tail.
+
+---
+
+**228: diff=0.71, gold=3.0,  sys=2.28**
+
+  * A man is running across a high wire.
+  * A man is running on rope.
+
+---
+
+**229: diff=0.71, gold=2.25,  sys=2.96**
+
+  * The girl flew her kite while she ran up a hill.
+  * A girl loses her kite.
+
+---
+
+**230: diff=0.70, gold=1.4,  sys=2.10**
+
+  * A woman is slicing some tomatoes.
+  * A woman is chopping a potato.
+
+---
+
+**231: diff=0.70, gold=3.33,  sys=2.62**
+
+  * The person lit the cameras on fire.
+  * A person is blow torching cameras.
+
+---
+
+**232: diff=0.70, gold=1.2,  sys=1.90**
+
+  * A man is playing an electronic keyboard.
+  * A man is playing a flute.
+
+---
+
+**233: diff=0.70, gold=2.8,  sys=2.09**
+
+  * A group of penguins is walking.
+  * A large amount of penguins are heading to the ocean.
+
+---
+
+**234: diff=0.70, gold=2.6,  sys=3.30**
+
+  * A man is riding on a horse.
+  * A girl is riding a horse.
+
+---
+
+**235: diff=0.69, gold=2.4,  sys=3.09**
+
+  * A skunk is looking here and there.
+  * A skunk looks at the camera.
+
+---
+
+**236: diff=0.69, gold=0.25,  sys=0.94**
+
+  * Someone is mixing ingrediants.
+  * Someone is sewing things.
+
+---
+
+**237: diff=0.69, gold=0.8,  sys=1.49**
+
+  * Someone is boiling okra in a pot.
+  * Someone pours olive oil into a bowl of tomato wedges.
+
+---
+
+**238: diff=0.69, gold=4.0,  sys=3.30**
+
+  * Kittens are eating food.
+  * Kittens are eating from dishes.
+
+---
+
+**239: diff=0.68, gold=2.37,  sys=3.06**
+
+  * A man is cutting up a potato.
+  * A man is cutting up carrots.
+
+---
+
+**240: diff=0.68, gold=0.5,  sys=1.18**
+
+  * A woman puts a garland over a man's shoulders.
+  * A man pours water over a pilots head.
+
+---
+
+**241: diff=0.68, gold=0.8,  sys=1.48**
+
+  * A person pours oil on a skillet.
+  * A person is dicing an onion.
+
+---
+
+**242: diff=0.68, gold=5.0,  sys=4.31**
+
+  * The polar bear is sliding on the snow.
+  * A polar bear is sliding across the snow.
+
+---
+
+**243: diff=0.67, gold=3.8,  sys=3.12**
+
+  * A woman is applying eye liner to her eyelid using an eye pencil.
+  * A woman is applying cosmetics to her eyelid.
+
+---
+
+**244: diff=0.67, gold=2.0,  sys=2.67**
+
+  * A woman is walking on an open ground with a pet dog as some other dogs follow them.
+  * A man is walking with several dogs.
+
+---
+
+**245: diff=0.67, gold=4.4,  sys=3.72**
+
+  * A man is playing a piano.
+  * A person is playing the piano.
+
+---
+
+**246: diff=0.67, gold=3.2,  sys=3.87**
+
+  * A group of people dance on a hill.
+  * A group of people are dancing.
+
+---
+
+**247: diff=0.67, gold=2.75,  sys=3.42**
+
+  * A man is pressing microwave buttons.
+  * A man turns on the microwave.
+
+---
+
+**248: diff=0.66, gold=1.6,  sys=2.26**
+
+  * A man is playing the piano.
+  * A man is playing the trumpet.
+
+---
+
+**249: diff=0.66, gold=3.11,  sys=2.44**
+
+  * Three boys are dancing.
+  * Kids are dancing.
+
+---
+
+**250: diff=0.66, gold=2.25,  sys=2.91**
+
+  * People ride and paddle a raft.
+  * Four people are floating on a raft.
+
+---
+
+**251: diff=0.66, gold=3.5,  sys=2.83**
+
+  * A man spreads butter on a big piece of bread.
+  * A man is smearing butter on a slice of garlic bread.
+
+---
+
+**252: diff=0.66, gold=4.0,  sys=3.33**
+
+  * A dog lies on his back on a wooden floor.
+  * A dog is laying on the floor.
+
+---
+
+**253: diff=0.65, gold=3.6,  sys=4.25**
+
+  * A woman is playing a flute on stage.
+  * The woman is playing the flute.
+
+---
+
+**254: diff=0.65, gold=2.0,  sys=2.65**
+
+  * A person is peeling an onion.
+  * A person is peeling an eggplant.
+
+---
+
+**255: diff=0.65, gold=3.2,  sys=2.54**
+
+  * The lady cracked two raw eggs.
+  * The woman is cracking eggs into a bowl.
+
+---
+
+**256: diff=0.65, gold=2.6,  sys=3.25**
+
+  * The cats are playing with each other.
+  * Two cats are fighting each other.
+
+---
+
+**257: diff=0.65, gold=0.0,  sys=0.65**
+
+  * An elderly woman is pouring oil into a frying pan.
+  * A tied man is putting into water.
+
+---
+
+**258: diff=0.65, gold=3.2,  sys=2.54**
+
+  * Someone is sitring noodles in water.
+  * A woman is boiling noodles in water.
+
+---
+
+**259: diff=0.64, gold=1.2,  sys=1.84**
+
+  * A baby is crawling happily.
+  * A baby sneezed and scared another baby.
+
+---
+
+**260: diff=0.64, gold=1.5,  sys=2.14**
+
+  * A man is playing a harp.
+  * A man is playing a keyboard.
+
+---
+
+**261: diff=0.64, gold=2.5,  sys=1.85**
+
+  * A boy is playing an instrument.
+  * A man is playing a trumpet.
+
+---
+
+**262: diff=0.64, gold=2.91,  sys=3.56**
+
+  * A man is playing the guitar and singing.
+  * A man is playing the guitar.
+
+---
+
+**263: diff=0.64, gold=4.13,  sys=4.77**
+
+  * Fish are swimming.
+  * A fish is swimming.
+
+---
+
+**264: diff=0.64, gold=1.2,  sys=0.55**
+
+  * A man is playing a guitar.
+  * A man is stabbing a target.
+
+---
+
+**265: diff=0.64, gold=4.25,  sys=3.60**
+
+  * A man is lifting weights in a garage.
+  * A man is lifting weights.
+
+---
+
+**266: diff=0.63, gold=1.0,  sys=0.36**
+
+  * A woman is reading.
+  * A woman is kneading dough.
+
+---
+
+**267: diff=0.63, gold=0.8,  sys=0.16**
+
+  * A man is levitating.
+  * A man is talking.
+
+---
+
+**268: diff=0.63, gold=4.0,  sys=3.36**
+
+  * A chef is preparing some food.
+  * A chef prepared a meal.
+
+---
+
+**269: diff=0.63, gold=0.0,  sys=0.63**
+
+  * A man is holding a leaf.
+  * A monkey is fighting a man.
+
+---
+
+**270: diff=0.63, gold=0.0,  sys=0.63**
+
+  * A woman is dancing.
+  * A man breaks a stick.
+
+---
+
+**271: diff=0.63, gold=0.2,  sys=0.83**
+
+  * The woman is styling her hair.
+  * The woman is slicing herbs.
+
+---
+
+**272: diff=0.63, gold=3.6,  sys=2.96**
+
+  * A toddler walks down a hallway.
+  * A little girl is walking down a hallway.
+
+---
+
+**273: diff=0.63, gold=4.66,  sys=4.03**
+
+  * A person is folding a piece of paper.
+  * Someone is folding a piece of paper.
+
+---
+
+**274: diff=0.62, gold=0.0,  sys=0.62**
+
+  * A woman is spreading mustard on a bread roll.
+  * A kitten is playing with a woman's finger.
+
+---
+
+**275: diff=0.62, gold=5.0,  sys=4.37**
+
+  * A man is playing the drums.
+  * A man plays the drum.
+
+---
+
+**276: diff=0.62, gold=3.2,  sys=2.57**
+
+  * A girl is playing a flute.
+  * A girl plays a wind instrument.
+
+---
+
+**277: diff=0.62, gold=1.6,  sys=0.97**
+
+  * A man is spinning.
+  * A man is dancing.
+
+---
+
+**278: diff=0.62, gold=2.6,  sys=3.22**
+
+  * A person is slicing onions.
+  * A person is peeling an onion.
+
+---
+
+**279: diff=0.62, gold=2.0,  sys=2.62**
+
+  * A man is riding a bicycle.
+  * A monkey is riding a bike.
+
+---
+
+**280: diff=0.62, gold=0.4,  sys=1.02**
+
+  * A woman is drinking vodka.
+  * A woman is exercising.
+
+---
+
+**281: diff=0.61, gold=0.0,  sys=0.61**
+
+  * A cow is eating grass.
+  * A dog is pulling a girl down a hill.
+
+---
+
+**282: diff=0.61, gold=0.0,  sys=0.61**
+
+  * A cat is watching a TV.
+  * A man is slicing a leave.
+
+---
+
+**283: diff=0.61, gold=0.2,  sys=0.81**
+
+  * Two puppies are playing with each other.
+  * Some men are playing soccer.
+
+---
+
+**284: diff=0.61, gold=3.8,  sys=3.18**
+
+  * A kid is playing guitar.
+  * A boy is playing a guitar.
+
+---
+
+**285: diff=0.61, gold=0.75,  sys=1.36**
+
+  * A man is playing with frogs
+  * A cat is playing with a camera.
+
+---
+
+**286: diff=0.60, gold=3.0,  sys=3.60**
+
+  * A man and a woman walk through the woods.
+  * The man and woman are walking.
+
+---
+
+**287: diff=0.60, gold=3.6,  sys=4.20**
+
+  * A woman is playing an electric guitar.
+  * A woman is playing a guitar.
+
+---
+
+**288: diff=0.60, gold=5.0,  sys=4.39**
+
+  * A man is climbing a rope.
+  * A man climbs up a rope.
+
+---
+
+**289: diff=0.60, gold=2.4,  sys=3.00**
+
+  * A girl is singing and playing a guitar.
+  * A young man is singing while playing the guitar.
+
+---
+
+**290: diff=0.59, gold=3.2,  sys=3.79**
+
+  * A man is jumping a wall.
+  * A man jumps onto a short wall.
+
+---
+
+**291: diff=0.58, gold=0.0,  sys=0.58**
+
+  * A baby elephant is eating a small tree.
+  * A little girl peddling a scooter.
+
+---
+
+**292: diff=0.57, gold=3.8,  sys=4.37**
+
+  * A man is playing a large flute.
+  * A man is playing a flute.
+
+---
+
+**293: diff=0.57, gold=4.25,  sys=3.67**
+
+  * A cat is eating some corn.
+  * A cat is eating corn on the cob.
+
+---
+
+**294: diff=0.57, gold=1.5,  sys=0.92**
+
+  * The woman is putting paste into a dish.
+  * A woman is pulling some kind of sticky goo out of a bowl.
+
+---
+
+**295: diff=0.57, gold=1.0,  sys=1.57**
+
+  * A woman peels a potato.
+  * A woman is grilling pineapples.
+
+---
+
+**296: diff=0.57, gold=2.75,  sys=2.17**
+
+  * Five kittens are eating out of five dishes.
+  * Kittens are eating food on trays.
+
+---
+
+**297: diff=0.57, gold=4.0,  sys=3.42**
+
+  * A rooster pecks at a dead mouse.
+  * A chicken is pecking at a dead mouse.
+
+---
+
+**298: diff=0.56, gold=2.2,  sys=2.76**
+
+  * A woman is slicing a leek.
+  * A woman is slicing ginger.
+
+---
+
+**299: diff=0.56, gold=4.25,  sys=3.68**
+
+  * Butter is being put into a bowl.
+  * A man cutting butter into a mixing bowl.
+
+---
+
+**300: diff=0.56, gold=0.6,  sys=1.16**
+
+  * A cat is playing a piano.
+  * A man is playing a guitar.
+
+---
+
+**301: diff=0.56, gold=4.6,  sys=4.03**
+
+  * A woman picks up and holds a baby kangaroo.
+  * A woman picks up and holds a baby kangaroo in her arms.
+
+---
+
+**302: diff=0.56, gold=0.2,  sys=0.76**
+
+  * A young man is singing and playing the piano.
+  * The man is writing a letter.
+
+---
+
+**303: diff=0.56, gold=5.0,  sys=4.43**
+
+  * A man puts seasoning in a bowl of water.
+  * The man added seasoning to water in a bowl.
+
+---
+
+**304: diff=0.56, gold=0.5,  sys=1.06**
+
+  * A woman is filing her fingernails with an emery board.
+  * A woman is feeding her baby with a bottle.
+
+---
+
+**305: diff=0.55, gold=0.75,  sys=1.30**
+
+  * Two men are fighting.
+  * The man is exercising.
+
+---
+
+**306: diff=0.55, gold=2.0,  sys=2.55**
+
+  * A dog is looking into swimming pool.
+  * A dog is walking around a pool.
+
+---
+
+**307: diff=0.55, gold=2.5,  sys=1.94**
+
+  * Someone is beating an egg.
+  * A woman stirs eggs in a bowl.
+
+---
+
+**308: diff=0.55, gold=2.2,  sys=2.75**
+
+  * A woman is riding a motorized scooter down a road.
+  * A man is riding a motor scooter.
+
+---
+
+**309: diff=0.54, gold=3.2,  sys=2.65**
+
+  * A woman is chopping an onion.
+  * A woman is slicing partially into half of an onion.
+
+---
+
+**310: diff=0.54, gold=4.8,  sys=4.25**
+
+  * The boy fell off his bike.
+  * A boy falls off his bike.
+
+---
+
+**311: diff=0.54, gold=5.0,  sys=4.45**
+
+  * A woman slices tofu.
+  * A woman is cutting tofu.
+
+---
+
+**312: diff=0.54, gold=1.6,  sys=2.14**
+
+  * A woman is slicing tomato.
+  * A man is slicing onion.
+
+---
+
+**313: diff=0.54, gold=5.0,  sys=4.45**
+
+  * One woman is measuring another woman's ankle.
+  * A woman measures another woman's ankle.
+
+---
+
+**314: diff=0.54, gold=3.5,  sys=4.04**
+
+  * A small guinea pig is gnawing and eating a piece of carrot on the floor.
+  * A Guinea pig eats a carrot.
+
+---
+
+**315: diff=0.53, gold=3.8,  sys=3.26**
+
+  * The little girl played on the grass with a dog and a ball.
+  * A baby plays with a dog and ball.
+
+---
+
+**316: diff=0.53, gold=0.4,  sys=0.93**
+
+  * A woman is talking to her pet bunny as she fondles it.
+  * A woman walks her dog onto astro turf.
+
+---
+
+**317: diff=0.53, gold=1.6,  sys=2.13**
+
+  * A man is playing a flute in a band.
+  * A man is playing a guitar.
+
+---
+
+**318: diff=0.53, gold=3.53,  sys=4.07**
+
+  * Two women are dancing and singing in front of a crowd.
+  * The women are singing and dancing.
+
+---
+
+**319: diff=0.53, gold=0.6,  sys=1.13**
+
+  * A man is dancing.
+  * A man is talking.
+
+---
+
+**320: diff=0.53, gold=4.0,  sys=4.53**
+
+  * A girl is flying a kite.
+  * A girl running is flying a kite.
+
+---
+
+**321: diff=0.53, gold=3.75,  sys=3.21**
+
+  * People are dancing outside.
+  * A group of people are dancing.
+
+---
+
+**322: diff=0.52, gold=4.4,  sys=3.87**
+
+  * A boy studies a calendar.
+  * A boy is looking at a calendar.
+
+---
+
+**323: diff=0.52, gold=1.2,  sys=1.72**
+
+  * A woman is peeling some fish.
+  * A woman is pouring a yellow mixture on a frying pan.
+
+---
+
+**324: diff=0.52, gold=4.8,  sys=4.27**
+
+  * A monkey pushes another monkey.
+  * The monkey pushed the other monkey.
+
+---
+
+**325: diff=0.51, gold=3.25,  sys=3.76**
+
+  * A person is folding a square paper piece.
+  * A man is folding paper.
+
+---
+
+**326: diff=0.51, gold=2.53,  sys=3.05**
+
+  * A woman is flipping pancakes.
+  * A cartoon chef is flipping pancakes.
+
+---
+
+**327: diff=0.51, gold=0.5,  sys=1.01**
+
+  * A man is fishing.
+  * A man is exercising.
+
+---
+
+**328: diff=0.51, gold=3.75,  sys=4.26**
+
+  * A man is playing the guitar.
+  * A man plays an acoustic guitar.
+
+---
+
+**329: diff=0.51, gold=0.6,  sys=0.08**
+
+  * A man is crying.
+  * A woman is dancing.
+
+---
+
+**330: diff=0.50, gold=4.8,  sys=4.29**
+
+  * The man is eating pizza.
+  * A man is eating a slice of pizza.
+
+---
+
+**331: diff=0.50, gold=2.33,  sys=2.83**
+
+  * A woman is carrying a boy.
+  * A woman is carrying her baby.
+
+---
+
+**332: diff=0.50, gold=1.0,  sys=0.49**
+
+  * A man is riding on a horse.
+  * A man is talking on a phone.
+
+---
+
+**333: diff=0.50, gold=0.4,  sys=0.90**
+
+  * The man is driving a white car.
+  * A man is giving an interview.
+
+---
+
+**334: diff=0.50, gold=4.0,  sys=3.49**
+
+  * A big green ball knocks a potato over.
+  * A large green ball hits a potato.
+
+---
+
+**335: diff=0.50, gold=1.25,  sys=1.75**
+
+  * A woman is placing food in a pot of hot water.
+  * A woman is frying meat.
+
+---
+
+**336: diff=0.50, gold=3.5,  sys=4.00**
+
+  * A person peels shrimp.
+  * The lady peeled the shrimp.
+
+---
+
+**337: diff=0.5, gold=0.5,  sys=0.0**
+
+  * A man is playing a guitar.
+  * A woman is riding a horse.
+
+---
+
+**338: diff=0.5, gold=5.0,  sys=4.5**
+
+  * A dog rides a skateboard.
+  * A dog is riding a skateboard.
+
+---
+
+**339: diff=0.49, gold=2.2,  sys=2.69**
+
+  * A man is playing the drums.
+  * A man is playing the guitar.
+
+---
+
+**340: diff=0.49, gold=2.2,  sys=2.69**
+
+  * The man is slicing a fish open.
+  * A man is slicing a potato.
+
+---
+
+**341: diff=0.49, gold=0.8,  sys=0.30**
+
+  * A man is slicing a tomato.
+  * A man is riding a horse.
+
+---
+
+**342: diff=0.49, gold=1.5,  sys=1.99**
+
+  * Raccoons are eating.
+  * A man is eating.
+
+---
+
+**343: diff=0.49, gold=1.0,  sys=0.50**
+
+  * A man is dancing outside.
+  * A man is playing flute.
+
+---
+
+**344: diff=0.49, gold=3.76,  sys=4.25**
+
+  * The woman is rolling dough.
+  * A woman is flouring and rolling dough.
+
+---
+
+**345: diff=0.49, gold=3.94,  sys=3.44**
+
+  * A girl is communicating with sign language.
+  * A young girl is using sign language.
+
+---
+
+**346: diff=0.49, gold=2.0,  sys=1.50**
+
+  * A rat like creature is smelling around.
+  * An animal is walking on the ground.
+
+---
+
+**347: diff=0.48, gold=3.8,  sys=3.31**
+
+  * A person is cutting some burrata cheese.
+  * The person is slicing cheese.
+
+---
+
+**348: diff=0.48, gold=5.0,  sys=4.51**
+
+  * A person cuts an onion.
+  * A person is cutting an onion.
+
+---
+
+**349: diff=0.48, gold=5.0,  sys=4.51**
+
+  * A person is throwing a cat on to the ceiling.
+  * A person throws a cat on the ceiling.
+
+---
+
+**350: diff=0.47, gold=3.09,  sys=2.61**
+
+  * A child is playing a computer game.
+  * A boy is playing a game on a laptop.
+
+---
+
+**351: diff=0.47, gold=3.5,  sys=3.97**
+
+  * Two men pushed carts through the woods.
+  * Two men are pushing carts.
+
+---
+
+**352: diff=0.47, gold=3.8,  sys=3.32**
+
+  * Someone is slicing an onion.
+  * A woman is cutting onion.
+
+---
+
+**353: diff=0.47, gold=5.0,  sys=4.52**
+
+  * A man is cutting an onion.
+  * A man cuts an onion.
+
+---
+
+**354: diff=0.47, gold=4.0,  sys=3.52**
+
+  * A baby is laughing.
+  * A baby is laughing and giggling.
+
+---
+
+**355: diff=0.46, gold=0.4,  sys=0.86**
+
+  * Meat is being put into a skillet.
+  * A woman is putting a baby into a trash can.
+
+---
+
+**356: diff=0.46, gold=0.6,  sys=0.13**
+
+  * A man is rinsing a steak.
+  * A man is playing a guitar.
+
+---
+
+**357: diff=0.46, gold=1.4,  sys=1.86**
+
+  * A man is playing a basketball.
+  * A man is playing a piano.
+
+---
+
+**358: diff=0.46, gold=0.0,  sys=0.46**
+
+  * The man drove his little red car around the traffic.
+  * The dog ran in the water at the beach.
+
+---
+
+**359: diff=0.46, gold=2.8,  sys=3.26**
+
+  * A man is playing a guitar.
+  * A girl is playing a guitar.
+
+---
+
+**360: diff=0.46, gold=0.0,  sys=0.46**
+
+  * A woman is riding on a horse.
+  * A man is turning over tables in anger.
+
+---
+
+**361: diff=0.45, gold=3.2,  sys=3.65**
+
+  * People are playing cricket.
+  * Men are playing cricket.
+
+---
+
+**362: diff=0.45, gold=1.4,  sys=0.94**
+
+  * The woman is seasoning the oil.
+  * A woman is pouring ingredients in a bowl.
+
+---
+
+**363: diff=0.45, gold=0.8,  sys=0.34**
+
+  * A man is playing a flute.
+  * A man is riding a scooter.
+
+---
+
+**364: diff=0.45, gold=1.0,  sys=0.54**
+
+  * A woman is picking tomatoes.
+  * A woman is pouring batter into a bowl.
+
+---
+
+**365: diff=0.45, gold=0.53,  sys=0.99**
+
+  * A woman is taking a bath.
+  * A woman is riding a horse.
+
+---
+
+**366: diff=0.45, gold=2.0,  sys=2.45**
+
+  * A man is playing a piano.
+  * A man is playing a flute.
+
+---
+
+**367: diff=0.45, gold=0.6,  sys=0.14**
+
+  * A man is folding paper.
+  * A woman is slicing a pepper.
+
+---
+
+**368: diff=0.45, gold=0.6,  sys=1.05**
+
+  * A man is cutting paper with a sword.
+  * A woman is cutting a tomato.
+
+---
+
+**369: diff=0.45, gold=4.2,  sys=3.74**
+
+  * A man is slicing a potato into pieces.
+  * A man is cutting a potato.
+
+---
+
+**370: diff=0.45, gold=2.5,  sys=2.04**
+
+  * A man is walking along a path through wilderness.
+  * A man is walking down a road.
+
+---
+
+**371: diff=0.45, gold=0.0,  sys=0.45**
+
+  * A man is taking some math classes.
+  * A man is rinsing a steak.
+
+---
+
+**372: diff=0.44, gold=0.2,  sys=0.64**
+
+  * A woman is adding sauce to some food.
+  * A person is cutting leaves.
+
+---
+
+**373: diff=0.44, gold=0.4,  sys=0.84**
+
+  * A boy is making some dance steps.
+  * A boy is pouring something from a pitcher.
+
+---
+
+**374: diff=0.44, gold=5.0,  sys=4.55**
+
+  * A woman rides a horse.
+  * A woman is riding a horse.
+
+---
+
+**375: diff=0.44, gold=3.75,  sys=3.30**
+
+  * A dog is trying to get bacon off his back.
+  * A dog is trying to eat the bacon on its back.
+
+---
+
+**376: diff=0.43, gold=2.0,  sys=2.43**
+
+  * A small baby is playing a guitar.
+  * A boy sits on a bed, sings and plays a guitar.
+
+---
+
+**377: diff=0.43, gold=4.4,  sys=3.96**
+
+  * A man is cutting a potato.
+  * A man is slicing some potato.
+
+---
+
+**378: diff=0.43, gold=1.4,  sys=1.83**
+
+  * A bear is running from two dogs.
+  * A bear is fighting wolves.
+
+---
+
+**379: diff=0.43, gold=5.0,  sys=4.56**
+
+  * A man is climbing a rope.
+  * A man climbs a rope.
+
+---
+
+**380: diff=0.43, gold=0.0,  sys=0.43**
+
+  * A girl is playing a piano.
+  * A boy is doing push ups.
+
+---
+
+**381: diff=0.43, gold=1.66,  sys=2.09**
+
+  * A man is running on the road.
+  * A panda dog is running on the road.
+
+---
+
+**382: diff=0.43, gold=0.6,  sys=1.03**
+
+  * A man is cycling.
+  * A man is talking.
+
+---
+
+**383: diff=0.42, gold=3.75,  sys=4.17**
+
+  * A man is playing a guitar.
+  * A man is playing an electric guitar.
+
+---
+
+**384: diff=0.42, gold=4.0,  sys=3.57**
+
+  * A woman is frying fish.
+  * A woman is cooking fish.
+
+---
+
+**385: diff=0.42, gold=0.0,  sys=0.42**
+
+  * A woman is taking a shower.
+  * A man is riding a white horse.
+
+---
+
+**386: diff=0.42, gold=0.8,  sys=1.22**
+
+  * A man is finding something.
+  * A woman is slicing something.
+
+---
+
+**387: diff=0.42, gold=5.0,  sys=4.57**
+
+  * A man and a woman are kissing.
+  * A man and woman kiss.
+
+---
+
+**388: diff=0.41, gold=5.0,  sys=4.58**
+
+  * A woman peels a potato.
+  * A woman is peeling a potato.
+
+---
+
+**389: diff=0.41, gold=5.0,  sys=4.58**
+
+  * A woman peels a potato.
+  * A woman is peeling a potato.
+
+---
+
+**390: diff=0.41, gold=0.6,  sys=0.18**
+
+  * A man is playing a guitar.
+  * A man is eating a banana.
+
+---
+
+**391: diff=0.41, gold=0.0,  sys=0.41**
+
+  * A couple are walking.
+  * Some men are sawing.
+
+---
+
+**392: diff=0.41, gold=3.8,  sys=4.21**
+
+  * A cat is rubbing against baby's face.
+  * A cat is rubbing against a baby.
+
+---
+
+**393: diff=0.40, gold=3.4,  sys=2.99**
+
+  * A man is eating a food.
+  * A man is eating a piece of bread.
+
+---
+
+**394: diff=0.40, gold=2.4,  sys=2.80**
+
+  * The baby crawled through the doorway.
+  * A baby is crawling across the floor.
+
+---
+
+**395: diff=0.40, gold=0.0,  sys=0.40**
+
+  * A dog is running on the ground.
+  * A girl is tapping her finger nails.
+
+---
+
+**396: diff=0.40, gold=3.5,  sys=3.09**
+
+  * A man is running.
+  * A man is running down a road.
+
+---
+
+**397: diff=0.40, gold=3.0,  sys=3.40**
+
+  * A woman is dancing and singing with other women.
+  * A woman is dancing and singing in the rain.
+
+---
+
+**398: diff=0.40, gold=0.6,  sys=1.00**
+
+  * A woman is riding a horse along a perimeter.
+  * A dog is riding a skateboard.
+
+---
+
+**399: diff=0.4, gold=0.4,  sys=0.0**
+
+  * Someone is greasing a pan.
+  * Smeone is laying down.
+
+---
+
+**400: diff=0.39, gold=3.8,  sys=4.19**
+
+  * A man is spreading shreded cheese on a pizza.
+  * A man is spreading shredded cheese on an uncooked pizza.
+
+---
+
+**401: diff=0.39, gold=5.0,  sys=4.60**
+
+  * A man is tying his shoe.
+  * A man ties his shoe.
+
+---
+
+**402: diff=0.39, gold=0.4,  sys=0.79**
+
+  * A man shooting a car.
+  * A man is cutting a potato.
+
+---
+
+**403: diff=0.39, gold=1.25,  sys=1.64**
+
+  * The boy is riding a tricycle.
+  * A woman is riding a water scooter.
+
+---
+
+**404: diff=0.39, gold=3.75,  sys=4.14**
+
+  * A dog is barking at a toy.
+  * The little dog barked at the electronic toy.
+
+---
+
+**405: diff=0.39, gold=1.0,  sys=1.39**
+
+  * A woman is feeding a man.
+  * A woman is mixing meat.
+
+---
+
+**406: diff=0.39, gold=2.16,  sys=1.77**
+
+  * A man is playing a flute.
+  * A man is playing guitar.
+
+---
+
+**407: diff=0.39, gold=1.8,  sys=2.19**
+
+  * A woman is peeling an orange.
+  * A woman cuts off a small piece of lemon rind.
+
+---
+
+**408: diff=0.38, gold=5.0,  sys=4.61**
+
+  * A man is feeding a mouse to a snake.
+  * The man is feeding a mouse to the snake.
+
+---
+
+**409: diff=0.38, gold=5.0,  sys=4.61**
+
+  * A man plays the violin.
+  * A man is playing violin.
+
+---
+
+**410: diff=0.38, gold=2.25,  sys=1.86**
+
+  * A person is chopping coriander leaves.
+  * A woman is slicing up some green leaves.
+
+---
+
+**411: diff=0.38, gold=0.4,  sys=0.78**
+
+  * A man jumping rope
+  * A man is talking.
+
+---
+
+**412: diff=0.38, gold=1.2,  sys=1.58**
+
+  * A man is driving a car.
+  * A man is riding a horse.
+
+---
+
+**413: diff=0.38, gold=0.4,  sys=0.78**
+
+  * A man is dieing in an operating room.
+  * A man is kissing a woman in stage.
+
+---
+
+**414: diff=0.38, gold=0.0,  sys=0.38**
+
+  * A cat is licking himself.
+  * A man is slicing a white onion with a mandolin slicer.
+
+---
+
+**415: diff=0.38, gold=0.2,  sys=0.58**
+
+  * A man is riding a horse.
+  * A man is playing a keyboard.
+
+---
+
+**416: diff=0.37, gold=0.0,  sys=0.37**
+
+  * A man playing the guitar.
+  * A woman is painting her lips.
+
+---
+
+**417: diff=0.37, gold=2.8,  sys=3.17**
+
+  * Two foxes are eating from a plate on a brick patio.
+  * Foxes are eating from a plate.
+
+---
+
+**418: diff=0.37, gold=2.0,  sys=2.37**
+
+  * A man is slicing a tomato.
+  * A man is slicing a bun.
+
+---
+
+**419: diff=0.37, gold=3.2,  sys=3.57**
+
+  * A man is playing guitar.
+  * A boy is playing a guitar.
+
+---
+
+**420: diff=0.37, gold=3.6,  sys=3.97**
+
+  * A group of men play soccer on the beach.
+  * A group of boys are playing soccer on the beach.
+
+---
+
+**421: diff=0.37, gold=3.25,  sys=2.87**
+
+  * A man seated is playing the guitar.
+  * A man is playing an acoustic guitar and singing into a microphone.
+
+---
+
+**422: diff=0.37, gold=0.25,  sys=0.62**
+
+  * A woman is slicing a meat.
+  * A woman is singing on stage.
+
+---
+
+**423: diff=0.37, gold=4.25,  sys=4.62**
+
+  * A dog is eating water melon.
+  * A dog is eating a piece of watermelon.
+
+---
+
+**424: diff=0.37, gold=5.0,  sys=4.62**
+
+  * A woman peels shrimp.
+  * A woman is peeling shrimp.
+
+---
+
+**425: diff=0.37, gold=5.0,  sys=4.62**
+
+  * The man is riding a horse.
+  * A man is riding on a horse.
+
+---
+
+**426: diff=0.37, gold=1.0,  sys=1.37**
+
+  * A guy is playing hackysack
+  * A man is playing a key-board.
+
+---
+
+**427: diff=0.36, gold=1.4,  sys=1.03**
+
+  * A woman is dancing by a fire.
+  * A woman is taking a bath.
+
+---
+
+**428: diff=0.36, gold=3.2,  sys=3.56**
+
+  * A boy is playing guitar.
+  * A man is playing a guitar.
+
+---
+
+**429: diff=0.36, gold=1.2,  sys=1.56**
+
+  * A man and a woman talk in a diner.
+  * A man and a woman are riding on a bicycle.
+
+---
+
+**430: diff=0.36, gold=5.0,  sys=4.63**
+
+  * A man is erasing a chalk board.
+  * The man is erasing the chalk board.
+
+---
+
+**431: diff=0.36, gold=0.6,  sys=0.96**
+
+  * The man cut up an onion.
+  * A man is dancing.
+
+---
+
+**432: diff=0.36, gold=3.0,  sys=2.63**
+
+  * An animal is biting a persons finger.
+  * A slow loris is biting a persons finger.
+
+---
+
+**433: diff=0.36, gold=1.71,  sys=2.07**
+
+  * A man is playing a guitar.
+  * A man is playing a trumpet.
+
+---
+
+**434: diff=0.36, gold=1.71,  sys=2.07**
+
+  * A man is playing a guitar.
+  * A man is playing a trumpet.
+
+---
+
+**435: diff=0.36, gold=1.71,  sys=2.07**
+
+  * A man is playing a guitar.
+  * A man is playing a trumpet.
+
+---
+
+**436: diff=0.35, gold=0.0,  sys=0.35**
+
+  * A man lays on the ground and aims a rifle.
+  * A man is spreading butter on a tortilla.
+
+---
+
+**437: diff=0.35, gold=2.6,  sys=2.24**
+
+  * A dog is looking into swimming pool.
+  * A dog is walking along the edge of a pool.
+
+---
+
+**438: diff=0.35, gold=0.8,  sys=1.15**
+
+  * A man is speaking.
+  * A man is cooking.
+
+---
+
+**439: diff=0.35, gold=4.2,  sys=3.84**
+
+  * A person is cutting mushrooms.
+  * A person is cutting mushrooms with a knife.
+
+---
+
+**440: diff=0.35, gold=0.0,  sys=0.35**
+
+  * A man is moving a tree limb.
+  * The woman is playing the violin.
+
+---
+
+**441: diff=0.35, gold=0.0,  sys=0.35**
+
+  * A badger is digging in the dirt.
+  * A man is moving large rocks.
+
+---
+
+**442: diff=0.35, gold=2.2,  sys=1.84**
+
+  * A man is playing keyboard.
+  * A person is playing a piano.
+
+---
+
+**443: diff=0.34, gold=1.28,  sys=0.93**
+
+  * A girl is playing a flute.
+  * A band is playing on a stage.
+
+---
+
+**444: diff=0.34, gold=4.75,  sys=4.40**
+
+  * The man cut some carpet with a knife.
+  * A man is cutting carpet with a knife.
+
+---
+
+**445: diff=0.34, gold=5.0,  sys=4.65**
+
+  * A man plays the flute.
+  * A man is playing a flute.
+
+---
+
+**446: diff=0.34, gold=2.2,  sys=2.54**
+
+  * A woman dances while a man plays the keyboard.
+  * A woman is dancing on a stage.
+
+---
+
+**447: diff=0.34, gold=3.0,  sys=2.65**
+
+  * A man is slicing something.
+  * A man is slicing a bun.
+
+---
+
+**448: diff=0.33, gold=0.5,  sys=0.83**
+
+  * A woman is writing.
+  * A woman is swimming.
+
+---
+
+**449: diff=0.33, gold=5.0,  sys=4.66**
+
+  * The cougar is chasing the bear.
+  * A cougar is chasing a bear.
+
+---
+
+**450: diff=0.33, gold=3.4,  sys=3.73**
+
+  * An airplane is flying in the air.
+  * A South African Airways plane is flying in a blue sky.
+
+---
+
+**451: diff=0.33, gold=1.0,  sys=1.33**
+
+  * A woman cuts up some vegetables.
+  * A woman is placing skewered food onto a cooker.
+
+---
+
+**452: diff=0.33, gold=5.0,  sys=4.66**
+
+  * A man is playing a guitar.
+  * A man plays the guitar.
+
+---
+
+**453: diff=0.33, gold=4.0,  sys=3.66**
+
+  * A man is playing on his keyboard.
+  * A man is playing a keyboard piano.
+
+---
+
+**454: diff=0.33, gold=3.8,  sys=3.46**
+
+  * A machine is sharpening a pencil.
+  * The machine shaved the end of the pencil.
+
+---
+
+**455: diff=0.32, gold=0.2,  sys=0.52**
+
+  * A man is screwing wood to a wall.
+  * A man is giving a woman a massage.
+
+---
+
+**456: diff=0.32, gold=5.0,  sys=4.67**
+
+  * A man plays the piano.
+  * A man is playing a piano.
+
+---
+
+**457: diff=0.32, gold=1.4,  sys=1.07**
+
+  * A man is lifting a car.
+  * A man is climbing a wall.
+
+---
+
+**458: diff=0.32, gold=2.5,  sys=2.17**
+
+  * The man is putting chicken into the container.
+  * A man is putting foods in a box.
+
+---
+
+**459: diff=0.32, gold=0.8,  sys=0.47**
+
+  * A man is dancing.
+  * A man is eating bread.
+
+---
+
+**460: diff=0.32, gold=1.6,  sys=1.92**
+
+  * The man is playing the piano.
+  * The man is playing the guitar.
+
+---
+
+**461: diff=0.31, gold=5.0,  sys=4.68**
+
+  * The man used a sword to slice a plastic bottle.
+  * A man sliced a plastic bottle with a sword.
+
+---
+
+**462: diff=0.31, gold=0.4,  sys=0.71**
+
+  * A woman is water skiing.
+  * A woman is slicing fish.
+
+---
+
+**463: diff=0.31, gold=1.0,  sys=1.31**
+
+  * The men played follow the leader on the grass.
+  * The rhino grazed on the grass.
+
+---
+
+**464: diff=0.31, gold=5.0,  sys=4.68**
+
+  * The woman is playing the flute.
+  * A woman is playing a flute.
+
+---
+
+**465: diff=0.31, gold=0.25,  sys=0.56**
+
+  * A person is boiling soup.
+  * A woman is placing eggs into a pan.
+
+---
+
+**466: diff=0.30, gold=4.0,  sys=4.30**
+
+  * The puppy played with a blue tennis ball.
+  * A puppy is playing with a tennis ball.
+
+---
+
+**467: diff=0.30, gold=3.75,  sys=4.05**
+
+  * Three men are playing guitars.
+  * Three men are on stage playing guitars.
+
+---
+
+**468: diff=0.30, gold=3.8,  sys=3.49**
+
+  * A woman swims underwater.
+  * A woman is swimming.
+
+---
+
+**469: diff=0.30, gold=3.4,  sys=3.09**
+
+  * A woman and man are riding in a car.
+  * A woman driving a car is talking to the man seated beside her.
+
+---
+
+**470: diff=0.30, gold=1.15,  sys=0.84**
+
+  * The lady cracked an egg for the mixer.
+  * The lady sliced up the meat.
+
+---
+
+**471: diff=0.30, gold=0.75,  sys=1.05**
+
+  * A woman is playing in the ocean.
+  * A woman is preparing shrimp to cook.
+
+---
+
+**472: diff=0.30, gold=2.4,  sys=2.70**
+
+  * A young Asian girl is applying eyeliner.
+  * A girl is putting on eye makeup.
+
+---
+
+**473: diff=0.30, gold=4.4,  sys=4.09**
+
+  * A little boy is playing a keyboard.
+  * A boy is playing key board.
+
+---
+
+**474: diff=0.29, gold=2.0,  sys=1.70**
+
+  * A man is playing a football.
+  * A man is maneuvering a soccer ball with his feet.
+
+---
+
+**475: diff=0.29, gold=3.0,  sys=3.29**
+
+  * A man is walking slowly across a rope bridge.
+  * A boy is walking across a bridge.
+
+---
+
+**476: diff=0.29, gold=3.4,  sys=3.10**
+
+  * A person is playing an electronic keyboard.
+  * A kid is playing keyboard.
+
+---
+
+**477: diff=0.29, gold=1.0,  sys=1.29**
+
+  * A man is preparing a snake for cooking.
+  * The man is dropping sliced cucumbers into water.
+
+---
+
+**478: diff=0.29, gold=3.6,  sys=3.89**
+
+  * A man is singing and playing a guitar.
+  * A man is playing a guitar.
+
+---
+
+**479: diff=0.29, gold=3.6,  sys=3.89**
+
+  * A man is playing a guitar.
+  * A man is singing and playing a guitar.
+
+---
+
+**480: diff=0.29, gold=4.2,  sys=3.90**
+
+  * A man is cutting up a cucumber.
+  * A man is slicing a cucumber.
+
+---
+
+**481: diff=0.29, gold=2.8,  sys=2.50**
+
+  * The man talked to a girl over the internet camera.
+  * A teenager talks to a girl over a webcam.
+
+---
+
+**482: diff=0.29, gold=3.0,  sys=2.70**
+
+  * A woman is cooking eggs.
+  * A woman is cooking something.
+
+---
+
+**483: diff=0.28, gold=0.4,  sys=0.68**
+
+  * A man and woman is riding in a car.
+  * A woman is frying shrimp.
+
+---
+
+**484: diff=0.28, gold=0.0,  sys=0.28**
+
+  * A man is playing guitar.
+  * A boy is talking to a giant dog.
+
+---
+
+**485: diff=0.28, gold=0.4,  sys=0.68**
+
+  * The woman is dicing onions.
+  * A woman is dancing in railway station.
+
+---
+
+**486: diff=0.28, gold=0.63,  sys=0.91**
+
+  * A man is speaking.
+  * A man is spitting.
+
+---
+
+**487: diff=0.28, gold=3.2,  sys=3.48**
+
+  * Someone drills a hole in a strip of wood with a power drill.
+  * A man drills a hole in a piece of wood.
+
+---
+
+**488: diff=0.28, gold=2.8,  sys=2.51**
+
+  * The woman is pencilling on eye shadow.
+  * The girl is using an eye pencil on her eyelid.
+
+---
+
+**489: diff=0.28, gold=2.6,  sys=2.31**
+
+  * The cook is kneading the flour.
+  * A woman is kneading tortilla dough.
+
+---
+
+**490: diff=0.28, gold=0.75,  sys=1.03**
+
+  * A person is peeling a potato with a potato peeler.
+  * A man is cutting tomatoes with a cleaver.
+
+---
+
+**491: diff=0.28, gold=4.0,  sys=3.71**
+
+  * Lionel Richie is dancing on the ceiling.
+  * Lionel Ritchie dances while standing on the ceiling.
+
+---
+
+**492: diff=0.28, gold=3.25,  sys=3.53**
+
+  * A woman holds a kangaroo.
+  * A woman is picking up a kangaroo.
+
+---
+
+**493: diff=0.28, gold=0.0,  sys=0.28**
+
+  * A man is tying his shoe.
+  * A dog is riding on a bicyclists shoulders.
+
+---
+
+**494: diff=0.27, gold=1.8,  sys=2.07**
+
+  * A woman is cutting onions.
+  * A woman is cutting tofu.
+
+---
+
+**495: diff=0.27, gold=2.5,  sys=2.77**
+
+  * A monkey is playing drums.
+  * Someone in a gorilla costume is playing a set of drums.
+
+---
+
+**496: diff=0.27, gold=2.75,  sys=3.02**
+
+  * Men are jumping into water from a bridge.
+  * Men jump in a river.
+
+---
+
+**497: diff=0.27, gold=0.8,  sys=1.07**
+
+  * A man is playing a guitar.
+  * A man tries to read the paper.
+
+---
+
+**498: diff=0.27, gold=3.5,  sys=3.77**
+
+  * The woman picked up the kangaroo.
+  * A woman is carrying a kangaroo.
+
+---
+
+**499: diff=0.27, gold=3.8,  sys=3.52**
+
+  * A little boy is vacuuming the floor.
+  * A boy is vacuuming.
+
+---
+
+**500: diff=0.27, gold=1.6,  sys=1.32**
+
+  * A cat is playing a key board.
+  * A man is playing two keyboards.
+
+---
+
+**501: diff=0.27, gold=1.5,  sys=1.77**
+
+  * A man is cutting apple by his hand.
+  * A man is cutting carpet with a knife.
+
+---
+
+**502: diff=0.27, gold=1.5,  sys=1.77**
+
+  * Two men are talking.
+  * Two men are playing guitar.
+
+---
+
+**503: diff=0.27, gold=3.0,  sys=2.72**
+
+  * A car backs out of a space.
+  * A car is backing out of a blocked lane.
+
+---
+
+**504: diff=0.27, gold=2.75,  sys=3.02**
+
+  * A woman is slicing an onion.
+  * A man is cutting an onion.
+
+---
+
+**505: diff=0.27, gold=0.4,  sys=0.67**
+
+  * A man is kicking pots of water.
+  * A man is picking flowers.
+
+---
+
+**506: diff=0.27, gold=0.0,  sys=0.27**
+
+  * A man is opening a box and taking out paper.
+  * A woman is peeling a potato.
+
+---
+
+**507: diff=0.27, gold=3.6,  sys=3.32**
+
+  * The panda bear lay on the logs.
+  * A panda is lying down.
+
+---
+
+**508: diff=0.27, gold=2.4,  sys=2.12**
+
+  * A woman is cutting tofu.
+  * A woman is cutting an onion.
+
+---
+
+**509: diff=0.26, gold=2.75,  sys=2.48**
+
+  * A woman is cutting up a chicken.
+  * A woman is slicing meat.
+
+---
+
+**510: diff=0.26, gold=4.0,  sys=3.73**
+
+  * A squirrel is spinning around in circles.
+  * A squirrel runs around in circles.
+
+---
+
+**511: diff=0.26, gold=3.0,  sys=2.73**
+
+  * A cat is playing keyboards.
+  * A cat is playing a piano.
+
+---
+
+**512: diff=0.26, gold=0.83,  sys=0.56**
+
+  * A man is mowing grass.
+  * A man is busting concrete.
+
+---
+
+**513: diff=0.26, gold=3.8,  sys=4.06**
+
+  * A woman cracks two eggs into a glass bowl.
+  * A woman is cracking an egg into a bowl.
+
+---
+
+**514: diff=0.26, gold=4.25,  sys=3.98**
+
+  * A woman is chopping broccoli.
+  * A woman is chopping broccoli with a knife.
+
+---
+
+**515: diff=0.26, gold=0.8,  sys=0.53**
+
+  * A man is cleaning a fish on a kitchen counter.
+  * A man is playing a flute.
+
+---
+
+**516: diff=0.25, gold=3.6,  sys=3.34**
+
+  * A person is writing.
+  * A person is writing with a pencil.
+
+---
+
+**517: diff=0.25, gold=1.6,  sys=1.34**
+
+  * The lady put the skewered shimp in the hot water.
+  * The lady fried the breaded meat in hot oil.
+
+---
+
+**518: diff=0.25, gold=0.25,  sys=0.0**
+
+  * A woman is taking a picture.
+  * A man is playing a guitar.
+
+---
+
+**519: diff=0.24, gold=2.6,  sys=2.84**
+
+  * A man is riding a white horse on an enclosed ground.
+  * Someone is riding a horse.
+
+---
+
+**520: diff=0.24, gold=3.2,  sys=3.44**
+
+  * The couple danced in the church.
+  * A couple slow dances.
+
+---
+
+**521: diff=0.24, gold=1.2,  sys=0.95**
+
+  * A woman is lying on a blanket on a rock and reading a book.
+  * A woman seated is singing a song and playing the guitar too.
+
+---
+
+**522: diff=0.24, gold=0.85,  sys=0.60**
+
+  * A man is rowing a boat.
+  * A man is shooting off a gun.
+
+---
+
+**523: diff=0.24, gold=0.53,  sys=0.29**
+
+  * A man is playing a guitar.
+  * A man is eating pasta.
+
+---
+
+**524: diff=0.23, gold=3.0,  sys=2.76**
+
+  * A woman is eating something.
+  * A woman is eating meat.
+
+---
+
+**525: diff=0.23, gold=4.85,  sys=4.62**
+
+  * A man is playing guitar.
+  * A man plays a guitar.
+
+---
+
+**526: diff=0.23, gold=2.75,  sys=2.51**
+
+  * Two men compete in a tire rolling race.
+  * Two people flipped tractor tires in a race.
+
+---
+
+**527: diff=0.23, gold=0.0,  sys=0.23**
+
+  * Plastic toys are floating in water.
+  * The ladies are performing a dance.
+
+---
+
+**528: diff=0.23, gold=3.2,  sys=3.43**
+
+  * A man pours oil into a pot.
+  * A man pours wine in a pot.
+
+---
+
+**529: diff=0.23, gold=0.0,  sys=0.23**
+
+  * A boy is playing violin on stage.
+  * A person is mixing a pot.
+
+---
+
+**530: diff=0.22, gold=3.0,  sys=2.77**
+
+  * Kids are dancing on stage.
+  * Some people are dancing on stage.
+
+---
+
+**531: diff=0.22, gold=3.5,  sys=3.27**
+
+  * A kid plays with a toy phone.
+  * A little boy plays with a toy phone.
+
+---
+
+**532: diff=0.22, gold=0.25,  sys=0.47**
+
+  * A girl is playing a violin.
+  * A baby is laughing and giggling.
+
+---
+
+**533: diff=0.22, gold=4.0,  sys=3.77**
+
+  * A person is boiling noodles.
+  * A woman is boiling noodles in water.
+
+---
+
+**534: diff=0.22, gold=2.25,  sys=2.02**
+
+  * A man is slicing an onion.
+  * A woman is slicing a pumpkin.
+
+---
+
+**535: diff=0.22, gold=0.0,  sys=0.22**
+
+  * A man plays an acoustic guitar.
+  * A woman and dog are walking together.
+
+---
+
+**536: diff=0.22, gold=1.8,  sys=1.57**
+
+  * A woman is dicing a potato.
+  * A woman cuts tofu into tiny pieces.
+
+---
+
+**537: diff=0.22, gold=4.2,  sys=4.42**
+
+  * Two zebras play in an open field.
+  * Two zebras are playing in a field.
+
+---
+
+**538: diff=0.22, gold=0.0,  sys=0.22**
+
+  * A woman holds a kangaroo.
+  * A man in a hat sings a song.
+
+---
+
+**539: diff=0.22, gold=4.6,  sys=4.37**
+
+  * A woman splits garlic cloves.
+  * A woman is breaking a head of garlic into cloves.
+
+---
+
+**540: diff=0.21, gold=4.25,  sys=4.46**
+
+  * A man drove his car.
+  * A man is driving a car.
+
+---
+
+**541: diff=0.21, gold=0.8,  sys=0.58**
+
+  * A man is fishing in the river.
+  * A man is singing while walking down the sidewalk.
+
+---
+
+**542: diff=0.21, gold=4.2,  sys=3.98**
+
+  * The woman is frying a breaded pork chop.
+  * A woman is cooking a breaded pork chop.
+
+---
+
+**543: diff=0.21, gold=3.75,  sys=3.96**
+
+  * The boy is stuck in the door of the doghouse.
+  * A child is stuck in a dog house.
+
+---
+
+**544: diff=0.21, gold=4.4,  sys=4.18**
+
+  * Two men are packing suitcases into the trunk of a car.
+  * The men are putting suitcases into the car's trunk.
+
+---
+
+**545: diff=0.21, gold=3.2,  sys=2.98**
+
+  * Some men are playing guitars.
+  * Three men are playing guitars and singing together.
+
+---
+
+**546: diff=0.21, gold=4.4,  sys=4.18**
+
+  * A squirrel runs around in circles.
+  * A squirrel is moving in circles.
+
+---
+
+**547: diff=0.21, gold=4.90,  sys=4.69**
+
+  * The man is playing the guitar.
+  * A man is playing a guitar.
+
+---
+
+**548: diff=0.21, gold=4.90,  sys=4.69**
+
+  * The man is playing the guitar.
+  * A man is playing a guitar.
+
+---
+
+**549: diff=0.21, gold=3.0,  sys=3.21**
+
+  * A woman rides an elephant in front of an adoring crowd.
+  * A woman rides an elephant.
+
+---
+
+**550: diff=0.20, gold=1.6,  sys=1.80**
+
+  * A woman mixes up vegetables.
+  * A woman is adding ingredients to a skillet.
+
+---
+
+**551: diff=0.20, gold=0.0,  sys=0.20**
+
+  * A woman is mincing some garlic.
+  * A person is cleaning a disk.
+
+---
+
+**552: diff=0.20, gold=2.8,  sys=2.59**
+
+  * A plane is landing.
+  * A animated airplane is landing.
+
+---
+
+**553: diff=0.20, gold=2.75,  sys=2.54**
+
+  * People flip into a swimming pool.
+  * Men are falling into a pool.
+
+---
+
+**554: diff=0.20, gold=0.33,  sys=0.54**
+
+  * A man is riding a horse and jumping over obstacles.
+  * A man is kicking a soccer ball.
+
+---
+
+**555: diff=0.20, gold=4.0,  sys=4.20**
+
+  * A man puts three pieces of meat into a pan.
+  * A man is putting meat in a pan.
+
+---
+
+**556: diff=0.20, gold=1.0,  sys=0.79**
+
+  * A man is assembling speaker parts.
+  * A man is playing the guitar.
+
+---
+
+**557: diff=0.20, gold=0.66,  sys=0.45**
+
+  * A man is paddling a canoe.
+  * A man is playing a harp.
+
+---
+
+**558: diff=0.20, gold=0.8,  sys=1.00**
+
+  * A man is seasoning some carrots.
+  * A woman is slicing garlic.
+
+---
+
+**559: diff=0.2, gold=0.2,  sys=0.0**
+
+  * A man is riding a bike.
+  * A woman is dancing in the street.
+
+---
+
+**560: diff=0.2, gold=0.2,  sys=0.0**
+
+  * A man is playing a guitar.
+  * A woman is dancing.
+
+---
+
+**561: diff=0.2, gold=0.2,  sys=0.0**
+
+  * A man is mowing a lawn.
+  * A woman is cutting a lemon.
+
+---
+
+**562: diff=0.2, gold=0.2,  sys=0.0**
+
+  * A man is breaking water jugs.
+  * A woman is peeling garlic.
+
+---
+
+**563: diff=0.19, gold=3.2,  sys=3.39**
+
+  * Runners race around a track.
+  * Runners compete in a race.
+
+---
+
+**564: diff=0.19, gold=3.83,  sys=3.63**
+
+  * A man is getting into a car.
+  * A man is getting into a car in a garage.
+
+---
+
+**565: diff=0.19, gold=5.0,  sys=4.80**
+
+  * The boy is playing the piano.
+  * A boy plays a piano.
+
+---
+
+**566: diff=0.19, gold=0.4,  sys=0.59**
+
+  * A woman is dancing.
+  * A woman is playing violin.
+
+---
+
+**567: diff=0.19, gold=0.6,  sys=0.79**
+
+  * A man is kicking a soccer ball.
+  * A man is mixing a bowl.
+
+---
+
+**568: diff=0.19, gold=0.0,  sys=0.19**
+
+  * A person is putting salt and pepper on a piece of pork.
+  * A youngster is sitting on a piano.
+
+---
+
+**569: diff=0.19, gold=4.0,  sys=3.80**
+
+  * A small dog is chasing a yoga ball.
+  * A dog is chasing a ball.
+
+---
+
+**570: diff=0.19, gold=0.0,  sys=0.19**
+
+  * A man is patting an alligator on the mouth.
+  * A person is dumping chopped vegetables into a pot on the stove.
+
+---
+
+**571: diff=0.19, gold=2.4,  sys=2.20**
+
+  * A woman is peeling a potato.
+  * A man is slicing potato.
+
+---
+
+**572: diff=0.18, gold=3.6,  sys=3.78**
+
+  * A man is playing a guitar.
+  * A man is singing while playing the guitar.
+
+---
+
+**573: diff=0.18, gold=3.8,  sys=3.61**
+
+  * A puppy plays with a plastic container.
+  * The dog is playing with a plastic container.
+
+---
+
+**574: diff=0.18, gold=1.4,  sys=1.58**
+
+  * A cat is playing in a box.
+  * The dog is playing with the floor cleaner.
+
+---
+
+**575: diff=0.18, gold=1.0,  sys=0.81**
+
+  * A man is cutting bread.
+  * A man is doing tricks with a soccer ball.
+
+---
+
+**576: diff=0.18, gold=2.0,  sys=1.81**
+
+  * A man is putting garlic on some bread slices.
+  * A man is sprinkling seasoning on several split and buttered loaves of bread.
+
+---
+
+**577: diff=0.18, gold=4.0,  sys=4.18**
+
+  * A man is riding a mechanical bull.
+  * A man rode a mechanical bull.
+
+---
+
+**578: diff=0.18, gold=2.2,  sys=2.38**
+
+  * A man is shaking a container over a kitchen sink.
+  * A man is emptying a plastic container.
+
+---
+
+**579: diff=0.17, gold=1.64,  sys=1.82**
+
+  * The man is playing the guitar.
+  * A man is playing the flute.
+
+---
+
+**580: diff=0.17, gold=0.6,  sys=0.77**
+
+  * A woman is cracking eggs into a bowl.
+  * A woman is placing skewers onto a rack.
+
+---
+
+**581: diff=0.17, gold=0.33,  sys=0.51**
+
+  * A person is doing pencil tricks with his hand.
+  * A person is slicing carrots in half.
+
+---
+
+**582: diff=0.17, gold=0.0,  sys=0.17**
+
+  * A cat is on a robot.
+  * A man is eating bread.
+
+---
+
+**583: diff=0.17, gold=2.8,  sys=2.62**
+
+  * Five men jump into a swimming pool.
+  * A group of swimmers fall into a pool.
+
+---
+
+**584: diff=0.17, gold=2.0,  sys=2.17**
+
+  * The man used a chopper to chop the onion.
+  * The man used a machine to chop up a potatoe.
+
+---
+
+**585: diff=0.16, gold=0.0,  sys=0.16**
+
+  * A cat is playing on the floor.
+  * A man is slicing garlic.
+
+---
+
+**586: diff=0.16, gold=1.0,  sys=0.83**
+
+  * A woman is picking a can.
+  * A woman is slicing a tomato.
+
+---
+
+**587: diff=0.16, gold=0.0,  sys=0.16**
+
+  * A submarine is going through water.
+  * A baby is falling asleep.
+
+---
+
+**588: diff=0.16, gold=4.75,  sys=4.58**
+
+  * A dog licks a baby.
+  * A dog is licking a baby.
+
+---
+
+**589: diff=0.16, gold=0.0,  sys=0.16**
+
+  * A cat is walking around a house.
+  * A woman is peeling potato.
+
+---
+
+**590: diff=0.16, gold=0.5,  sys=0.66**
+
+  * A man shoots a basket.
+  * A man is playing a guitar.
+
+---
+
+**591: diff=0.16, gold=1.8,  sys=1.96**
+
+  * A man is playing a guitar.
+  * A man is playing a keyboard.
+
+---
+
+**592: diff=0.16, gold=1.4,  sys=1.23**
+
+  * A woman is wrapping tofu.
+  * A woman is balling dough.
+
+---
+
+**593: diff=0.15, gold=1.75,  sys=1.90**
+
+  * A man holds a small animal in one hand.
+  * A man shows off a small monkey.
+
+---
+
+**594: diff=0.15, gold=2.4,  sys=2.24**
+
+  * A lion is walking.
+  * A lion is pacing in a pen.
+
+---
+
+**595: diff=0.15, gold=3.93,  sys=3.77**
+
+  * A woman is slicing a pepper.
+  * A woman is cutting a red pepper.
+
+---
+
+**596: diff=0.15, gold=0.0,  sys=0.15**
+
+  * A man sharpens a pencil using a knife.
+  * A woman is dancing in the rain.
+
+---
+
+**597: diff=0.15, gold=0.0,  sys=0.15**
+
+  * A cat is licking a sucker.
+  * A woman is slicing cucumber.
+
+---
+
+**598: diff=0.15, gold=0.0,  sys=0.15**
+
+  * A woman is riding on a horse.
+  * A man is shooting off guns.
+
+---
+
+**599: diff=0.15, gold=3.2,  sys=3.04**
+
+  * A woman is slicing an onion.
+  * A man is cutting and onion.
+
+---
+
+**600: diff=0.15, gold=2.4,  sys=2.55**
+
+  * The man stirred the sauce for the chicken.
+  * The man is stirring oil.
+
+---
+
+**601: diff=0.15, gold=4.8,  sys=4.64**
+
+  * The man cut a paper plate.
+  * A man is cutting a paper plate.
+
+---
+
+**602: diff=0.15, gold=3.2,  sys=3.04**
+
+  * The missile exploded.
+  * A rocket exploded.
+
+---
+
+**603: diff=0.15, gold=1.0,  sys=0.84**
+
+  * A woman is playing the flute.
+  * A man is playing the guitar.
+
+---
+
+**604: diff=0.14, gold=0.8,  sys=0.65**
+
+  * A  man is dancing.
+  * A man is riding a horse.
+
+---
+
+**605: diff=0.14, gold=0.8,  sys=0.94**
+
+  * A man is selling items.
+  * A man is cleaning the house.
+
+---
+
+**606: diff=0.14, gold=0.4,  sys=0.25**
+
+  * A woman is dancing.
+  * A woman is kneading dough.
+
+---
+
+**607: diff=0.14, gold=0.8,  sys=0.65**
+
+  * A man is opening a door.
+  * A man is playing a guitar.
+
+---
+
+**608: diff=0.14, gold=3.4,  sys=3.25**
+
+  * The polar bears fought over the kill.
+  * Polar bears are fighting each other.
+
+---
+
+**609: diff=0.14, gold=1.25,  sys=1.39**
+
+  * A woman pours a mixture into a bowl and mixes it.
+  * A woman is preparing an egg in a skillet.
+
+---
+
+**610: diff=0.14, gold=0.4,  sys=0.25**
+
+  * A man is playing guitar.
+  * A man is draining pasta.
+
+---
+
+**611: diff=0.14, gold=0.64,  sys=0.49**
+
+  * A woman is speaking in sign language.
+  * A woman spices some seafood.
+
+---
+
+**612: diff=0.14, gold=1.25,  sys=1.10**
+
+  * A woman is slicing an onion with a knife.
+  * A man is preparing some dish.
+
+---
+
+**613: diff=0.14, gold=0.14,  sys=0.0**
+
+  * A woman is dancing.
+  * A man is eating.
+
+---
+
+**614: diff=0.14, gold=3.2,  sys=3.05**
+
+  * An animal is chewing on something.
+  * An animal is chewing on a key chain.
+
+---
+
+**615: diff=0.14, gold=3.8,  sys=3.65**
+
+  * A cheetah is running.
+  * A cheetah is running across a field.
+
+---
+
+**616: diff=0.13, gold=0.0,  sys=0.13**
+
+  * A person checks some rice pudding.
+  * A horse is running.
+
+---
+
+**617: diff=0.13, gold=0.0,  sys=0.13**
+
+  * A man is playing a violin.
+  * A woman is using a sewing machine.
+
+---
+
+**618: diff=0.13, gold=3.25,  sys=3.11**
+
+  * A man is playing a wooden flute while several other men play bongo drums.
+  * A man is playing a flute.
+
+---
+
+**619: diff=0.13, gold=0.0,  sys=0.13**
+
+  * A woman is slicing ginger.
+  * A person is holding two baby lorises.
+
+---
+
+**620: diff=0.13, gold=3.0,  sys=2.86**
+
+  * Two baby pandas are playing.
+  * Two pandas are laying together.
+
+---
+
+**621: diff=0.13, gold=0.13,  sys=0.0**
+
+  * A woman is picking a can.
+  * A man is playing a guitar.
+
+---
+
+**622: diff=0.13, gold=3.6,  sys=3.73**
+
+  * A man is playing a guitar.
+  * Someoen is playing guitar.
+
+---
+
+**623: diff=0.12, gold=0.6,  sys=0.47**
+
+  * A man is putting a pan into an oven.
+  * A woman is cutting an onion.
+
+---
+
+**624: diff=0.12, gold=3.8,  sys=3.67**
+
+  * The woman is cutting cooked octopus.
+  * A woman is chopping octopus.
+
+---
+
+**625: diff=0.12, gold=1.5,  sys=1.62**
+
+  * A man is crushing garlic with the back of a knife.
+  * A woman is slicing meat with a knife.
+
+---
+
+**626: diff=0.12, gold=2.8,  sys=2.92**
+
+  * The little boy is singing and playing the guitar.
+  * A baby is playing a guitar.
+
+---
+
+**627: diff=0.12, gold=1.33,  sys=1.20**
+
+  * The boy is playing the piano.
+  * A band is playing on stage.
+
+---
+
+**628: diff=0.12, gold=0.0,  sys=0.12**
+
+  * A cat is pouncing on a trampoline.
+  * A man is slicing a tomato.
+
+---
+
+**629: diff=0.12, gold=0.0,  sys=0.12**
+
+  * A man is playing a guitar.
+  * Someone is handling a bun.
+
+---
+
+**630: diff=0.12, gold=0.75,  sys=0.87**
+
+  * A boy is crawling into a dog house.
+  * A boy is playing a wooden flute.
+
+---
+
+**631: diff=0.12, gold=0.0,  sys=0.12**
+
+  * A man is making a bed.
+  * A woman is playing a guitar.
+
+---
+
+**632: diff=0.12, gold=2.5,  sys=2.62**
+
+  * Two teams are playing soccer.
+  * Different sets of teams are playing football on a field.
+
+---
+
+**633: diff=0.12, gold=3.0,  sys=2.87**
+
+  * A man is cutting a fish.
+  * A man guts a fish.
+
+---
+
+**634: diff=0.12, gold=0.08,  sys=0.20**
+
+  * A man is cutting a potato.
+  * A woman plays an electric guitar.
+
+---
+
+**635: diff=0.12, gold=4.0,  sys=3.87**
+
+  * A man plays a keyboard.
+  * A person is playing the keyboard.
+
+---
+
+**636: diff=0.12, gold=4.4,  sys=4.27**
+
+  * A man rides off on a motorcycle.
+  * A man is riding on a motorcycle.
+
+---
+
+**637: diff=0.12, gold=0.0,  sys=0.12**
+
+  * A woman is stirring two eggs in a glass bowl.
+  * A young girl is singing on a stage.
+
+---
+
+**638: diff=0.11, gold=1.0,  sys=0.88**
+
+  * Someone is slicing an onion.
+  * Someoen is peeling a potato.
+
+---
+
+**639: diff=0.11, gold=0.4,  sys=0.28**
+
+  * A man is rowing a boat.
+  * A man is slicing a tomato.
+
+---
+
+**640: diff=0.11, gold=0.5,  sys=0.38**
+
+  * A man is smoking.
+  * A man is skating.
+
+---
+
+**641: diff=0.11, gold=2.4,  sys=2.51**
+
+  * A man is slicing a bun.
+  * A man is slicing an onion.
+
+---
+
+**642: diff=0.11, gold=1.75,  sys=1.63**
+
+  * The ballerina is dancing.
+  * A man is dancing.
+
+---
+
+**643: diff=0.11, gold=1.6,  sys=1.71**
+
+  * A panda is climbing.
+  * A man is climbing a rope.
+
+---
+
+**644: diff=0.10, gold=3.75,  sys=3.85**
+
+  * Someone is carving a statue.
+  * A man is carving a statue.
+
+---
+
+**645: diff=0.10, gold=0.0,  sys=0.10**
+
+  * A man is playing guitar.
+  * A woman is slicing up some pork.
+
+---
+
+**646: diff=0.10, gold=0.75,  sys=0.64**
+
+  * A person is frying meat in a pan.
+  * A person is holding a skunk.
+
+---
+
+**647: diff=0.10, gold=0.6,  sys=0.70**
+
+  * A woman is sewing on a machine.
+  * A woman is breading some meat.
+
+---
+
+**648: diff=0.10, gold=0.5,  sys=0.60**
+
+  * A man is playing a guitar.
+  * A man is driving a car.
+
+---
+
+**649: diff=0.09, gold=3.8,  sys=3.70**
+
+  * Soccer players are kicking a soccer ball into the goal.
+  * A soccer player scores a goal.
+
+---
+
+**650: diff=0.09, gold=0.8,  sys=0.70**
+
+  * A man is dragging a dead deer.
+  * A man is jumping into water from a cliff.
+
+---
+
+**651: diff=0.09, gold=2.25,  sys=2.15**
+
+  * A woman is adding oil on fishes.
+  * A woman is pouring water on fish.
+
+---
+
+**652: diff=0.09, gold=3.25,  sys=3.34**
+
+  * A cat is trying to touch a dog.
+  * The cat teased the dog by touching his head.
+
+---
+
+**653: diff=0.09, gold=3.4,  sys=3.49**
+
+  * A man riding a horse in slow motion.
+  * A man is riding on a horse.
+
+---
+
+**654: diff=0.09, gold=0.0,  sys=0.09**
+
+  * Three children are eating their food.
+  * The deer jumped over the fence.
+
+---
+
+**655: diff=0.09, gold=3.4,  sys=3.49**
+
+  * A man is swinging from a rope attached to the ceiling.
+  * A man is swinging on a rope.
+
+---
+
+**656: diff=0.09, gold=3.75,  sys=3.84**
+
+  * An old woman is shaking hand with a man.
+  * A man and a woman shake hands.
+
+---
+
+**657: diff=0.08, gold=1.58,  sys=1.67**
+
+  * A man is playing a guitar.
+  * A man is playing a flute.
+
+---
+
+**658: diff=0.08, gold=0.8,  sys=0.88**
+
+  * A man is jumping into water.
+  * A man is cutting paper.
+
+---
+
+**659: diff=0.08, gold=4.25,  sys=4.16**
+
+  * A man shoots a man.
+  * A man with a pistol shoots another man.
+
+---
+
+**660: diff=0.08, gold=0.4,  sys=0.48**
+
+  * A woman is riding a horse on a beach.
+  * A man is carrying another man on his back.
+
+---
+
+**661: diff=0.08, gold=0.4,  sys=0.48**
+
+  * A man is punching through boards.
+  * A dog is running through water.
+
+---
+
+**662: diff=0.08, gold=0.4,  sys=0.48**
+
+  * A man is playing a guitar.
+  * A man is cleaning a glass door.
+
+---
+
+**663: diff=0.08, gold=2.0,  sys=2.08**
+
+  * A tiger cub is making a sound.
+  * A tiger is walking around.
+
+---
+
+**664: diff=0.07, gold=2.2,  sys=2.12**
+
+  * A man is slicing potatoes.
+  * A woman is peeling potato.
+
+---
+
+**665: diff=0.07, gold=4.6,  sys=4.52**
+
+  * A panda is sliding down a slide.
+  * A panda slides down a slide.
+
+---
+
+**666: diff=0.07, gold=0.0,  sys=0.07**
+
+  * A woman is dancing.
+  * A man is talking.
+
+---
+
+**667: diff=0.07, gold=0.6,  sys=0.67**
+
+  * A woman is frying something.
+  * A woman is riding a horse.
+
+---
+
+**668: diff=0.07, gold=4.0,  sys=3.92**
+
+  * A man is playing the guitar.
+  * A man seated in a room is playing the guitar.
+
+---
+
+**669: diff=0.07, gold=0.6,  sys=0.67**
+
+  * A woman is opening a soda and drinking it.
+  * A woman is riding on an elephant.
+
+---
+
+**670: diff=0.07, gold=1.2,  sys=1.27**
+
+  * Someone is playing a piano.
+  * A man is playing a guitar.
+
+---
+
+**671: diff=0.07, gold=0.0,  sys=0.07**
+
+  * A cat is drinking some water.
+  * A truck is going down a hill.
+
+---
+
+**672: diff=0.06, gold=0.25,  sys=0.18**
+
+  * A woman is firing a rifle.
+  * A man is performing stunts.
+
+---
+
+**673: diff=0.06, gold=4.2,  sys=4.26**
+
+  * Two dogs swim in a pool.
+  * Dogs are swimming in a pool.
+
+---
+
+**674: diff=0.06, gold=2.75,  sys=2.81**
+
+  * A young boy is holding a guitar.
+  * A little boy is playing a guitar.
+
+---
+
+**675: diff=0.06, gold=3.8,  sys=3.73**
+
+  * Someone is stirring chili in a kettle.
+  * Someone is stirring a pot of chili with a spoon.
+
+---
+
+**676: diff=0.06, gold=4.0,  sys=3.93**
+
+  * The woman is walking her dog.
+  * A woman walks her dog down the street.
+
+---
+
+**677: diff=0.06, gold=2.8,  sys=2.86**
+
+  * A monkey is playing drums.
+  * A gorilla plays the drums.
+
+---
+
+**678: diff=0.06, gold=3.8,  sys=3.86**
+
+  * The person is riding the horse.
+  * A man is riding a horse.
+
+---
+
+**679: diff=0.06, gold=3.6,  sys=3.66**
+
+  * A person is surfing a large wave.
+  * A person is surfing.
+
+---
+
+**680: diff=0.06, gold=0.0,  sys=0.06**
+
+  * A woman is chopping onion.
+  * A man is doing a card trick.
+
+---
+
+**681: diff=0.06, gold=0.8,  sys=0.73**
+
+  * A man is opening a door.
+  * A man is cutting an onion.
+
+---
+
+**682: diff=0.05, gold=2.8,  sys=2.74**
+
+  * Two men are fighting.
+  * Two men are fighting using a form of martial arts.
+
+---
+
+**683: diff=0.05, gold=0.0,  sys=0.05**
+
+  * A train is moving.
+  * A man is doing yoga.
+
+---
+
+**684: diff=0.05, gold=0.0,  sys=0.05**
+
+  * A man is doing push-ups.
+  * A woman is cutting some octopus.
+
+---
+
+**685: diff=0.05, gold=4.6,  sys=4.65**
+
+  * A woman is playing flute.
+  * A woman plays on a flute.
+
+---
+
+**686: diff=0.05, gold=3.0,  sys=2.94**
+
+  * A herd of deer are crossing the street.
+  * A herd of caribou are crossing a road.
+
+---
+
+**687: diff=0.05, gold=4.0,  sys=4.05**
+
+  * The people got off the train.
+  * The people got off the train at the station.
+
+---
+
+**688: diff=0.04, gold=0.8,  sys=0.84**
+
+  * An overweight man is skipping rope.
+  * A young man is dancing.
+
+---
+
+**689: diff=0.04, gold=0.4,  sys=0.44**
+
+  * A woman is slicing a pumpkin.
+  * A woman is riding an elephant.
+
+---
+
+**690: diff=0.04, gold=1.8,  sys=1.75**
+
+  * A man is cutting tomatoes into pieces.
+  * A woman is cutting some vegetables.
+
+---
+
+**691: diff=0.04, gold=2.8,  sys=2.84**
+
+  * A monkey pulls the tail of a dog.
+  * A monkey is teasing a dog at the zoo.
+
+---
+
+**692: diff=0.03, gold=3.6,  sys=3.63**
+
+  * The man talked on the telephone.
+  * The man is talking on the phone.
+
+---
+
+**693: diff=0.03, gold=0.6,  sys=0.63**
+
+  * Two boys are driving.
+  * Two bays are dancing.
+
+---
+
+**694: diff=0.03, gold=2.2,  sys=2.16**
+
+  * The men are playing cricket.
+  * The men are playing basketball.
+
+---
+
+**695: diff=0.03, gold=4.0,  sys=4.03**
+
+  * The man spread butter on the loaf of bread.
+  * A man is spreading butter onto bread.
+
+---
+
+**696: diff=0.03, gold=0.8,  sys=0.83**
+
+  * A woman is dancing.
+  * A woman plays the clarinet.
+
+---
+
+**697: diff=0.03, gold=1.2,  sys=1.23**
+
+  * A man is playing a guitar.
+  * A boy is playing a piano.
+
+---
+
+**698: diff=0.02, gold=4.0,  sys=3.97**
+
+  * A man is eating a banana by a tree.
+  * A man is eating a banana.
+
+---
+
+**699: diff=0.02, gold=1.6,  sys=1.57**
+
+  * A dog is playing in the snow.
+  * A dog is pawing at a fly in the carpet before it.
+
+---
+
+**700: diff=0.02, gold=3.4,  sys=3.42**
+
+  * A lion is playing with people.
+  * A lion is playing with two men.
+
+---
+
+**701: diff=0.02, gold=3.0,  sys=2.97**
+
+  * someone is slicing a vegetable.
+  * Someone is slicing a tomato.
+
+---
+
+**702: diff=0.02, gold=0.0,  sys=0.02**
+
+  * A woman is frying something in the pan.
+  * A man is playing his guitar.
+
+---
+
+**703: diff=0.02, gold=1.0,  sys=0.97**
+
+  * A man is running on a field.
+  * A man climbs up a rope.
+
+---
+
+**704: diff=0.02, gold=0.41,  sys=0.43**
+
+  * A woman is slicing meat with a knife.
+  * A man is spreading out dough.
+
+---
+
+**705: diff=0.01, gold=2.0,  sys=1.98**
+
+  * A man is playing the piano.
+  * A man played the guitar.
+
+---
+
+**706: diff=0.01, gold=1.25,  sys=1.23**
+
+  * A woman is deboning a fish.
+  * A man catches a fish.
+
+---
+
+**707: diff=0.01, gold=0.0,  sys=0.01**
+
+  * A ballet dancer is performing on stage.
+  * The beaver is being petted.
+
+---
+
+**708: diff=0.01, gold=4.6,  sys=4.58**
+
+  * The dog walked along the edge of the pool.
+  * A dog is walking along a pool.
+
+---
+
+**709: diff=0.00, gold=4.0,  sys=3.99**
+
+  * Two women are wrestling.
+  * Two women are wrestling on the floor.
+
+---
+
+**710: diff=0.00, gold=4.25,  sys=4.25**
+
+  * A man is playing the cello.
+  * A man seated is playing the cello.
+
+---
+
+**711: diff=0.00, gold=3.86,  sys=3.86**
+
+  * A man is playing a flute.
+  * A man is playing a bamboo flute.
+
+---
+
+**712: diff=0.00, gold=0.25,  sys=0.24**
+
+  * A man is looking out of a window.
+  * A woman is swimming in the water.
+
+---
+
+**713: diff=0.00, gold=0.2,  sys=0.19**
+
+  * A woman is peeling shrimp.
+  * A man is squeezing water.
+
+---
+
+**714: diff=0.00, gold=4.0,  sys=4.00**
+
+  * The rhino grazed on the grass.
+  * A rhino is grazing in a field.
+
+---
+
+**715: diff=0.0, gold=0.0,  sys=0.0**
+
+  * The woman is peeling shrimp.
+  * The man is holding a lemur.
+
+---
+
+**716: diff=0.0, gold=0.0,  sys=0.0**
+
+  * The man is riding a horse.
+  * A woman is using a hoe.
+
+---
+
+**717: diff=0.0, gold=5.0,  sys=5.0**
+
+  * The man is kissing and hugging the woman.
+  * A man is hugging and kissing a woman.
+
+---
+
+**718: diff=0.0, gold=0.0,  sys=0.0**
+
+  * The elephants are bathing.
+  * Two women are singing.
+
+---
+
+**719: diff=0.0, gold=0.0,  sys=0.0**
+
+  * The animal is eating.
+  * A woman is dancing.
+
+---
+
+**720: diff=0.0, gold=0.0,  sys=0.0**
+
+  * Someone is holding a hedgehog.
+  * A onion is being sliced.
+
+---
+
+**721: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A young man is playing the piano.
+  * A woman is peeling a prawn.
+
+---
+
+**722: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman slices a lemon.
+  * A man is talking into a microphone.
+
+---
+
+**723: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman peels an apple.
+  * A man pops wheelies on a motorcycle.
+
+---
+
+**724: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman is water skiing on a lake.
+  * A man is playing a flute.
+
+---
+
+**725: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman is swimming underwater.
+  * A man is slicing some carrots.
+
+---
+
+**726: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman is slicing octopus.
+  * A man is playing the guitar.
+
+---
+
+**727: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman is slicing big pepper.
+  * A dog is moving its mouth.
+
+---
+
+**728: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman is peeling a potato.
+  * A lion is walking around.
+
+---
+
+**729: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman is filing her nails.
+  * A man is peeling a carrot.
+
+---
+
+**730: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman is deveining shrimp.
+  * A man is dancing in rain.
+
+---
+
+**731: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A woman is cutting a cucumber.
+  * A man is playing a guitar.
+
+---
+
+**732: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A person is slicing some onions.
+  * A hamster is singing.
+
+---
+
+**733: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A person is slicing an onion.
+  * A cat is pooping into a toilet.
+
+---
+
+**734: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A person is riding a horse.
+  * A woman is slicing potatoes.
+
+---
+
+**735: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A person is peeling a potato.
+  * A cat is licking a small bottle.
+
+---
+
+**736: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is swimming.
+  * A woman is slicing meat.
+
+---
+
+**737: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is riding a skateboard.
+  * A woman is cutting a potato.
+
+---
+
+**738: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is riding a horse.
+  * A woman is washing a freezer.
+
+---
+
+**739: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is riding a bike.
+  * A panda bear is eating.
+
+---
+
+**740: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is playing a guitar.
+  * A woman is cutting vegetable.
+
+---
+
+**741: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is playing a flute.
+  * A dog is barking at a fly.
+
+---
+
+**742: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is jumping rope outside.
+  * A woman is slicing a cucumber.
+
+---
+
+**743: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is holding a leaf.
+  * A woman is watching television.
+
+---
+
+**744: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A man is buttering a piece of bread.
+  * A slow loris hanging on a cord.
+
+---
+
+**745: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A girl is eating a cupcake.
+  * A man is slicing a cucumber.
+
+---
+
+**746: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A girl is dancing in a cage.
+  * A onion is being chopped.
+
+---
+
+**747: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A dog is jumping on a trampoline.
+  * A boy is playing a guitar.
+
+---
+
+**748: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A chimpanzee is hurting a woman.
+  * A man is driving a car.
+
+---
+
+**749: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A cat is jumping into a box.
+  * A young man is talking to a leaf.
+
+---
+
+**750: diff=0.0, gold=0.0,  sys=0.0**
+
+  * A boy is pushing a van.
+  * A person is slicing a tomato.
+
+---
+
