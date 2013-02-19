@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: weka:weka:3.7.5">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/weka/weka/3.7.5/weka-3.7.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/weka/weka/3.7.5/weka-3.7.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/weka/weka/3.7.5/weka-3.7.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

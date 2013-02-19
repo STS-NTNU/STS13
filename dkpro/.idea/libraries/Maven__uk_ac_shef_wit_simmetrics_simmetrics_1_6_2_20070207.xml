@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: uk.ac.shef.wit.simmetrics:simmetrics:1.6.2.20070207">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/uk/ac/shef/wit/simmetrics/simmetrics/1.6.2.20070207/simmetrics-1.6.2.20070207.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/uk/ac/shef/wit/simmetrics/simmetrics/1.6.2.20070207/simmetrics-1.6.2.20070207-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/uk/ac/shef/wit/simmetrics/simmetrics/1.6.2.20070207/simmetrics-1.6.2.20070207-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

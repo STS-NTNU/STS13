@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.lexical-asl:0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/algorithms/de.tudarmstadt.ukp.similarity.algorithms.lexical-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.algorithms.lexical-asl-0.0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/algorithms/de.tudarmstadt.ukp.similarity.algorithms.lexical-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.algorithms.lexical-asl-0.0.1-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/algorithms/de.tudarmstadt.ukp.similarity.algorithms.lexical-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.algorithms.lexical-asl-0.0.1-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
