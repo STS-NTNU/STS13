@@ -51,7 +51,7 @@ public class LogFilter
 	    return result;
 	}
 
-	@Override           double
+	@Override
 	public String globalInfo()
 	{
 		return "A simple filter which applies the log function to all attribute values.";
