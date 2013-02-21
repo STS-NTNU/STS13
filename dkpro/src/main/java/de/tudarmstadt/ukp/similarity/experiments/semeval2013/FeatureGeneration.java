@@ -3,6 +3,7 @@ package de.tudarmstadt.ukp.similarity.experiments.semeval2013;
 import static de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.DATASET_DIR;
 import static de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.FEATURES_DIR;
 import static de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.UTILS_DIR;
+
 import static org.uimafit.factory.AnalysisEngineFactory.createPrimitive;
 import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
 import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
@@ -14,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SentLenSimilarityResource;
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SentSumSimilarityResource;
 import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
@@ -107,7 +110,28 @@ public class FeatureGeneration
 				"string",
 				"LongestCommonSubsequenceComparator"
 				));
-		
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        SentSumSimilarityResource.class,
+                        SentSumSimilarityResource.PARAM_N, "3"),
+                Document.class.getName(),
+                false,
+                "LBexp",
+                "SentSumSimilarityMeasure"
+        ));
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        SentLenSimilarityResource.class,
+                        SentLenSimilarityResource.PARAM_LOG, "true"),
+                Document.class.getName(),
+                false,
+                "string",
+                "sent_len"
+                )
+        );
+
 		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	SimpleTextSimilarityResource.class,
