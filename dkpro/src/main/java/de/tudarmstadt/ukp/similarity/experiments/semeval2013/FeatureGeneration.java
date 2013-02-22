@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.RelationSimilarityResource;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SentLenSimilarityResource;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SentSumSimilarityResource;
 import org.apache.commons.io.FileUtils;
@@ -120,6 +121,17 @@ public class FeatureGeneration
                 "LBexp",
                 "SentSumSimilarityMeasure"
         ));
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        RelationSimilarityResource.class,
+                        RelationSimilarityResource.PARAM_N, "3"),
+                Document.class.getName(),
+                false,
+                "LBexp",
+                "RelationSumSimilarityMeasure"
+        ));
+
 
         configs.add(new FeatureConfig(
                 createExternalResourceDescription(

@@ -194,6 +194,16 @@
     <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.lexsub-gpl:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: de.tudarmstadt.langtech.substituter.twsi:de.tudarmstadt.langtech.substituter.twsi:0.1.0" level="project" />
     <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.sspace-gpl:0.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///local/relex-1.4.1/relex-1.4.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="relex-1.4.1" level="application" />
   </component>
 </module>
 

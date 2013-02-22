@@ -5,23 +5,31 @@ import de.tudarmstadt.ukp.similarity.algorithms.api.TextSimilarityMeasureBase;
 
 import java.util.Collection;
 
-public class SentSumSimilarityMeasure
+import relex.RelationExtractor;
+
+
+public class RelationSimilarityMeasure
 	extends TextSimilarityMeasureBase
 {
 	@SuppressWarnings("unused")
 	private int n;
 
-	public SentSumSimilarityMeasure(int n)
+	public RelationSimilarityMeasure(int n)
 	{
 		// The configuration parameter is not used right now and intended for illustration purposes only.
 		this.n = n;
 	}
-	
-	@Override
-	public double getSimilarity(Collection<String> strings,
+
+    public double getSimilarity(Collection<String> strings,
 			Collection<String> strings2)
 		throws SimilarityException
 	{
+
+
+
+        RelationExtractor rel = new RelationExtractor(false);
+        rel.setAllowSkippedWords(true);
+
 
         String first_string =  strings.iterator().next();
         String second_string =  strings2.iterator().next();
