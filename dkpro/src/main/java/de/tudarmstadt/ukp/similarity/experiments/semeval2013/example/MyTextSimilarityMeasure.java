@@ -16,6 +16,8 @@ public class MyTextSimilarityMeasure
 		// The configuration parameter is not used right now and intended for illustration purposes only.
 		this.n = n;
 	}
+
+
 	
 	@Override
 	public double getSimilarity(Collection<String> stringList1,

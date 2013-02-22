@@ -1,6 +1,6 @@
 package de.tudarmstadt.ukp.similarity.experiments.semeval2013.example;
 
-import de.tudarmstadt.ukp.similarity.dkpro.resource.TextSimilarityResourceBase;
+import de.tudarmstadt.ukp.similarity.dkpro.resource.JCasTextSimilarityResourceBase;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
 import org.uimafit.descriptor.ConfigurationParameter;
@@ -8,8 +8,8 @@ import org.uimafit.descriptor.ConfigurationParameter;
 import java.util.Map;
 
 
-public class MyTextSimilarityResource
-	extends TextSimilarityResourceBase
+public class MyJCasTextSimilarityResource
+	extends JCasTextSimilarityResourceBase
 {
 	public static final String PARAM_N = "N";
 	@ConfigurationParameter(name=PARAM_N, mandatory=true)
@@ -24,9 +24,9 @@ public class MyTextSimilarityResource
             return false;
         }
         
-        this.mode = TextSimilarityResourceMode.list;
+        this.mode = TextSimilarityResourceMode.jcas;
         
-		measure = new MyTextSimilarityMeasure(n);
+		measure = new MyJCasTextSimilarityMeasure(n);
         
         return true;
     }
