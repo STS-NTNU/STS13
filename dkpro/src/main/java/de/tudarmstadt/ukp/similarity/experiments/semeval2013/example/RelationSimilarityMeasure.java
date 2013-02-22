@@ -6,6 +6,7 @@ import de.tudarmstadt.ukp.similarity.algorithms.api.TextSimilarityMeasureBase;
 import java.util.Collection;
 
 import relex.RelationExtractor;
+import relex.entity.EntityMaintainer;
 
 
 public class RelationSimilarityMeasure
@@ -29,6 +30,15 @@ public class RelationSimilarityMeasure
 
         RelationExtractor rel = new RelationExtractor(false);
         rel.setAllowSkippedWords(true);
+        rel.setMaxParses(3);
+        rel.setMaxParseSeconds(60);
+
+        EntityMaintainer em = null;
+
+        String sentence = "This a little bit nice.";
+
+        //RelexInfo ri =
+        rel.processSentence(sentence,em);
 
 
         String first_string =  strings.iterator().next();

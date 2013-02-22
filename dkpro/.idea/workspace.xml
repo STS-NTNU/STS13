@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13e2172c-1921-430f-bafe-5dda8b5ce1b4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/SentSumSimilarityMeasure.java" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/SentSumSimilarityMeasure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de.tudarmstadt.ukp.similarity.experiments.semeval2013.iml" afterPath="$PROJECT_DIR$/de.tudarmstadt.ukp.similarity.experiments.semeval2013.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResource.java" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="de.tudarmstadt.ukp.similarity.experiments.semeval2013.iws" />
@@ -23,12 +18,13 @@
     <file path="$PROJECT_DIR$/../sTCBR/Representation/src/ntnu/nlp/rep/onto/NPTree.scala" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1360666856413" ignored="false" />
     <file path="/MyTextSimilarityMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1360675766185" ignored="false" />
     <file path="/LogFilter.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361375455290" ignored="false" />
-    <file path="/Dummy.txt" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361530311780" ignored="false" />
+    <file path="/Dummy.txt" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361545287191" ignored="false" />
     <file path="/a.dummy" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361375673088" ignored="false" />
     <file path="/FeatureGeneration.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361527085603" ignored="false" />
     <file path="/SentSumSimilarityResource.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361461305246" ignored="false" />
     <file path="/SentSumSimilarityMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361463662137" ignored="false" />
-    <file path="/RelationSimilarityMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361542863286" ignored="false" />
+    <file path="/RelationSimilarityMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361548959825" ignored="false" />
+    <file path="/RelationSimilarityResource.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361548867521" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,22 +42,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java" line="33" class="de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.RelationSimilarityMeasure" package="de.tudarmstadt.ukp.similarity.experiments.semeval2013.example">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -109,9 +90,10 @@
       <file leaf-file-name="RelationSimilarityMeasure.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="804" selection-end="804" vertical-scroll-proportion="0.4225352">
+            <state line="41" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.47897196">
               <folding>
-                <element signature="e#366#393#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#404#431#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,8 +102,9 @@
       <file leaf-file-name="RelationExtractor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file:///local/relex/trunk/src/java/relex/RelationExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="350" column="8" selection-start="10158" selection-end="10188" vertical-scroll-proportion="0.0">
+            <state line="181" column="22" selection-start="5361" selection-end="5367" vertical-scroll-proportion="-4.76">
               <folding>
+                <element signature="e#0#14295#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -142,7 +125,7 @@
       <file leaf-file-name="RelationSimilarityResource.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="24" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
+            <state line="32" column="54" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,7 +143,7 @@
       <file leaf-file-name="FeatureGeneration.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="41" selection-start="7304" selection-end="7304" vertical-scroll-proportion="0.0">
+            <state line="125" column="30" selection-start="6133" selection-end="6133" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -225,8 +208,8 @@
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/filter/LogFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/SentSumSimilarityResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/SentSumSimilarityMeasure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java" />
       </list>
     </option>
@@ -626,19 +609,23 @@
       <created>1361463760245</created>
       <updated>1361463760245</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding another feature file that uses relex">
+      <created>1361545292361</created>
+      <updated>1361545292361</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1200" height="1880" extended-state="4" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39780602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39780602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -651,7 +638,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.27383015" sideWeight="0.7688327" order="0" side_tool="false" content_ui="combo" x="2299" y="0" width="390" height="776" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23036951" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23036951" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.24956672" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="2615" y="0" width="288" height="1739" />
@@ -699,7 +686,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding a couple of features" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding another feature file that uses relex" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -714,6 +701,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="test commit" />
     <MESSAGE value="adding a couple of features" />
+    <MESSAGE value="adding another feature file that uses relex" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -744,13 +732,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/SentSumSimilarityMeasure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="90" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -790,7 +771,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="149" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.35740072">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,12 +790,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/algorithms/de.tudarmstadt.ukp.similarity.algorithms.api-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.algorithms.api-asl-0.0.1-SNAPSHOT.jar!/de/tudarmstadt/ukp/similarity/algorithms/api/TextSimilarityMeasure.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="11" selection-start="301" selection-end="301" vertical-scroll-proportion="0.096359745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///local/jdk1.6.0_37/jre/lib/rt.jar!/sun/reflect/NativeConstructorAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="43" selection-start="804" selection-end="1053" vertical-scroll-proportion="0.25026068">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-asl-0.0.1-SNAPSHOT-sources.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/SimpleTextSimilarityResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="76" selection-start="1973" selection-end="1973" vertical-scroll-proportion="-19.2">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="30" selection-start="6133" selection-end="6133" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="54" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -827,41 +836,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/algorithms/de.tudarmstadt.ukp.similarity.algorithms.api-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.algorithms.api-asl-0.0.1-SNAPSHOT.jar!/de/tudarmstadt/ukp/similarity/algorithms/api/TextSimilarityMeasure.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="301" selection-end="301" vertical-scroll-proportion="0.096359745">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///local/relex/trunk/src/java/relex/RelationExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="350" column="8" selection-start="10158" selection-end="10188" vertical-scroll-proportion="0.0">
+        <state line="181" column="22" selection-start="5361" selection-end="5367" vertical-scroll-proportion="-4.76">
           <folding>
+            <element signature="e#0#14295#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="41" selection-start="7304" selection-end="7304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///local/jdk1.6.0_37/jre/lib/rt.jar!/sun/reflect/NativeConstructorAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="43" selection-start="804" selection-end="1053" vertical-scroll-proportion="0.25026068">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="804" selection-end="804" vertical-scroll-proportion="0.4225352">
+        <state line="41" column="0" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.47897196">
           <folding>
-            <element signature="e#366#393#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#404#431#0" expanded="true" />
           </folding>
         </state>
       </provider>

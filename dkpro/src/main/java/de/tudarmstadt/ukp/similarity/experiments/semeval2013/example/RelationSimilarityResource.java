@@ -26,7 +26,7 @@ public class RelationSimilarityResource
         
         this.mode = TextSimilarityResourceMode.text;
         
-		measure = new SentSumSimilarityMeasure(n);
+		measure = new RelationSimilarityMeasure(n);
         
         return true;
     }
