@@ -27,6 +27,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="de.tudarmstadt.ukp.similarity.experiments.semeval2013" target="1.6" />
+      <module name="relex" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
