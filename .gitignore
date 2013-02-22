@@ -1,4 +1,5 @@
 *.pyc
+*.iml
 *~
 *.wpr
 *.wpu
@@ -6,4 +7,5 @@
 _*
 *.DS_Store
 !__init__.py
+dkpro/.idea/workspace.xml
 

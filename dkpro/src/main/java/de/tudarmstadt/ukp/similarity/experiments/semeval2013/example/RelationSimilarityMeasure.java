@@ -5,8 +5,6 @@ import de.tudarmstadt.ukp.similarity.algorithms.api.TextSimilarityMeasureBase;
 
 import java.util.Collection;
 
-import relex.RelationExtractor;
-
 
 public class RelationSimilarityMeasure
 	extends TextSimilarityMeasureBase
@@ -26,9 +24,9 @@ public class RelationSimilarityMeasure
 	{
 
 
-
-        RelationExtractor rel = new RelationExtractor(false);
-        rel.setAllowSkippedWords(true);
+//
+//        RelationExtractor rel = new RelationExtractor(false);
+//        rel.setAllowSkippedWords(true);
 
 
         String first_string =  strings.iterator().next();

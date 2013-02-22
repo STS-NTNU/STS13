@@ -19,6 +19,7 @@ import de.tudarmstadt.ukp.similarity.dkpro.resource.lexical.ngrams.WordNGramCont
 import de.tudarmstadt.ukp.similarity.dkpro.resource.lexical.ngrams.WordNGramJaccardResource;
 import de.tudarmstadt.ukp.similarity.dkpro.resource.lexical.string.GreedyStringTilingMeasureResource;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.*;
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.MyJCasTextSimilarityResource;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.CharacterNGramIdfValuesGenerator;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.StopwordFilter;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.WordIdfValuesGenerator;
