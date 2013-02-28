@@ -14,11 +14,12 @@ public class RelationSimilarityMeasure
 {
 	@SuppressWarnings("unused")
 	private int n;
+    private RelationExtractor rel;
 
-	public RelationSimilarityMeasure(int n)
-	{
-		// The configuration parameter is not used right now and intended for illustration purposes only.
+	public RelationSimilarityMeasure(int n, RelationExtractor rel)
+	{                                                                          		// The configuration parameter is not used right now and intended for illustration purposes only.
 		this.n = n;
+        this.rel = rel;
 	}
 
     public double getSimilarity(Collection<String> strings,
@@ -27,9 +28,7 @@ public class RelationSimilarityMeasure
 	{
 
 
-
-        RelationExtractor rel = new RelationExtractor(false);
-        rel.setAllowSkippedWords(true);
+        this.rel.setAllowSkippedWords(true);
         rel.setMaxParses(3);
         rel.setMaxParseSeconds(60);
 
@@ -38,7 +37,8 @@ public class RelationSimilarityMeasure
         String sentence = "This a little bit nice.";
 
         //RelexInfo ri =
-        rel.processSentence(sentence,em);
+        relex.Sentence ri = rel.processSentence(sentence,em);
+
 
 
         String first_string =  strings.iterator().next();

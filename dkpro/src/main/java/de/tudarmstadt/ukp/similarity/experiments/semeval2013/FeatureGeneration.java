@@ -1,10 +1,37 @@
 package de.tudarmstadt.ukp.similarity.experiments.semeval2013;
 
+import static de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.DATASET_DIR;
+import static de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.FEATURES_DIR;
+import static de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.UTILS_DIR;
+
+import static org.uimafit.factory.AnalysisEngineFactory.createPrimitive;
+import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
+import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
+import static org.uimafit.factory.ExternalResourceFactory.createExternalResourceDescription;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.RelationSimilarityResource;
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SentLenSimilarityResource;
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SentSumSimilarityResource;
+import org.apache.commons.io.FileUtils;
+import org.apache.uima.analysis_engine.AnalysisEngine;
+import org.apache.uima.analysis_engine.AnalysisEngineDescription;
+import org.apache.uima.collection.CollectionReader;
+import org.uimafit.factory.AggregateBuilder;
+import org.uimafit.pipeline.SimplePipeline;
+
+import de.tudarmstadt.ukp.dkpro.core.api.resources.DKProContext;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Document;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.tudarmstadt.ukp.dkpro.core.gate.GateLemmatizer;
 import de.tudarmstadt.ukp.dkpro.core.opennlp.OpenNlpPosTagger;
+import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordLemmatizer;
 import de.tudarmstadt.ukp.dkpro.core.tokit.BreakIteratorSegmenter;
 import de.tudarmstadt.ukp.similarity.algorithms.lexical.string.LongestCommonSubsequenceComparator;
 import de.tudarmstadt.ukp.similarity.algorithms.lexical.string.LongestCommonSubsequenceNormComparator;
@@ -18,31 +45,18 @@ import de.tudarmstadt.ukp.similarity.dkpro.resource.lexical.ngrams.CharacterNGra
 import de.tudarmstadt.ukp.similarity.dkpro.resource.lexical.ngrams.WordNGramContainmentResource;
 import de.tudarmstadt.ukp.similarity.dkpro.resource.lexical.ngrams.WordNGramJaccardResource;
 import de.tudarmstadt.ukp.similarity.dkpro.resource.lexical.string.GreedyStringTilingMeasureResource;
-import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.*;
-import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.MyJCasTextSimilarityResource;
+import de.tudarmstadt.ukp.similarity.dkpro.resource.lexsub.TWSISubstituteWrapperResource;
+import de.tudarmstadt.ukp.similarity.dkpro.resource.lsr.ResnikRelatednessResource;
+import de.tudarmstadt.ukp.similarity.dkpro.resource.lsr.aggregate.MCS06AggregateResource;
+import de.tudarmstadt.ukp.similarity.dkpro.resource.vsm.VectorIndexSourceRelatednessResource;
+import de.tudarmstadt.ukp.similarity.ml.FeatureConfig;
+import de.tudarmstadt.ukp.similarity.ml.io.SimilarityScoreWriter;
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.Dataset;
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.Mode;
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.MyTextSimilarityResource;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.CharacterNGramIdfValuesGenerator;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.StopwordFilter;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.WordIdfValuesGenerator;
-import de.tudarmstadt.ukp.similarity.ml.FeatureConfig;
-import de.tudarmstadt.ukp.similarity.ml.io.SimilarityScoreWriter;
-import org.apache.commons.io.FileUtils;
-import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
-import org.apache.uima.collection.CollectionReader;
-import org.uimafit.factory.AggregateBuilder;
-import org.uimafit.pipeline.SimplePipeline;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import static de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.*;
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitive;
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
-import static org.uimafit.factory.ExternalResourceFactory.createExternalResourceDescription;
 
 
 public class FeatureGeneration
@@ -66,15 +80,15 @@ public class FeatureGeneration
 		 * The measure here is intended to operate on lists of lemmas without any stopword
 		 * filtering. 
 		 */
-		configs.add(new FeatureConfig(
-				createExternalResourceDescription(
-				    	MyJCasTextSimilarityResource.class,
-				    	MyJCasTextSimilarityResource.PARAM_N, "3"),
-				Lemma.class.getName(),
-				false,
-				"custom",
-				"JCasSimilarityMeasure"
-				));
+//		configs.add(new FeatureConfig(
+//				createExternalResourceDescription(
+//				    	MyTextSimilarityResource.class,
+//				    	MyTextSimilarityResource.PARAM_N, "3"),
+//				Lemma.class.getName(),
+//				false,
+//				"custom",
+//				"MyTextSimilarityMeasure_3"
+//				));
 		
 		// String features
 		configs.add(new FeatureConfig(
@@ -97,7 +111,39 @@ public class FeatureGeneration
 				"string",
 				"LongestCommonSubsequenceComparator"
 				));
-		
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        SentSumSimilarityResource.class,
+                        SentSumSimilarityResource.PARAM_N, "3"),
+                Document.class.getName(),
+                false,
+                "LBexp",
+                "SentSumSimilarityMeasure"
+        ));
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        RelationSimilarityResource.class,
+                        RelationSimilarityResource.PARAM_N, "3"),
+                Document.class.getName(),
+                false,
+                "LBexp",
+                "RelationSumSimilarityMeasure"
+        ));
+
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        SentLenSimilarityResource.class,
+                        SentLenSimilarityResource.PARAM_LOG, "true"),
+                Document.class.getName(),
+                false,
+                "string",
+                "sent_len"
+                )
+        );
+
 		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	SimpleTextSimilarityResource.class,

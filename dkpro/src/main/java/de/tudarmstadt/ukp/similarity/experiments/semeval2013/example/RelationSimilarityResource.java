@@ -4,6 +4,7 @@ import de.tudarmstadt.ukp.similarity.dkpro.resource.TextSimilarityResourceBase;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
 import org.uimafit.descriptor.ConfigurationParameter;
+import relex.RelationExtractor;
 
 import java.util.Map;
 
@@ -15,6 +16,8 @@ public class RelationSimilarityResource
 	@ConfigurationParameter(name=PARAM_N, mandatory=false)
 	private int n;
 
+    public RelationExtractor rel;
+
 	@SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public boolean initialize(ResourceSpecifier specifier, Map additionalParams)
@@ -23,10 +26,15 @@ public class RelationSimilarityResource
         if (!super.initialize(specifier, additionalParams)) {
             return false;
         }
-        
+
+
+        //RelationExtractor rel = new RelationExtractor(false);
+
+        this.rel = new RelationExtractor(false);
+
         this.mode = TextSimilarityResourceMode.text;
         
-		measure = new RelationSimilarityMeasure(n);
+		measure = new RelationSimilarityMeasure(n, rel);
         
         return true;
     }
