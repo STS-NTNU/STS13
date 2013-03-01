@@ -13,6 +13,5 @@ _*
 *.iml
 *.iws
 log/
-target/
 dkpro/.idea/workspace.xml
 
