@@ -48,14 +48,29 @@ public class RelationSimilarityMeasure
         //RelationExtractor.main(foo);
 
         Sentence ri = rel.processSentence(first_string,em);
-
         Frame frame = null;
-
         frame = new Frame();
-
 		String fin = SimpleView.printRelationsAlt(ri.getParses().get(0));
 		String[] fout = frame.process(fin);
 
+        Sentence secsen = rel.processSentence(second_string,em);
+        Frame secframe = null;
+        secframe = new Frame();
+        String secfin = SimpleView.printRelationsAlt(secsen.getParses().get(0));
+        String[] secfout = secframe.process(secfin);
+
+        for (String f : fout) {
+
+            for (String g : secfout) {
+
+                if (g.contentEquals(f)) {
+                    System.out.print(f + " \n");
+                }
+            }
+
+        }
+
+        secfout.getClass();
 
         int sum1 = 0;
         int sum2 = 0;
