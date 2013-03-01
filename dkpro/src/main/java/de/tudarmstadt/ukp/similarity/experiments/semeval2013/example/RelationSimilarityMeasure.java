@@ -6,7 +6,10 @@ import de.tudarmstadt.ukp.similarity.algorithms.api.TextSimilarityMeasureBase;
 import java.util.Collection;
 
 import relex.RelationExtractor;
+import relex.Sentence;
 import relex.entity.EntityMaintainer;
+import relex.frame.Frame;
+import relex.output.SimpleView;
 
 
 public class RelationSimilarityMeasure
@@ -29,20 +32,30 @@ public class RelationSimilarityMeasure
 
 
         this.rel.setAllowSkippedWords(true);
-        rel.setMaxParses(3);
-        rel.setMaxParseSeconds(60);
+        this.rel.setMaxParses(3);
+        this.rel.setMaxParseSeconds(60);
 
         EntityMaintainer em = null;
 
-        String sentence = "This a little bit nice.";
-
-        //RelexInfo ri =
-        relex.Sentence ri = rel.processSentence(sentence,em);
-
-
+        String sentence = "I saw a man with binoculars.";
 
         String first_string =  strings.iterator().next();
         String second_string =  strings2.iterator().next();
+
+        String [] foo = {"-n 4 -l -t -f -r -a -s Alice ate the mushroom."};
+
+        //rel.main(foo);
+        //RelationExtractor.main(foo);
+
+        Sentence ri = rel.processSentence(first_string,em);
+
+        Frame frame = null;
+
+        frame = new Frame();
+
+		String fin = SimpleView.printRelationsAlt(ri.getParses().get(0));
+		String[] fout = frame.process(fin);
+
 
         int sum1 = 0;
         int sum2 = 0;

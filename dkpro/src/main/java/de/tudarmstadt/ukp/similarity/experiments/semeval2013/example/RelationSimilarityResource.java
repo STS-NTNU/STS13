@@ -30,7 +30,10 @@ public class RelationSimilarityResource
 
         //RelationExtractor rel = new RelationExtractor(false);
 
+        String foo = "f";
+
         this.rel = new RelationExtractor(false);
+
 
         this.mode = TextSimilarityResourceMode.text;
         
