@@ -6,4 +6,12 @@
 _*
 *.DS_Store
 !__init__.py
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+log/
+target/
 
