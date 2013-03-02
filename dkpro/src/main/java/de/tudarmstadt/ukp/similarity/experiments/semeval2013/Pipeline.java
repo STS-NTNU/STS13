@@ -2,6 +2,8 @@ package de.tudarmstadt.ukp.similarity.experiments.semeval2013;
 
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.Evaluator;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.Features2Arff;
+import edu.ntnu.nlp.gate.GatePreprocessor;
+import edu.ntnu.nlp.sim.word.WNSim;
 import org.apache.commons.cli.*;
 
 import static de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.Dataset.*;
@@ -46,7 +48,10 @@ public class Pipeline
 	public static void main(String[] args)
 		throws Exception
 	{
-		Options options = new Options();
+        GatePreprocessor.init("C:/Program Files/GATE_Developer_7.1");
+        WNSim.init("E:/Dropbox/Data/WordNet", "3.0");
+
+        Options options = new Options();
 		options.addOption("D", "train", false, "run train mode");
 		options.addOption("T", "test", false, "run test mode incl. evaluation (post-submission scenario)");
 		options.addOption("S", "submission", false, "run test mode without evaluation (submission scenario)");
