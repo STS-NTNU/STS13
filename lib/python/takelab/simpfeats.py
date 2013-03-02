@@ -13,6 +13,13 @@ import nltk
 from nltk.corpus import wordnet
 
 
+# global variables to be defined
+wweight = None
+minwweight = None
+nyt_sim = None
+wiki_sim = None
+
+
 stopwords = set([
 "i", "a", "about", "an", "are", "as", "at", "be", "by", "for", "from",
 "how", "in", "is", "it", "of", "on", "or", "that", "the", "this", "to",
