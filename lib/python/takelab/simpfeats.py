@@ -418,6 +418,8 @@ def generate_features(input_fname, score_fname=None,
                       outf=sys.stdout, out_format="libsvm", with_lsa=True):
     if score_fname:
         scores = [float(x) for x in open(score_fname)]
+    else:
+        scores = None
 
     for idx, (sa, sb) in enumerate(load_data(input_fname)):
         ##if idx > 5: break
@@ -443,7 +445,7 @@ def generate_features(input_fname, score_fname=None,
             raise ValueError("unknown ouptut format: " + repr(out_format))
     
     if out_format == "numpy":
-        y = np.array(scores)
+        y = np.array(scores) if scores is not None else np.zeros(X.shape[0])
         np.savez(outf, X=X, y=y)
                 
 
