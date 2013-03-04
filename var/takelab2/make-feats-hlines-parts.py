@@ -1,22 +1,26 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 """
 make features for part of hlines
 """
 
+# NB I ran a variant of this on the Translate server
+
 import sys
+
+sys.path.append("./lib/python")
 
 import takelab.simpfeats as tl
 
 
 # load word counts for IC weighting
-tl.wweight = tl.load_wweight_table("../wordfreq/_wordfreq_hlines_parts.txt")
+tl.wweight = tl.load_wweight_table("../wordfreq/_wordfreq_hlines.txt")
 tl.minwweight = min(tl.wweight.values())
 
-for part in "abcdefghij":
-    out_fname = "_npz_data/_hlines_part_a{}.npz".format(part)
+for in_fname in sys.argv[1:]:
+    out_fname = in_fname + ".npz"
     sys.stderr.write("creating {}\n".format(out_fname))
-    tl.generate_features("../../../../local/corpora/hlines/_hlines_part_a{}".format(part),
+    tl.generate_features(in_fname,
                          outf=out_fname, 
                          out_format="numpy", 
                          with_lsa=False)
