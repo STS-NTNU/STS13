@@ -15,9 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.RelationSimilarityResource;
-import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SentLenSimilarityResource;
-import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SentSumSimilarityResource;
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.*;
 import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
@@ -53,7 +51,6 @@ import de.tudarmstadt.ukp.similarity.ml.FeatureConfig;
 import de.tudarmstadt.ukp.similarity.ml.io.SimilarityScoreWriter;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.Dataset;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.Mode;
-import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.MyTextSimilarityResource;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.CharacterNGramIdfValuesGenerator;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.StopwordFilter;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.WordIdfValuesGenerator;
@@ -91,7 +88,7 @@ public class FeatureGeneration
 //				));
 		
 		// String features
-		configs.add(new FeatureConfig(
+/*		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	GreedyStringTilingMeasureResource.class,
 				    	GreedyStringTilingMeasureResource.PARAM_MIN_MATCH_LENGTH, "3"),
@@ -110,9 +107,9 @@ public class FeatureGeneration
 				false,
 				"string",
 				"LongestCommonSubsequenceComparator"
-				));
+				));*/
 
-        configs.add(new FeatureConfig(
+/*        configs.add(new FeatureConfig(
                 createExternalResourceDescription(
                         SentSumSimilarityResource.class,
                         SentSumSimilarityResource.PARAM_N, "3"),
@@ -120,7 +117,7 @@ public class FeatureGeneration
                 false,
                 "LBexp",
                 "SentSumSimilarityMeasure"
-        ));
+        ));*/
 
         configs.add(new FeatureConfig(
                 createExternalResourceDescription(
@@ -129,11 +126,30 @@ public class FeatureGeneration
                 Document.class.getName(),
                 false,
                 "LBexp",
-                "RelationSumSimilarityMeasure"
+                "RelationSimilarityMeasure"
         ));
 
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        RelationSimilarityResourceOneConstituent.class,
+                        RelationSimilarityResourceOneConstituent.PARAM_N, "3"),
+                Document.class.getName(),
+                false,
+                "LBexp",
+                "RelationSimilarityMeasureOneConstituent"
+        ));
 
         configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        RelationSimilarityFrameTypeResource.class,
+                        RelationSimilarityFrameTypeResource.PARAM_N, "3"),
+                Document.class.getName(),
+                false,
+                "LBexp",
+                "RelationSimilarityFrameTypeMeasure"
+        ));
+
+/*        configs.add(new FeatureConfig(
                 createExternalResourceDescription(
                         SentLenSimilarityResource.class,
                         SentLenSimilarityResource.PARAM_LOG, "true"),
@@ -221,7 +237,7 @@ public class FeatureGeneration
 					"n-grams",
 					"WordNGramJaccardMeasure_" + n + "_stopword-filtered"
 					));			
-		}
+		}*/
 		
 		/* TODO: If you plan to use the following measures, make sure that you have the
 		 * necessary resources installed. 
