@@ -37,7 +37,7 @@ public class ParseConfidenceMeasure
         this.rel.setAllowSkippedWords(true);
         this.rel.setMaxParses(1);
         this.rel.setMaxParseSeconds(60);
-
+                          sdf
         EntityMaintainer em = null;
 
         String sentence = "Thus, it is urgent that the staff of the interservice group are very quickly strengthened at the heart of the Secretary-General of the Commission, so that all the proposed act of general scope can be accompanied, during their examination by the college on the basis of Article 299 (2) of a fiche d'impact detailed.";
