@@ -1,5 +1,6 @@
 package de.tudarmstadt.ukp.similarity.experiments.semeval2013.example;
 
+import com.sun.corba.se.impl.logging.ORBUtilSystemException;
 import de.tudarmstadt.ukp.similarity.algorithms.api.SimilarityException;
 import de.tudarmstadt.ukp.similarity.algorithms.api.TextSimilarityMeasureBase;
 
@@ -36,26 +37,25 @@ public class RelationSimilarityMeasure
         */
 
         this.rel.setAllowSkippedWords(true);
-        this.rel.setMaxParses(3);
+        this.rel.setMaxParses(1);
         this.rel.setMaxParseSeconds(60);
 
         EntityMaintainer em = null;
 
-        String sentence = "Without doubt, it was better to have no agreement at all than a poor one and it is true that, in this instance, the American proposal was a third-rate proposal, and one which was completely unacceptable to Europe.";
-
+        String sentence = "Thus, it is urgent that the staff of the interservice group are very quickly strengthened at the heart of the Secretary-General of the Commission, so that all the proposed act of general scope can be accompanied, during their examination by the college on the basis of Article 299 (2) of a fiche d'impact detailed.";
         String first_string =  strings.iterator().next();
         String second_string =  strings2.iterator().next();
 
         String [] foo = {"-n 4 -l -t -f -r -a -s Alice ate the mushroom."};
 
-        //rel.main(foo);
-        //RelationExtractor.main(foo);
+        // System.out.println(first_string + "\n");
 
         Sentence ri = rel.processSentence(first_string,em);
+        Sentence secsen = rel.processSentence(second_string,em);
 
         // Need to get out of here if there are no parses
-        if (ri.getParses().size() == 0)
-            return 0;
+        if (ri.getParses().size() == 0 || secsen.getParses().size() == 0)
+            return 0.0;
 
         Frame frame = null;
         frame = new Frame();
@@ -63,15 +63,16 @@ public class RelationSimilarityMeasure
 		String[] fout = frame.process(fin);
 
 
-
-
-        Sentence secsen = rel.processSentence(second_string,em);
         Frame secframe = null;
         secframe = new Frame();
         String secfin = SimpleView.printRelationsAlt(secsen.getParses().get(0));
         String[] secfout = secframe.process(secfin);
 
-        float matches = 0;
+        if (fout.length == 0 || secfout.length == 0) {
+            return 0.0;
+        }
+
+        Double matches = 0.0;
 
         for (String f : fout) {
 
@@ -91,9 +92,9 @@ public class RelationSimilarityMeasure
         int sum2 = 0;
 
 
-        float diff = (matches / fout.length );
+        Double diff = (matches / fout.length );
 
-
+        diff = Math.floor(diff*1000) / 1000;
         return diff;  //To change body of implemented methods use File | Settings | File Templates.
 		// Your similarity computation goes here.
 

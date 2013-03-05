@@ -35,7 +35,7 @@ public class ParseConfidenceResource
 
         this.mode = TextSimilarityResourceMode.text;
         
-		measure = new RelationSimilarityMeasure(n, rel);
+		measure = new ParseConfidenceMeasure(n, rel);
         
         return true;
     }

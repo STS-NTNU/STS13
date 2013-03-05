@@ -37,7 +37,7 @@ public class RelationSimilarityFrameTypeMeasure
         */
 
         this.rel.setAllowSkippedWords(true);
-        this.rel.setMaxParses(3);
+        this.rel.setMaxParses(1);
         this.rel.setMaxParseSeconds(60);
 
         EntityMaintainer em = null;
@@ -47,22 +47,28 @@ public class RelationSimilarityFrameTypeMeasure
 
 
         Sentence ri = rel.processSentence(first_string,em);
-        if (ri.getParses().size() == 0)
+        Sentence secsen = rel.processSentence(second_string,em);
+
+        if (ri.getParses().size() == 0 || secsen.getParses().size() == 0)
             return 0;
+
         Frame frame = null;
         frame = new Frame();
 		String fin = SimpleView.printRelationsAlt(ri.getParses().get(0));
 		String[] fout = frame.process(fin);
 
-        Sentence secsen = rel.processSentence(second_string,em);
         Frame secframe = null;
         secframe = new Frame();
         String secfin = SimpleView.printRelationsAlt(secsen.getParses().get(0));
         String[] secfout = secframe.process(secfin);
 
+        if (fout.length == 0 || secfout.length == 0) {
+            return 0.0;
+        }
+
         Pattern pattern = Pattern.compile("[^(]+");
 
-        float matches = 0;
+        Double matches = 0.0;
 
         for (String f : fout) {
             Matcher matcher = pattern.matcher(f);
@@ -88,8 +94,9 @@ public class RelationSimilarityFrameTypeMeasure
         int sum2 = 0;
 
 
-        float diff = (matches / fout.length );
+        Double diff = (matches / fout.length );
 
+        diff = Math.floor(diff*1000) / 1000;
 
         return diff;  //To change body of implemented methods use File | Settings | File Templates.
 		// Your similarity computation goes here.

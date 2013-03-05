@@ -83,9 +83,9 @@ public class Pipeline
 		throws Exception
 	{
 		// Generate the features for training data
-		//FeatureGeneration.generateFeatures(MSRpar, TRAIN);
+		FeatureGeneration.generateFeatures(MSRpar, TRAIN);
 		FeatureGeneration.generateFeatures(MSRvid, TRAIN);
-		//FeatureGeneration.generateFeatures(SMTeuroparl, TRAIN);
+		FeatureGeneration.generateFeatures(SMTeuroparl, TRAIN);
 		
 		// Packages features in arff files
 		Features2Arff.toArffFile(TRAIN, MSRpar, MSRvid, SMTeuroparl);

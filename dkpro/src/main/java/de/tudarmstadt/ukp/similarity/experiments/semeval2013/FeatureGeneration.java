@@ -149,18 +149,17 @@ public class FeatureGeneration
                 "RelationSimilarityFrameTypeMeasure"
         ));
 
-/*        configs.add(new FeatureConfig(
+        configs.add(new FeatureConfig(
                 createExternalResourceDescription(
-                        SentLenSimilarityResource.class,
-                        SentLenSimilarityResource.PARAM_LOG, "true"),
+                        ParseConfidenceResource.class),
                 Document.class.getName(),
                 false,
-                "string",
-                "sent_len"
+                "LBexp",
+                "ParseConfidence"
                 )
         );
 
-		configs.add(new FeatureConfig(
+/*		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	SimpleTextSimilarityResource.class,
 				    	SimpleTextSimilarityResource.PARAM_MODE, "text",
