@@ -30,8 +30,6 @@ public class ParseConfidenceResource
 
         //RelationExtractor rel = new RelationExtractor(false);
 
-        String foo = "f";
-
         this.rel = new RelationExtractor(false);
 
 
