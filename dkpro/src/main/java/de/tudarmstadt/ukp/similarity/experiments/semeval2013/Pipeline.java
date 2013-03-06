@@ -43,7 +43,7 @@ public class Pipeline
 	public static final String UTILS_DIR = "target/utils";
 	public static final String OUTPUT_DIR = "target/output";
 
-    public static final String FILTER = "nSimilarityMeasure.txt";
+    public static final String [] FILTER = {"n-gram", "string"};
 
 	public static void main(String[] args)
 		throws Exception

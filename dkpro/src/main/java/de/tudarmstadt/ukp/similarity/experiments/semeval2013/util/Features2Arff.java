@@ -44,7 +44,7 @@ public class Features2Arff
 		System.out.println("Generating ARFF file");
 		
 		Collection<File> files = FileUtils.listFiles(
-				new File(FEATURES_DIR + "/" + mode.toString().toLowerCase() + "/" + dataset.toString() + "/LBexp"),
+				new File(FEATURES_DIR + "/" + mode.toString().toLowerCase() + "/" + dataset.toString() ),
 				new String[] { "txt" },
 				true); 
 		
@@ -58,7 +58,7 @@ public class Features2Arff
 	}
 
     // these custom methods are written by LB
-    public static void toArffFileFilter(Mode mode, String filter, Dataset... datasets)
+    public static void toArffFileFilter(Mode mode, String [] filters, Dataset... datasets)
             throws IOException
     {
         for (Dataset dataset : datasets)
@@ -68,12 +68,12 @@ public class Features2Arff
             PathMatchingResourcePatternResolver r = new PathMatchingResourcePatternResolver();
             Resource res = r.getResource(path);
 
-            toArffFileFilter(mode, filter, dataset, res.getFile());
+            toArffFileFilter(mode, filters, dataset, res.getFile());
         }
     }
 
     @SuppressWarnings("unchecked")
-    private static void toArffFileFilter(Mode mode,  String filter, Dataset dataset, File goldStandard)
+    private static void toArffFileFilter(Mode mode,  String [] filters, Dataset dataset, File goldStandard)
             throws IOException
     {
         System.out.println("Generating ARFF file, after filtering the files");
@@ -86,7 +86,17 @@ public class Features2Arff
         Iterator<File> myit = files.iterator();
         while (myit.hasNext()) {
             File file = myit.next();
-            if (!file.getName().contains(filter) )
+            boolean found = false;
+
+            for (String filter : filters) {
+
+                if (file.getAbsolutePath().contains(filter)){
+                    found = true;
+                }
+
+            }
+
+            if (found == false)
                 myit.remove();
         }
 
