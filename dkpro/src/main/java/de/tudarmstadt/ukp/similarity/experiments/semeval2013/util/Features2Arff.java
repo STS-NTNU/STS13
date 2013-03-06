@@ -3,12 +3,9 @@ package de.tudarmstadt.ukp.similarity.experiments.semeval2013.util;
 import java.io.File;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.core.io.Resource;
@@ -47,7 +44,7 @@ public class Features2Arff
 		System.out.println("Generating ARFF file");
 		
 		Collection<File> files = FileUtils.listFiles(
-				new File(FEATURES_DIR + "/" + mode.toString().toLowerCase() + "/" + dataset.toString()),
+				new File(FEATURES_DIR + "/" + mode.toString().toLowerCase() + "/" + dataset.toString() + "/LBexp"),
 				new String[] { "txt" },
 				true); 
 		
@@ -59,7 +56,50 @@ public class Features2Arff
 		
 		System.out.println(" - done");
 	}
-	
+
+    // these custom methods are written by LB
+    public static void toArffFileFilter(Mode mode, String filter, Dataset... datasets)
+            throws IOException
+    {
+        for (Dataset dataset : datasets)
+        {
+            String path = GOLDSTANDARD_DIR + "/" + mode.toString().toLowerCase() + "/STS.gs." + dataset.toString() + ".txt";
+
+            PathMatchingResourcePatternResolver r = new PathMatchingResourcePatternResolver();
+            Resource res = r.getResource(path);
+
+            toArffFileFilter(mode, filter, dataset, res.getFile());
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    private static void toArffFileFilter(Mode mode,  String filter, Dataset dataset, File goldStandard)
+            throws IOException
+    {
+        System.out.println("Generating ARFF file, after filtering the files");
+
+        Collection<File> files = FileUtils.listFiles(
+                new File(FEATURES_DIR + "/" + mode.toString().toLowerCase() + "/" + dataset.toString() ),
+                new String[] { "txt" },
+                true);
+
+        Iterator<File> myit = files.iterator();
+        while (myit.hasNext()) {
+            File file = myit.next();
+            if (!file.getName().contains(filter) )
+                myit.remove();
+        }
+
+
+            String arffString = toArffString(files, goldStandard);
+
+        FileUtils.writeStringToFile(
+                new File(MODELS_DIR + "/" + mode.toString().toLowerCase() + "/" + dataset.toString() + ".arff"),
+                arffString);
+
+        System.out.println(" - done");
+    }
+
 	@SuppressWarnings("unchecked")
 	private static String toArffString(Collection<File> csvFiles, File goldFile)
 		throws IOException
@@ -158,4 +198,8 @@ public class Features2Arff
 		
 		return arff.toString();
 	}
+
 }
+
+
+

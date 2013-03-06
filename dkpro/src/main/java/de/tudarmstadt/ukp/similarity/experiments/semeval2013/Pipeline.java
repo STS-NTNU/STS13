@@ -88,7 +88,7 @@ public class Pipeline
 		FeatureGeneration.generateFeatures(SMTeuroparl, TRAIN);
 		
 		// Packages features in arff files
-		Features2Arff.toArffFile(TRAIN, MSRpar, MSRvid, SMTeuroparl);
+		Features2Arff.toArffFileFilter(TRAIN, "Conf", MSRpar, MSRvid, SMTeuroparl);
 
 		// Run the classifier
 		Evaluator.runLinearRegressionCV(TRAIN, MSRpar, MSRvid, SMTeuroparl);
@@ -117,8 +117,8 @@ public class Pipeline
 		FeatureGeneration.combineFeatureSets(TRAIN, ALL, MSRpar, MSRvid, SMTeuroparl);
 		
 		// Package features in arff files
-		Features2Arff.toArffFile(TRAIN, ALL);
-		Features2Arff.toArffFile(TEST, MSRpar, MSRvid, SMTeuroparl, OnWN, SMTnews);
+		Features2Arff.toArffFileFilter(TRAIN, "Conf", ALL);
+		Features2Arff.toArffFileFilter(TEST, "Conf", MSRpar, MSRvid, SMTeuroparl, OnWN, SMTnews);
 
 		// Run the classifer
 		Evaluator.runLinearRegression(ALL, MSRpar, MSRvid, SMTeuroparl, OnWN, SMTnews);
