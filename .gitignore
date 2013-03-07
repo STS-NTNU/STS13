@@ -14,4 +14,7 @@ _*
 *.iws
 log/
 dkpro/.idea/workspace.xml
+*.pdf
+*.png
+
 
