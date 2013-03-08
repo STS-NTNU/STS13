@@ -43,8 +43,8 @@ public class Pipeline
 	public static final String UTILS_DIR = "target/utils";
 	public static final String OUTPUT_DIR = "target/output";
 
-    public static final String [] FILTER = {"n-gram", "string"};
-
+    public static final String [] FILTER = {"word-sim","Rel", "esa", "n-gram", "Longest", "Greed"};
+                                            //"word-sim","Rel", "esa", "n-gram", "Longest", "Greed"
 	public static void main(String[] args)
 		throws Exception
 	{

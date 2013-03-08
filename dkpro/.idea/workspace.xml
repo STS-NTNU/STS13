@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13e2172c-1921-430f-bafe-5dda8b5ce1b4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/util/Features2Arff.java" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/util/Features2Arff.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceMeasure.java" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceMeasure.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/Pipeline.java" afterPath="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/Pipeline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="de.tudarmstadt.ukp.similarity.experiments.semeval2013.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362587517474" ignored="false" />
-    <file path="/Pipeline.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362587112914" ignored="false" />
+    <file path="/fragment.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362740578826" ignored="false" />
+    <file path="/Pipeline.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362750731358" ignored="false" />
     <file path="/StopwordFilter.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1360665932327" ignored="false" />
     <file path="/SBT" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1360666640535" ignored="false" />
     <file path="$PROJECT_DIR$/../sTCBR/Representation/src/ntnu/nlp/rep/onto/GlobalOntology.scala" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1360666811491" ignored="false" />
@@ -17,9 +19,9 @@
     <file path="$PROJECT_DIR$/../sTCBR/Representation/src/ntnu/nlp/rep/onto/NPTree.scala" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1360666856413" ignored="false" />
     <file path="/MyTextSimilarityMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1360675766185" ignored="false" />
     <file path="/LogFilter.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361375455290" ignored="false" />
-    <file path="/Dummy.txt" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362584096944" ignored="false" />
+    <file path="/Dummy.txt" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362587839032" ignored="false" />
     <file path="/a.dummy" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361375673088" ignored="false" />
-    <file path="/FeatureGeneration.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362489851813" ignored="false" />
+    <file path="/FeatureGeneration.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362748467100" ignored="false" />
     <file path="/SentSumSimilarityResource.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361461305246" ignored="false" />
     <file path="/SentSumSimilarityMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1361463662137" ignored="false" />
     <file path="/RelationSimilarityMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362496320641" ignored="false" />
@@ -33,7 +35,7 @@
     <file path="/ParseConfidenceMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362497112884" ignored="false" />
     <file path="/ParseConfidence2Resource.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362491995926" ignored="false" />
     <file path="/RelationSimilarityFrameTypeMeasure.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362497498845" ignored="false" />
-    <file path="/Features2Arff.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362587712914" ignored="false" />
+    <file path="/Features2Arff.java" changelist="13e2172c-1921-430f-bafe-5dda8b5ce1b4" time="1362588269272" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java" line="398" class="de.tudarmstadt.ukp.similarity.experiments.semeval2013.FeatureGeneration" package="de.tudarmstadt.ukp.similarity.experiments.semeval2013">
+      <breakpoint url="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-asl-0.0.1-SNAPSHOT-sources.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/lsr/aggregate/MCS06AggregateResource.java" line="2" class="MCS06AggregateResource.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -116,94 +118,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RelationSimilarityMeasure.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="69" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#546#573#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RelationSimilarityResourceOneConstituent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResourceOneConstituent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseConfidenceMeasure.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceMeasure.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="28" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#481#508#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RelationSimilarityMeasureOneConstituent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasureOneConstituent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="28" selection-start="2933" selection-end="2933" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#562#589#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RelationSimilarityFrameTypeMeasure.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityFrameTypeMeasure.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="28" selection-start="2226" selection-end="2226" vertical-scroll-proportion="-36.0">
-              <folding>
-                <element signature="e#557#584#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Pipeline.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/Pipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="55" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Features2Arff.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/util/Features2Arff.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="0" selection-start="3482" selection-end="3482" vertical-scroll-proportion="0.2375924">
-              <folding>
-                <element signature="e#1396#1426#0" expanded="true" />
-                <element signature="e#2598#2628#0" expanded="true" />
-                <element signature="e#3777#3807#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collection.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///local/jdk1.7.0_13/jre/lib/rt.jar!/java/util/Collection.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/1.4/commons-io-1.4-sources.jar!/org/apache/commons/io/FileUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="397" column="105" selection-start="16153" selection-end="16153" vertical-scroll-proportion="0.0">
+            <state line="45" column="97" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,7 +130,87 @@
       <file leaf-file-name="FeatureGeneration.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="308" column="23" selection-start="12842" selection-end="12842" vertical-scroll-proportion="0.0">
+            <state line="154" column="47" selection-start="7066" selection-end="7089" vertical-scroll-proportion="-29.4">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseConfidenceResource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="44" selection-start="1095" selection-end="1117" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseConfidenceMeasure.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceMeasure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="53" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.82898855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResnikRelatednessResource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-asl-0.0.1-SNAPSHOT-sources.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/lsr/ResnikRelatednessResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="19" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MCS06AggregateResource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-asl-0.0.1-SNAPSHOT-sources.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/lsr/aggregate/MCS06AggregateResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="10" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassifierSimilarityMeasure.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/algorithms/de.tudarmstadt.ukp.similarity.algorithms.ml-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.algorithms.ml-asl-0.0.1-SNAPSHOT.jar!/de/tudarmstadt/ukp/similarity/algorithms/ml/ClassifierSimilarityMeasure.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="29" selection-start="1825" selection-end="1825" vertical-scroll-proportion="-14.4">
+              <folding>
+                <element signature="e#0#2338#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TWSISubstituteWrapperResource.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-gpl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-gpl-0.0.1-SNAPSHOT.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/lexsub/TWSISubstituteWrapperResource.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="13" selection-start="194" selection-end="194" vertical-scroll-proportion="-3.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandomAccessFile.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///local/jdk1.7.0_13/jre/lib/rt.jar!/java/io/RandomAccessFile.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="0" selection-start="4688" selection-end="4688" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UkpFileManagerImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/lexsemresource/de.tudarmstadt.ukp.dkpro.lexsemresource.wordnet-asl/0.8.0/de.tudarmstadt.ukp.dkpro.lexsemresource.wordnet-asl-0.8.0-sources.jar!/de/tudarmstadt/ukp/dkpro/lexsemresource/wordnet/util/UkpFileManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="13" selection-start="3056" selection-end="3056" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -253,15 +251,15 @@
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityFrameTypeResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidence2Measure.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidence2Resource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceResource.java" />
         <option value="/local/relex-1.4.1/src/java/relex/RelationExtractor.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasureOneConstituent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceMeasure.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityFrameTypeMeasure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/Pipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/util/Features2Arff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/Pipeline.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceMeasure.java" />
       </list>
     </option>
   </component>
@@ -365,6 +363,364 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consumer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="misc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meta" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lazy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classifiers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="evaluation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: weka:weka:3.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weka-3.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -506,7 +862,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline" />
       <option name="VM_PARAMETERS" value="-Djava.library.path=/local/lib -DEnglishModelFilename=/local/relex-1.4.1/data/opennlp/models-1.5/en-sent.bin" />
-      <option name="PROGRAM_PARAMETERS" value="-D" />
+      <option name="PROGRAM_PARAMETERS" value="-T" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -514,7 +870,9 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
-      <envs />
+      <envs>
+        <env name="DKPRO_HOME" value="$PROJECT_DIR$" />
+      </envs>
       <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
@@ -755,7 +1113,11 @@
       <created>1362584100093</created>
       <updated>1362584100094</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix to filter function">
+      <created>1362587846060</created>
+      <updated>1362587846060</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -768,9 +1130,9 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1667625" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956523" sideWeight="0.8279446" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39780602" sideWeight="0.49652174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39780602" sideWeight="0.48956522" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39780602" sideWeight="0.4973913" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39780602" sideWeight="0.5043478" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949972" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -780,7 +1142,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.32842287" sideWeight="0.8280621" order="3" side_tool="false" content_ui="tabs" x="1920" y="0" width="379" height="776" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.27383015" sideWeight="0.7688327" order="0" side_tool="false" content_ui="combo" x="2299" y="0" width="390" height="776" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.27383015" sideWeight="0.7688327" order="0" side_tool="false" content_ui="combo" x="2299" y="0" width="776" height="776" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22921479" sideWeight="0.63304347" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956523" sideWeight="0.7702079" order="3" side_tool="true" content_ui="tabs" />
@@ -864,132 +1226,132 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///local/link-grammar/linkgrammar-4.7.9.jar!/org/linkgrammar/LinkGrammar.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-asl-0.0.1-SNAPSHOT-sources.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/lsr/LSRRelatednessResourceBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="559" selection-end="616" vertical-scroll-proportion="0.3243243">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///local/jdk1.7.0_13/jre/lib/rt.jar!/java/util/regex/Pattern.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="258" column="16" selection-start="10597" selection-end="10720" vertical-scroll-proportion="0.33263817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="37" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///local/relex-1.4.1/src/java/relex/RelationExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="687" column="24" selection-start="19523" selection-end="19646" vertical-scroll-proportion="-12.92">
+        <state line="61" column="0" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#24595#0" expanded="false" />
+            <element signature="n#!!doc" expanded="false" />
             <element signature="imports" expanded="false" />
-            <element signature="e#12199#12207#0" expanded="false" />
-            <element signature="e#12707#12715#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasure.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/lexsemresource/de.tudarmstadt.ukp.dkpro.lexsemresource.api-asl/0.8.0/de.tudarmstadt.ukp.dkpro.lexsemresource.api-asl-0.8.0.jar!/de/tudarmstadt/ukp/dkpro/lexsemresource/LexicalSemanticResource.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="69" selection-start="2688" selection-end="2688" vertical-scroll-proportion="0.0">
+        <state line="6" column="17" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/lexsemresource/de.tudarmstadt.ukp.dkpro.lexsemresource.api-asl/0.8.0/de.tudarmstadt.ukp.dkpro.lexsemresource.api-asl-0.8.0-sources.jar!/de/tudarmstadt/ukp/dkpro/lexsemresource/LexicalSemanticResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="287" column="20" selection-start="13007" selection-end="13008" vertical-scroll-proportion="-33.44">
           <folding>
-            <element signature="e#546#573#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityResourceOneConstituent.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/lexsemresource/de.tudarmstadt.ukp.dkpro.lexsemresource.core-asl/0.8.0/de.tudarmstadt.ukp.dkpro.lexsemresource.core-asl-0.8.0-sources.jar!/de/tudarmstadt/ukp/dkpro/lexsemresource/core/ResourceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityMeasureOneConstituent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="28" selection-start="2933" selection-end="2933" vertical-scroll-proportion="0.0">
+        <state line="42" column="15" selection-start="1611" selection-end="1611" vertical-scroll-proportion="-15.6">
           <folding>
-            <element signature="e#562#589#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#1858#1866#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/RelationSimilarityFrameTypeMeasure.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/lexsemresource/de.tudarmstadt.ukp.dkpro.lexsemresource.wordnet-asl/0.8.0/de.tudarmstadt.ukp.dkpro.lexsemresource.wordnet-asl-0.8.0.jar!/de/tudarmstadt/ukp/dkpro/lexsemresource/wordnet/util/UkpFileManagerImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="28" selection-start="2226" selection-end="2226" vertical-scroll-proportion="-36.0">
+        <state line="40" column="0" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/dkpro/lexsemresource/de.tudarmstadt.ukp.dkpro.lexsemresource.wordnet-asl/0.8.0/de.tudarmstadt.ukp.dkpro.lexsemresource.wordnet-asl-0.8.0-sources.jar!/de/tudarmstadt/ukp/dkpro/lexsemresource/wordnet/util/UkpFileManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="13" selection-start="3056" selection-end="3056" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///local/jdk1.7.0_13/jre/lib/rt.jar!/java/io/RandomAccessFile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="0" selection-start="4688" selection-end="4688" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-gpl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-gpl-0.0.1-SNAPSHOT.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/lexsub/TWSISubstituteWrapperResource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="194" selection-end="194" vertical-scroll-proportion="-3.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-asl-0.0.1-SNAPSHOT-sources.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/lsr/ResnikRelatednessResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="19" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#557#584#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/1.4/commons-io-1.4.jar!/org/apache/commons/io/FileUtils.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/algorithms/de.tudarmstadt.ukp.similarity.algorithms.ml-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.algorithms.ml-asl-0.0.1-SNAPSHOT.jar!/de/tudarmstadt/ukp/similarity/algorithms/ml/ClassifierSimilarityMeasure.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="39" selection-start="1740" selection-end="1740" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="308" column="23" selection-start="12842" selection-end="12842" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/1.4/commons-io-1.4-sources.jar!/org/apache/commons/io/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="397" column="105" selection-start="16153" selection-end="16153" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceMeasure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="28" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
+        <state line="24" column="29" selection-start="1825" selection-end="1825" vertical-scroll-proportion="-14.4">
           <folding>
-            <element signature="e#481#508#0" expanded="true" />
+            <element signature="e#0#2338#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../sts/STS13/dkpro/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/util/Features2Arff.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/de/tudarmstadt/ukp/similarity/dkpro/de.tudarmstadt.ukp.similarity.dkpro.core-asl/0.0.1-SNAPSHOT/de.tudarmstadt.ukp.similarity.dkpro.core-asl-0.0.1-SNAPSHOT-sources.jar!/de/tudarmstadt/ukp/similarity/dkpro/resource/lsr/aggregate/MCS06AggregateResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="1" selection-start="4588" selection-end="4588" vertical-scroll-proportion="0.92296404">
-          <folding />
+        <state line="1" column="10" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///local/jdk1.7.0_13/jre/lib/rt.jar!/java/util/Collection.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/weka/weka/3.7.5/weka-3.7.5.jar!/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/Pipeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="55" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.0">
+        <state line="45" column="97" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/util/Features2Arff.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/FeatureGeneration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="3482" selection-end="3482" vertical-scroll-proportion="0.2375924">
+        <state line="154" column="47" selection-start="7066" selection-end="7089" vertical-scroll-proportion="-29.4">
           <folding>
-            <element signature="e#1396#1426#0" expanded="true" />
-            <element signature="e#2598#2628#0" expanded="true" />
-            <element signature="e#3777#3807#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="44" selection-start="1095" selection-end="1117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/tudarmstadt/ukp/similarity/experiments/semeval2013/example/ParseConfidenceMeasure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="53" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.82898855">
+          <folding />
         </state>
       </provider>
     </entry>

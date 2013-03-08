@@ -85,6 +85,11 @@ public class Features2Arff
 
         Iterator<File> myit = files.iterator();
         while (myit.hasNext()) {
+
+            if (filters.length == 0)
+                break;
+
+
             File file = myit.next();
             boolean found = false;
 

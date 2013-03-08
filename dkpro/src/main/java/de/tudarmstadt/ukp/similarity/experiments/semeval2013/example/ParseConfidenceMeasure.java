@@ -59,7 +59,7 @@ public class ParseConfidenceMeasure
         Double sec_confidence = secsen.getParses().get(0).getTruthValue().getConfidence();
 
 
-        Double diff = Math.abs(first_confidence-sec_confidence);
+        Double diff = first_confidence-sec_confidence;
 
         diff = Math.floor(diff*1000) / 1000;
 
