@@ -284,7 +284,8 @@ public class FeatureGeneration
 		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	VectorIndexSourceRelatednessResource.class,
-				    	VectorIndexSourceRelatednessResource.PARAM_MODEL_LOCATION, DKProContext.getContext().getWorkspace().getAbsolutePath() + "/ESA/VectorIndexes/wordnet_eng_lem_nc_c"),
+				    	VectorIndexSourceRelatednessResource.PARAM_MODEL_LOCATION,
+                        DKProContext.getContext().getWorkspace().getAbsolutePath() + "/ESA/VectorIndexes/wordnet_eng_lem_nc_c"),
 				Lemma.class.getName() + "/value",
 				false,
 				"esa",
@@ -294,13 +295,24 @@ public class FeatureGeneration
 		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	VectorIndexSourceRelatednessResource.class,
-				    	VectorIndexSourceRelatednessResource.PARAM_MODEL_LOCATION, DKProContext.getContext().getWorkspace().getAbsolutePath() + "/ESA/VectorIndexes/wiktionary_en"),
+				    	VectorIndexSourceRelatednessResource.PARAM_MODEL_LOCATION,
+                        DKProContext.getContext().getWorkspace().getAbsolutePath() + "/ESA/VectorIndexes/wiktionary_en"),
 				Lemma.class.getName() + "/value",
 				false,
 				"esa",
 				"ESA_Wiktionary"
 				));
 
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        VectorIndexSourceRelatednessResource.class,
+                        VectorIndexSourceRelatednessResource.PARAM_MODEL_LOCATION,
+                        DKProContext.getContext().getWorkspace().getAbsolutePath() + "/ESA/VectorIndexes/wikipedia_en"),
+                Lemma.class.getName() + "/value",
+                false,
+                "esa",
+                "ESA_Wikipedia"
+        ));
 		
 		// Run the pipeline		
 		for (FeatureConfig config : configs)
