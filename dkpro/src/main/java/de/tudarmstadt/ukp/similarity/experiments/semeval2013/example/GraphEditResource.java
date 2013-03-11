@@ -36,7 +36,6 @@ public class GraphEditResource
 	@ConfigurationParameter(name=PARAM_N, mandatory=false)
 	private int n;
 
-    public RelationExtractor rel;
     public DependencyParser depParser;
     public Map<String, Double> posEditWeights;
     public Map<String, Double> deprelEditWeights;
@@ -51,11 +50,6 @@ public class GraphEditResource
         }
 
 
-        //RelationExtractor rel = new RelationExtractor(false);
-
-        String foo = "f";
-
-        this.rel = new RelationExtractor(false);
 
         try {
             Config cs = new Config("app.properties");
@@ -88,7 +82,8 @@ public class GraphEditResource
 
 
 
-		measure = new GraphEditMeasure(n, rel);
+		//measure = new GraphEditMeasure(n);
+        measure = new GraphEditMeasure(n, depParser, posEditWeights, deprelEditWeights);
         
         return true;
     }

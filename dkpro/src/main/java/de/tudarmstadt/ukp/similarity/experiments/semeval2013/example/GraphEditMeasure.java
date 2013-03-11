@@ -21,16 +21,17 @@ public class GraphEditMeasure
 {
 	@SuppressWarnings("unused")
 	private int n;
-    private RelationExtractor rel;
     private Map<String,Double> deprelEditWeights;
     private Map<String,Double> posEditWeights;
     private DependencyParser depParser;
 
 
-    public GraphEditMeasure(int n, RelationExtractor rel)
+    public GraphEditMeasure(int n, DependencyParser depParser, Map<String, Double> posEditWeights, Map<String, Double> deprelEditWeights)
 	{                                                                          		// The configuration parameter is not used right now and intended for illustration purposes only.
 		this.n = n;
-        this.rel = rel;
+        this.deprelEditWeights = deprelEditWeights;
+        this.posEditWeights = posEditWeights;
+        this.depParser = depParser;
 	}
 
     public double getSimilarity(Collection<String> strings,
@@ -43,9 +44,7 @@ public class GraphEditMeasure
             sentences
         */
 
-        this.rel.setAllowSkippedWords(true);
-        this.rel.setMaxParses(1);
-        this.rel.setMaxParseSeconds(60);
+
 
         EntityMaintainer em = null;
 
