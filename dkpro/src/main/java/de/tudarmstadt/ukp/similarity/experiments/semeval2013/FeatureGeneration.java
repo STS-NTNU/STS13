@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import de.tudarmstadt.ukp.similarity.algorithms.wikipedia.measures.LeacockChodorowAverageComparator;
+import de.tudarmstadt.ukp.similarity.dkpro.resource.lsr.LeacockChodorowRelatednessResource;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.*;
 import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
@@ -55,6 +57,8 @@ import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.CharacterNGram
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.StopwordFilter;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.util.WordIdfValuesGenerator;
 
+import de.tudarmstadt.ukp.similarity.algorithms.wikipedia.measures.LeacockChodorowAverageComparator;
+
 import weka.classifiers.bayes.BayesNet;
 
 public class FeatureGeneration
@@ -89,7 +93,7 @@ public class FeatureGeneration
 //				));
 		
 		// String features
-/*		configs.add(new FeatureConfig(
+		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	GreedyStringTilingMeasureResource.class,
 				    	GreedyStringTilingMeasureResource.PARAM_MIN_MATCH_LENGTH, "3"),
@@ -99,7 +103,7 @@ public class FeatureGeneration
 				"GreedyStringTiling_3"
 				));
 		
-		configs.add(new FeatureConfig(
+/*		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	SimpleTextSimilarityResource.class,
 				    	SimpleTextSimilarityResource.PARAM_MODE, "text",
@@ -120,6 +124,12 @@ public class FeatureGeneration
                 "SentSumSimilarityMeasure"
         ));*/
 
+
+
+
+
+
+
         configs.add(new FeatureConfig(
                 createExternalResourceDescription(
                         RelationSimilarityResource.class,
@@ -128,6 +138,16 @@ public class FeatureGeneration
                 false,
                 "LBexp",
                 "RelationSimilarityMeasure"
+        ));
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        RelationSimilarityNegationResource.class,
+                        RelationSimilarityNegationResource.PARAM_N, "3"),
+                Document.class.getName(),
+                false,
+                "LBexp",
+                "RelationSimilarityNegationMeasure"
         ));
 
         configs.add(new FeatureConfig(
@@ -158,6 +178,16 @@ public class FeatureGeneration
                 "LBexp",
                 "ParseConfidence"
                 )
+        );
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        GraphEditResource.class),
+                Document.class.getName(),
+                false,
+                "LBexp",
+                "GraphEditDistance"
+        )
         );
 
 /*		configs.add(new FeatureConfig(
@@ -245,7 +275,7 @@ public class FeatureGeneration
 		 * http://code.google.com/p/dkpro-similarity-asl/wiki/SettingUpTheResources
 		 */
 		
-		// Resnik word similarity measure, aggregated according to Mihalcea et al. (2006)
+/*		// Resnik word similarity measure, aggregated according to Mihalcea et al. (2006)
 		configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	MCS06AggregateResource.class,
@@ -260,6 +290,22 @@ public class FeatureGeneration
 				"word-sim",
 				"MCS06_Resnik_WordNet"
 				));
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        MCS06AggregateResource.class,
+                        MCS06AggregateResource.PARAM_TERM_SIMILARITY_RESOURCE, createExternalResourceDescription(
+                        LeacockChodorowRelatednessResource.class,
+                        LeacockChodorowRelatednessResource.PARAM_RESOURCE_NAME, "wordnet",
+                        LeacockChodorowRelatednessResource.PARAM_RESOURCE_LANGUAGE, "en"
+                ),
+                        MCS06AggregateResource.PARAM_IDF_VALUES_FILE, UTILS_DIR + "/word-idf/" + mode.toString().toLowerCase() + "/" + dataset.toString() + ".txt"),
+                Lemma.class.getName() + "/value",
+                false,
+                "word-sim",
+                "MCS06_Leacock_Chodorow_WordNet"
+        ));
+
 
 		// Lexical Substitution System wrapper for
 		// Resnik word similarity measure, aggregated according to Mihalcea et al. (2006)
@@ -279,6 +325,25 @@ public class FeatureGeneration
 				"word-sim",
 				"TWSI_MCS06_Resnik_WordNet"
 				));
+
+        // Lexical Substitution System wrapper for
+        // Resnik word similarity measure, aggregated according to Mihalcea et al. (2006)
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        TWSISubstituteWrapperResource.class,
+                        TWSISubstituteWrapperResource.PARAM_TEXT_SIMILARITY_RESOURCE,
+                        createExternalResourceDescription(
+                                MCS06AggregateResource.class,
+                                MCS06AggregateResource.PARAM_TERM_SIMILARITY_RESOURCE,
+                                createExternalResourceDescription(
+                                        LeacockChodorowRelatednessResource.class,
+                                        LeacockChodorowRelatednessResource.PARAM_RESOURCE_NAME, "wordnet",
+                                        LeacockChodorowRelatednessResource.PARAM_RESOURCE_LANGUAGE, "en"
+                                ),
+                                MCS06AggregateResource.PARAM_IDF_VALUES_FILE, UTILS_DIR + "/word-idf/" + mode.toString().toLowerCase() + "/" + dataset.toString() + ".txt")),
+                "word-sim",
+                "TWSI_MCS06_Leacock_Chodorow_WordNet"
+        ));
 
 		// Explicit Semantic Analysis
 		configs.add(new FeatureConfig(
@@ -313,7 +378,20 @@ public class FeatureGeneration
                 "esa",
                 "ESA_Wikipedia"
         ));
-		
+
+        configs.add(new FeatureConfig(
+                createExternalResourceDescription(
+                        LeacockChodorowRelatednessResource.class,
+                        VectorIndexSourceRelatednessResource.PARAM_MODEL_LOCATION,
+                        DKProContext.getContext().getWorkspace().getAbsolutePath() + "/ESA/VectorIndexes/wikipedia_en"),
+                Lemma.class.getName() + "/value",
+                false,
+                "esa",
+                "ESA_Wikipedia_LeacockChodorow"
+        ));*/
+
+
+
 		// Run the pipeline		
 		for (FeatureConfig config : configs)
 		{			

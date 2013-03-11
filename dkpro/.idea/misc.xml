@@ -9,6 +9,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="/local/relex-1.4.1/pom.xml" />
+        <option value="$PROJECT_DIR$/../../nlp-graph-edit-distance/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset1" name="XML Application Context" removed="false">
+          <file>file://$MODULE_DIR$/de.tudarmstadt.ukp.dkpro.lexsemresource.core.ResourceFactory/resources.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -22,6 +31,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="relex-1.4.1" level="application" />
+    <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.api-asl:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
@@ -204,7 +214,16 @@
     <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.lexsub-gpl:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: de.tudarmstadt.langtech.substituter.twsi:de.tudarmstadt.langtech.substituter.twsi:0.1.0" level="project" />
     <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.sspace-gpl:0.0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="module" module-name="text2graph" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/maltparser-1.7.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
