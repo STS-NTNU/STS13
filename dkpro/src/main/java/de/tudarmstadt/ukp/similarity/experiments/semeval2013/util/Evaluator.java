@@ -55,6 +55,8 @@ import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.Evaluation
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.Pipeline.Mode;
 import de.tudarmstadt.ukp.similarity.experiments.semeval2013.filter.LogFilter;
 
+import de.tudarmstadt.ukp.similarity.experiments.semeval2013.example.SVMRegressionResource;
+
 
 public class Evaluator
 {
@@ -94,7 +96,43 @@ public class Evaluator
 			SimplePipeline.runPipeline(reader, aggr_seg, scorer, writer);
 		}
 	}
-	
+
+
+    public static void runLogisticRegression(Dataset train, Dataset... test)
+            throws UIMAException, IOException
+    {
+        for (Dataset dataset : test)
+        {
+            CollectionReader reader = createCollectionReader(SemEvalCorpusReader.class,
+                    SemEvalCorpusReader.PARAM_INPUT_FILE, DATASET_DIR + "/test/STS.input." + dataset.toString() + ".txt",
+                    SemEvalCorpusReader.PARAM_COMBINATION_STRATEGY, CombinationStrategy.SAME_ROW_ONLY.toString());
+
+            AnalysisEngineDescription seg = createPrimitiveDescription(BreakIteratorSegmenter.class);
+
+            AggregateBuilder builder = new AggregateBuilder();
+            builder.add(seg, CombinationReader.INITIAL_VIEW, CombinationReader.VIEW_1);
+            builder.add(seg, CombinationReader.INITIAL_VIEW, CombinationReader.VIEW_2);
+            AnalysisEngine aggr_seg = builder.createAggregate();
+
+            AnalysisEngine scorer = createPrimitive(SimilarityScorer.class,
+                    SimilarityScorer.PARAM_NAME_VIEW_1, CombinationReader.VIEW_1,
+                    SimilarityScorer.PARAM_NAME_VIEW_2, CombinationReader.VIEW_2,
+                    SimilarityScorer.PARAM_SEGMENT_FEATURE_PATH, Document.class.getName(),
+                    SimilarityScorer.PARAM_TEXT_SIMILARITY_RESOURCE, createExternalResourceDescription(
+                    SVMRegressionResource.class,
+                    SVMRegressionResource.PARAM_TRAIN_ARFF, MODELS_DIR + "/train/" + train.toString() + ".arff",
+                    SVMRegressionResource.PARAM_TEST_ARFF, MODELS_DIR + "/test/" + dataset.toString() + ".arff")
+            );
+
+            AnalysisEngine writer = createPrimitive(SimilarityScoreWriter.class,
+                    SimilarityScoreWriter.PARAM_OUTPUT_FILE, OUTPUT_DIR + "/test/" + dataset.toString() + ".csv",
+                    SimilarityScoreWriter.PARAM_OUTPUT_SCORES_ONLY, true,
+                    SimilarityScoreWriter.PARAM_OUTPUT_GOLD_SCORES, false);
+
+            SimplePipeline.runPipeline(reader, aggr_seg, scorer, writer);
+        }
+    }
+
 	public static void runLinearRegressionCV(Mode mode, Dataset... datasets)
 		throws Exception
 	{

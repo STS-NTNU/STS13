@@ -43,7 +43,7 @@ public class Pipeline
 	public static final String UTILS_DIR = "target/utils";
 	public static final String OUTPUT_DIR = "target/output";
 
-    public static final String [] FILTER = {"word-sim", "esa", "n-gram", "Longest", "Greed", "string", "Graph"};
+    public static final String [] FILTER = {"word-sim", "esa", "n-gram", "Longest", "Greed", "string"};
                                             //"word-sim","Rel", "esa", "n-gram", "Longest", "Greed"
 	public static void main(String[] args)
 		throws Exception
@@ -121,11 +121,13 @@ public class Pipeline
 		
 		// Package features in arff files
 		Features2Arff.toArffFileFilter(TRAIN, FILTER, ALL);
-		Features2Arff.toArffFileFilter(TEST, FILTER, MSRpar, MSRvid, SMTeuroparl, OnWN, SMTnews);
+		Features2Arff.toArffFileFilter(TEST, FILTER, MSRvid);
 
 		// Run the classifer
-		Evaluator.runLinearRegression(ALL, MSRpar, MSRvid, SMTeuroparl, OnWN, SMTnews);
-		
+		//Evaluator.runLinearRegression(ALL, MSRpar, MSRvid, SMTeuroparl, OnWN, SMTnews);
+
+        Evaluator.runLogisticRegression(ALL, MSRpar, MSRvid, SMTeuroparl, OnWN, SMTnews);
+
 		// Evaluate
 		// Note: For submission scenario, comment the lines below, as 
 		// there is no gold standard present then to compare with.

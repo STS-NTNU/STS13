@@ -276,7 +276,7 @@ public class FeatureGeneration
 		 */
 		
 		// Resnik word similarity measure, aggregated according to Mihalcea et al. (2006)
-		configs.add(new FeatureConfig(
+		/*configs.add(new FeatureConfig(
 				createExternalResourceDescription(
 				    	MCS06AggregateResource.class,
 				    	MCS06AggregateResource.PARAM_TERM_SIMILARITY_RESOURCE, createExternalResourceDescription(
@@ -388,7 +388,7 @@ public class FeatureGeneration
                 false,
                 "esa",
                 "ESA_Wikipedia_LeacockChodorow"
-        ));
+        )); */
 
 
 
