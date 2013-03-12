@@ -13,8 +13,10 @@ import org.maltparser.core.exception.MaltChainedException;
 import relex.RelationExtractor;
 import relex.entity.EntityMaintainer;
 
+import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
+
 
 public class GraphEditMeasure
 	extends TextSimilarityMeasureBase
@@ -54,6 +56,7 @@ public class GraphEditMeasure
 
         String [] texts = {first_string, second_string};
 
+        double score = 0.0;
 
 
         try {
@@ -62,19 +65,16 @@ public class GraphEditMeasure
             Graph g2 = this.depParser.dependencyParse("2", texts[1]);
             GraphEditDistance ged = new GraphEditDistance(g1, g2, posEditWeights, deprelEditWeights);
 
+            score = ged.getDistance();
 
         }
-        catch (MaltChainedException e)
-        {
-            System.err.println("Caught FileNotFoundException: " + e.getMessage());
+        catch (MaltChainedException e) {
+            System.err.println("Caught MaltChainedException: " + e.getMessage());
+            e.printStackTrace();
         }
 
 
-        int sum1 = 0;
-        int sum2 = 0;
-
-        return sum1;  //To change body of implemented methods use File | Settings | File Templates.
-		// Your similarity computation goes here.
+        return (score);
 
 	}
 

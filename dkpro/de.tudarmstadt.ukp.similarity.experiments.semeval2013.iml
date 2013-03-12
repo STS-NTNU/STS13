@@ -13,10 +13,10 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -32,6 +32,15 @@
     </orderEntry>
     <orderEntry type="library" name="relex-1.4.1" level="application" />
     <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../nlp-graph-edit-distance/target/text2graph-1.0-SNAPSHOT.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.api-asl:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
@@ -214,16 +223,9 @@
     <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.lexsub-gpl:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: de.tudarmstadt.langtech.substituter.twsi:de.tudarmstadt.langtech.substituter.twsi:0.1.0" level="project" />
     <orderEntry type="library" name="Maven: de.tudarmstadt.ukp.similarity.algorithms:de.tudarmstadt.ukp.similarity.algorithms.sspace-gpl:0.0.1-SNAPSHOT" level="project" />
-    <orderEntry type="module" module-name="text2graph" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/maltparser-1.7.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="Maven: org.maltparser:maltparser:1.7.1" level="project" />
+    <orderEntry type="library" name="Maven: tw.edu.ntu.csie:libsvm:3.1" level="project" />
+    <orderEntry type="library" name="Maven: de.bwaldvogel:liblinear:1.8" level="project" />
   </component>
 </module>
 

@@ -23,7 +23,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="de.tudarmstadt.ukp.similarity.experiments.semeval2013" />
-        <module name="text2graph" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

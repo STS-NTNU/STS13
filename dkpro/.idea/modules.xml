@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/de.tudarmstadt.ukp.similarity.experiments.semeval2013.iml" filepath="$PROJECT_DIR$/de.tudarmstadt.ukp.similarity.experiments.semeval2013.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../nlp-graph-edit-distance/text2graph.iml" filepath="$PROJECT_DIR$/../../nlp-graph-edit-distance/text2graph.iml" />
     </modules>
   </component>
 </project>

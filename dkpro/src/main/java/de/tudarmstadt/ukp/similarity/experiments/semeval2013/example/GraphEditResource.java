@@ -63,7 +63,7 @@ public class GraphEditResource
 
         }
         catch (MaltChainedException e) {
-            System.err.println("Caught FileNotFoundException: " + e.getMessage());
+            System.err.println("Caught MaltChainedException: " + e.getMessage());
         }
         catch (ClassNotFoundException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
