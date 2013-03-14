@@ -15,7 +15,7 @@ from sts.io import read_system_input
 from sts.score import correlation
 from sts.sts12 import test_input_fnames
 from ntnu.sts12 import ( train_ids, read_train_data, read_test_data,
-                         postprocess, dkpro_feats )
+                         postprocess, all_feats )
 
 # make sure you have sklearn installed
 
@@ -31,7 +31,7 @@ id_pairs = [
     (train_ids, "surprise.OnWN") ]
     
 # features to be used
-feats = dkpro_feats
+feats = all_feats
 
 # learning algorithm
 regressor = LinearRegression()

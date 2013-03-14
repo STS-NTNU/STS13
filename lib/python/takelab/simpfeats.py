@@ -12,6 +12,8 @@ from numpy.linalg import norm
 import nltk
 from nltk.corpus import wordnet
 
+from ntnu.sts12 import takelab_feats, takelab_lsa_feats
+
 
 # global variables to be defined
 wweight = None
@@ -34,6 +36,7 @@ to_wordnet_tag = {
         'VB':wordnet.VERB,
         'RB':wordnet.ADV
     }
+
 
 
 def load_wweight_table(path):
@@ -449,6 +452,20 @@ def generate_features(input_fname, score_fname=None,
         np.savez(outf, X=X, y=y)
                 
 
+
+def generate_feats_ntnu(input_fname, out_dir, with_lsa=True):
+    feats = takelab_feats + takelab_lsa_feats if with_lsa else takelab_feats
+    out_files = [open(out_dir + "/" + f, "w") for f in feats]
+    
+    for idx, (sa, sb) in enumerate(load_data(input_fname)):
+        values = calc_features(sa, sb, with_lsa)
+        for v, fh in zip(values, out_files):
+            fh.write(str(v) + "\n")
+
+    for fh in out_files:
+        fh.close()
+        
+        
 
 if __name__ == "__main__":
 
