@@ -140,6 +140,6 @@ gleb_feats = [
 all_feats = (
     dkpro_feats +
     takelab_feats +
-    takelab_lsa_feats +
+    #takelab_lsa_feats +
     gleb_feats
     )

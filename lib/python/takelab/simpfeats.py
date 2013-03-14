@@ -455,7 +455,8 @@ def generate_features(input_fname, score_fname=None,
 
 def generate_feats_ntnu(input_fname, out_dir, with_lsa=True):
     feats = takelab_feats + takelab_lsa_feats if with_lsa else takelab_feats
-    out_files = [open(out_dir + "/" + f, "w") for f in feats]
+    out_files = [open("{}/{}.txt".format(out_dir, f), "w") 
+                 for f in feats]
     
     for idx, (sa, sb) in enumerate(load_data(input_fname)):
         values = calc_features(sa, sb, with_lsa)
