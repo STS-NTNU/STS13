@@ -14,7 +14,7 @@ import takelab.simpfeats as tl
 from sts import sts12
 
 # load word counts for IC weighting
-tl.wweight = tl.load_wweight_table("../var/wordfreq/_wordfreq-STS2012.txt")
+tl.wweight = tl.load_wweight_table("../var/wordfreq/wordfreq-STS2012.txt")
 tl.minwweight = min(tl.wweight.values())
 
 with_lsa = False    
