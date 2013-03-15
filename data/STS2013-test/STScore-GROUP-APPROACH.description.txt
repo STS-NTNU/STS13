@@ -1,0 +1,70 @@
+
+Please include a description of your submission, following the format
+below. 
+
+Please don't modify lines starting with = unless instructed to do so.
+
+Please delete lines starting with [. All lines starting with [ will be
+ignored.
+
+========================
+
+= TEAM =
+
+[Please include affiliation and name of first author]
+
+= DESCRIPTION OF RUN =
+
+[Please include a short paragraph describing your method for the run]
+
+= TOOLS USED =
+
+[Please keep those tools that you used, delete those you did not use, and add more lines if needed]
+
+* Part of speech tagger
+* Lemmatizer
+* Multiword expressions recognition
+* Syntax parser
+* Semantic Role Labeling
+* Word Sense Disambiguation
+* Lexical Substitution
+* Distributional similarity
+* Knowledge-based similarity
+* Time and date resolution
+* Named Entity recognition
+* Sentiment Analysis
+* Metaphor and/or Metonymy
+* Logical Inference
+* Textual Entailment
+* Correference
+* Scoping
+* ... (add as needed)
+
+= RESOURCES USED =
+
+[Please keep those resources that you used, delete those you did not use, and add more lines if needed]
+
+* Monolingual corpora
+* Multilingual corpora
+* Tables of paraphrases
+* WordNet
+* PropBank
+* FrameNet
+* Ontonotes
+* Repositories for named-entities and acronyms
+* Other dictionaries (please specify)
+* Wikipedia
+* VerbOcean
+* Dirt
+* Lin's thesaurus
+* Other distributional similarity thesauri (please specify)
+* ... (add as needed)
+
+= METHOD TO COMBINE TOOLS AND RESOURCES =
+
+[Please summarize the method to combine the tools and resources, mentioning whether it's heuristic, or uses machine learning, etc.]
+
+
+= COMMENTS =
+
+[Please include any comment you might have to improve the task in the future]
