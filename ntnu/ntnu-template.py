@@ -2,6 +2,62 @@
 
 """
 template file for NTNU submissions that generates a zipfile according to STS13 guidelines
+
+
+Downloading test data and uploading runs
+-------------------------------------------------------
+
+The download test directory (/home/sts) contains two files:
+
+ /home/sts/test.tgz        The test files for the core STS task
+ /home/sts/test-typed.tgz  The test files fof the typed STS task
+
+Participant teams will be allowed to submit three runs at most for
+each task. Each run will be delivered as a compressed file (zip or
+gzip format) and will contain:
+
+- a directory containing:
+ - the answer files for all datasets
+ - a description file (see below)
+
+The participants are required to follow the naming convention, as
+follows:
+
+ STScore-GROUP-APPROACH.zip
+
+or
+
+ STStyped-GROUP-APPROACH.zip
+
+And should contain respectively:
+
+ STScore-GROUP-APPROACH/
+    STScore-GROUP-APPROACH.description.txt
+    STScore.output.FNWN.txt
+    STScore.output.OnWN.txt
+    STScore.output.SMT.txt
+    STScore.output.headlines.txt
+
+or
+
+ STStyped-GROUP-APPROACH/
+    STStyped-GROUP-APPROACH.description.txt
+    STStyped.output.europeana.txt
+
+where GROUP identifies which group made the submission (please
+use the same name as in the registration).
+
+and APPROACH identifies each run.
+
+Each run needs to be accompanied by a text file describing the method,
+tools and resources used in the run. This file will help the
+organizers produce an informative report on the task. Please fill the
+required information following the format in the following files as
+made available with the test data:
+
+ STScore-GROUP-APPROACH.description.txt
+ STStyped-GROUP-APPROACH.description.txt
+
 """
 
 from os import mkdir
