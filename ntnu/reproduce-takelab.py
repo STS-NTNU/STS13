@@ -34,8 +34,8 @@ id_pairs = [
 
 
 # features to be used
-feats = takelab_feats
-# feats = takelab_feats + takelab_lsa_feats 
+# feats = takelab_feats
+feats = takelab_feats + takelab_lsa_feats 
 
 # learning algorithms, one per test set, where SVR settings result from
 # grid-search.sh
