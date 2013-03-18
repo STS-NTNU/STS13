@@ -16,8 +16,9 @@ import numpy as np
 from sts.io import read_system_input
 from sts.score import correlation
 from sts.sts12 import test_input_fnames
-from ntnu.sts12 import ( train_ids, read_train_data, read_test_data,
-                         postprocess, takelab_feats, takelab_lsa_feats )
+from ntnu.sts12 import train_ids, read_train_data, read_test_data
+from ntnu.io import postprocess
+from ntnu.feats import takelab_feats, takelab_lsa_feats 
 
 # make sure you have sklearn installed
 

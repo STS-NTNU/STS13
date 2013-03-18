@@ -49,6 +49,18 @@ def read(input_fname, gold_fname, output_fname=None, with_confidence=False,
         return merge_arrays((inp, gold, out), flatten=True)
     else:
         return merge_arrays((inp, gold), flatten=True)
+    
+    
+def write_scores(filename, scores, confidence=None):
+    outf = open(filename, "w")
+    
+    if not confidence:
+        confidence = np.zeros(scores.shape[0])
+        
+    for s, c in zip(scores, confidence):
+        outf.write("{:f}\t{:f}\n".format(s, c)) 
+        
+    outf.close()
         
 
     
