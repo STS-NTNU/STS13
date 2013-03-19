@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Attempt to reproduce TakeLab system scores on STS12 data
+Combination of all features
 """
 
 # make sure have numpy installed 
@@ -16,7 +16,7 @@ from sts.score import correlation
 from sts.sts12 import test_input_fnames
 from ntnu.sts12 import train_ids, read_train_data, read_test_data
 from ntnu.io import postprocess
-from ntnu.feats import takelab_feats, takelab_lsa_feats 
+from ntnu.feats import all_feats, dkpro_feats, takelab_feats
 
 # make sure you have sklearn installed
 
@@ -33,21 +33,21 @@ id_pairs = [
 
 
 # features to be used
-# feats = takelab_feats
-feats = takelab_feats + takelab_lsa_feats 
+feats = dkpro_feats + takelab_feats
+#feats = all_feats
+
 
 # learning algorithms, one per test set, where SVR settings result from
 # grid-search.sh
-regressors = [
-    SVR(C=50,  epsilon=0.2, gamma=0.02),
-    SVR(C=200, epsilon=0.5, gamma=0.02),
-    SVR(C=100, epsilon=0.2, gamma=0.02),
-    SVR(C=100, epsilon=0.2, gamma=0.02),
-    SVR(C=10,  epsilon=0.5, gamma=0.02)
-    ]
+#regressors = [
+    #SVR(C=50,  epsilon=0.2, gamma=0.02),
+    #SVR(C=200, epsilon=0.5, gamma=0.02),
+    #SVR(C=100, epsilon=0.2, gamma=0.02),
+    #SVR(C=100, epsilon=0.2, gamma=0.02),
+    #SVR(C=10,  epsilon=0.5, gamma=0.02)
+    #]
 
-# non-optimized
-# regressors = [SVR() for i in range(5)]
+regressors = [SVR() for i in range(5)]
 
 
 for (train_id, test_id), regressor in zip(id_pairs, regressors):

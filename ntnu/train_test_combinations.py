@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Attempt to reproduce TakeLab system scores on STS12 data
+Combination of training & testing data
 """
 
 # make sure have numpy installed 
@@ -14,9 +14,9 @@ import numpy as np
 from sts.io import read_system_input
 from sts.score import correlation
 from sts.sts12 import test_input_fnames
-from ntnu.sts12 import train_ids, read_train_data, read_test_data
+from ntnu.sts12 import train_ids, test_ids, read_train_data, read_test_data
 from ntnu.io import postprocess
-from ntnu.feats import takelab_feats, takelab_lsa_feats 
+from ntnu.feats import all_feats
 
 # make sure you have sklearn installed
 
@@ -24,33 +24,28 @@ from sklearn.svm import SVR
 
 
 # ids of training and testing data sets
-id_pairs = [ 
-    ("MSRpar", "MSRpar"),
-    ("MSRvid", "MSRvid"),
-    ("SMTeuroparl", "SMTeuroparl"),
-    ("SMTeuroparl", "surprise.SMTnews"),
-    (train_ids, "surprise.OnWN") ]
+
+comb_train_ids = [ ("MSRpar",),
+                   ("MSRpar", "MSRvid"),
+                   ("MSRpar", "SMTeuroparl"),
+                   ("MSRpar", "MSRvid", "SMTeuroparl"),
+                   ("MSRvid",),
+                   ("MSRvid", "SMTeuroparl"),
+                   ("SMTeuroparl",) ]
+
+id_pairs = [(train_id, test_id)
+            for test_id in test_ids
+            for train_id in comb_train_ids ]
 
 
 # features to be used
-# feats = takelab_feats
-feats = takelab_feats + takelab_lsa_feats 
+feats = all_feats
 
-# learning algorithms, one per test set, where SVR settings result from
-# grid-search.sh
-regressors = [
-    SVR(C=50,  epsilon=0.2, gamma=0.02),
-    SVR(C=200, epsilon=0.5, gamma=0.02),
-    SVR(C=100, epsilon=0.2, gamma=0.02),
-    SVR(C=100, epsilon=0.2, gamma=0.02),
-    SVR(C=10,  epsilon=0.5, gamma=0.02)
-    ]
-
-# non-optimized
-# regressors = [SVR() for i in range(5)]
+# regressors
+regressor = SVR()
 
 
-for (train_id, test_id), regressor in zip(id_pairs, regressors):
+for train_id, test_id in id_pairs:
     train_feat, train_scores = read_train_data(train_id, feats)
     regressor.fit(train_feat, train_scores)
     
@@ -63,7 +58,7 @@ for (train_id, test_id), regressor in zip(id_pairs, regressors):
     if isinstance(train_id, tuple):
         train_id = "+".join(train_id)
     
-    print "{:32s} {:32s} {:2.2f}".format(
+    print "{:32s}\t{:32s}\t{:2.2f}".format(
         train_id, 
         test_id, 
         correlation(sys_scores, test_scores))
