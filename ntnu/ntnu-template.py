@@ -64,56 +64,139 @@ from os import mkdir
 from os.path import exists
 from subprocess import call
 
-from sklearn.linear_model import LinearRegression
+import numpy as np
+
+from sklearn.svm import SVR
 
 from sts.io import read_system_input, write_scores
 from sts.sts13 import test_input_fnames
-from ntnu.sts12 import read_train_data, train_ids
-from ntnu.sts13 import read_test_data
+from ntnu.sts12 import read_train_data, train_ids, read_test_data, test_ids
+from ntnu.sts13 import read_blind_test_data
 from ntnu.io import postprocess
-from ntnu.feats import takelab_feats
+from ntnu.feats import all_feats, takelab_feats, gleb_feats
 
 
 GROUP = "NTNU"
 
 APPROACH = "METHOD1"
 
+
+# Please include a description of your submission, following the format
+# below. 
+# Please don't modify lines starting with = unless instructed to do so.
+# Please delete lines starting with [. All lines starting with [ will be
+# ignored.
+
 DESCRIPTION = \
 """
-linear regression on Takelab features 
+= TEAM =
+
+[Please include affiliation and name of first author]
+
+= DESCRIPTION OF RUN =
+
+[Please include a short paragraph describing your method for the run]
+
+= TOOLS USED =
+
+[Please keep those tools that you used, delete those you did not use, and add more lines if needed]
+
+* Part of speech tagger
+* Lemmatizer
+* Multiword expressions recognition
+* Syntax parser
+* Semantic Role Labeling
+* Word Sense Disambiguation
+* Lexical Substitution
+* Distributional similarity
+* Knowledge-based similarity
+* Time and date resolution
+* Named Entity recognition
+* Sentiment Analysis
+* Metaphor and/or Metonymy
+* Logical Inference
+* Textual Entailment
+* Correference
+* Scoping
+* ... (add as needed)
+
+= RESOURCES USED =
+
+[Please keep those resources that you used, delete those you did not use, and add more lines if needed]
+
+* Monolingual corpora
+* Multilingual corpora
+* Tables of paraphrases
+* WordNet
+* PropBank
+* FrameNet
+* Ontonotes
+* Repositories for named-entities and acronyms
+* Other dictionaries (please specify)
+* Wikipedia
+* VerbOcean
+* Dirt
+* Lin's thesaurus
+* Other distributional similarity thesauri (please specify)
+* ... (add as needed)
+
+= METHOD TO COMBINE TOOLS AND RESOURCES =
+
+[Please summarize the method to combine the tools and resources, mentioning whether it's heuristic, or uses machine learning, etc.]
+
+
+= COMMENTS =
+
+[Please include any comment you might have to improve the task in the future]
+
 """
 
 
-
-# pairing of 2012 training data and 2013 test data
+# pairing of 2012 training and test data to 2013 test data
+# This particular choice resulted from looking at the STS12 test & train data combinations, 
+# and from looking at histograms for the scores on the STS13 data.
 id_pairs = [ 
-    ("MSRvid", "headlines"),
-    ("SMTeuroparl", "SMT"),
-    (train_ids, "FNWN"),
-    (train_ids, "OnWN") ]
+    (train_ids,     
+     test_ids, 
+     "headlines"),
+    ("SMTeuroparl", 
+     ("SMTeuroparl", "surprise.SMTnews"), 
+     "SMT"),
+    (("MSRpar", "SMTeuroparl"),
+     ("surprise.OnWN", "surprise.SMTnews"),
+     "FNWN"),
+    (("MSRpar", "SMTeuroparl"),
+     ("surprise.OnWN", "surprise.SMTnews"),
+     "OnWN") ]
 
 # features to be used
-feats = takelab_feats
+# feats = all_feats
+feats = takelab_feats + gleb_feats
 
 # learning algorithm
-regressor = LinearRegression()
+regressor = SVR(C=200)
 
 out_dir = "STScore-{}-{}".format(GROUP, APPROACH)
 if not exists(out_dir): mkdir(out_dir)
 
 filenames = []
 
-for train_id, test_id in id_pairs:
-    X_train, y_train = read_train_data(train_id, feats)
+for sts12_train_id, sts12_test_id, sts13_test_id in id_pairs:
+    # combine 2012 training and test data 
+    X_sts12_train, y_sts12_train = read_train_data(sts12_train_id, feats)
+    X_sts12_test, y_sts12_test = read_test_data(sts12_test_id, feats)
+    X_train = np.vstack([X_sts12_train, X_sts12_test])
+    y_train = np.hstack([y_sts12_train, y_sts12_test])
+    
     regressor.fit(X_train, y_train)
     
-    X_test = read_test_data(test_id, feats)
+    X_test = read_blind_test_data(sts13_test_id, feats)
     y_test = regressor.predict(X_test)
     
-    test_input = read_system_input(test_input_fnames[test_id])
+    test_input = read_system_input(test_input_fnames[sts13_test_id])
     postprocess(test_input,  y_test)
     
-    fname =  "{}/STScore.output.{}.txt".format(out_dir, test_id)
+    fname =  "{}/STScore.output.{}.txt".format(out_dir, sts13_test_id)
     write_scores(fname, y_test)
     filenames.append(fname)
     

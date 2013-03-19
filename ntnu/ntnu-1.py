@@ -33,8 +33,8 @@ id_pairs = [
 
 
 # features to be used
-feats = dkpro_feats + takelab_feats
-#feats = all_feats
+#feats = dkpro_feats + takelab_feats
+feats = all_feats
 
 
 # learning algorithms, one per test set, where SVR settings result from
