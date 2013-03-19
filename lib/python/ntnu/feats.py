@@ -44,7 +44,7 @@ takelab_lsa_feats = [
 ]    
 
 gleb_feats = [
-    "SemanticWordOrderLeacockAndChodorow"]
+    "GateSmartMatchSim"]
 
 
 all_feats = (
