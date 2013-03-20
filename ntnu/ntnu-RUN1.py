@@ -73,7 +73,7 @@ from sts.sts13 import test_input_fnames
 from ntnu.sts12 import read_train_data, train_ids, read_test_data, test_ids
 from ntnu.sts13 import read_blind_test_data
 from ntnu.io import postprocess
-from ntnu.feats import all_feats, dkpro_feats, takelab_feats, gleb_feats
+from ntnu.feats import all_feats, dkpro_feats, takelab_feats, gleb_feats, takelab_lsa_feats
 
 
 GROUP = "NTNU"
@@ -169,7 +169,7 @@ id_pairs = [
 
 # features to be used
 # feats = all_feats
-feats = dkpro_feats + takelab_feats + gleb_feats
+feats = dkpro_feats + takelab_feats + takelab_lsa_feats + gleb_feats
 
 # learning algorithm in default setting
 regressor = SVR()
