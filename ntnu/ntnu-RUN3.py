@@ -78,7 +78,7 @@ from ntnu.feats import all_feats
 
 GROUP = "NTNU"
 
-APPROACH = "RUN1"
+APPROACH = "RUN3"
 
 
 # Please include a description of your submission, following the format
