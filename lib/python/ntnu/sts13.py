@@ -20,7 +20,7 @@ test_feat_fnames = {id: feat2filename(test_dir, id) for id in test_ids}
 #                     features=features, convert_nan=convert_nan)
 
 
-def read_test_data(ids, features=[], convert_nan=True):
+def read_blind_test_data(ids, features=[], convert_nan=True):
     return read_blind_data(ids, test_feat_fnames, features=features,
                            convert_nan=convert_nan )
 

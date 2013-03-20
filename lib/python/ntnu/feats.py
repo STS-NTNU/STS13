@@ -16,7 +16,12 @@ dkpro_feats = [
     "WordNGramContainmentMeasure_1_stopword-filtered",
     "LongestCommonSubstringComparator", 
     "GreedyStringTiling_3",
-    "WordNGramContainmentMeasure_2_stopword-filtered"
+    "WordNGramContainmentMeasure_2_stopword-filtered",
+    "ESA_Wikipedia",
+    "ESA_Wiktionary",
+    "ESA_WordNet",
+    "MCS06_Resnik_WordNet",
+    "TWSI_MCS06_Resnik_WordNet"
 ]
     
 
@@ -44,14 +49,35 @@ takelab_lsa_feats = [
 ]    
 
 gleb_feats = [
-    "SemanticWordOrderLeacockAndChodorow",
+    #"SemanticWordOrderLeacockAndChodorow",
     "GateSmartMatchSim"
 ]
 
+lars_feats = [
+    #"ParseConfidence",
+    "RelationSimilarityFrameTypeMeasure",
+    "RelationSimilarityMeasure",
+    "RelationSimilarityMeasureOneConstituent",
+    #"RelationSimilarityNegationMeasure",
+    #"GraphEditDistance"
+    ]
+
+hans_feats = [
+    "MultisenseRI_CentroidTermTerm_Measure",
+    "MultisenseRI_ContextTermTerm_Measure",
+    "MultisenseRI_HASensesTermTerm_Measure",
+    "MultisenseRI_MaxSenseTermTerm_Measure",
+    "RI_AvgTermTerm_Measure",
+    "RI_HungarianAlgorithm_Measure",
+    "RI_SentVectors_Norm_Measure",
+    "RI_SentVectors_TFIDF_Measure"
+    ]
 
 all_feats = (
     dkpro_feats +
     takelab_feats +
     takelab_lsa_feats +
-    gleb_feats
+    gleb_feats +
+    hans_feats +
+    lars_feats
     )

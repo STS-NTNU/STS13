@@ -73,12 +73,12 @@ from sts.sts13 import test_input_fnames
 from ntnu.sts12 import read_train_data, train_ids, read_test_data, test_ids
 from ntnu.sts13 import read_blind_test_data
 from ntnu.io import postprocess
-from ntnu.feats import all_feats, takelab_feats, gleb_feats
+from ntnu.feats import all_feats, dkpro_feats, takelab_feats, gleb_feats, takelab_lsa_feats
 
 
 GROUP = "NTNU"
 
-APPROACH = "METHOD1"
+APPROACH = "RUN1"
 
 
 # Please include a description of your submission, following the format
@@ -153,8 +153,6 @@ DESCRIPTION = \
 
 
 # pairing of 2012 training and test data to 2013 test data
-# This particular choice resulted from looking at the STS12 test & train data combinations, 
-# and from looking at histograms for the scores on the STS13 data.
 id_pairs = [ 
     (train_ids,     
      test_ids, 
@@ -162,19 +160,19 @@ id_pairs = [
     ("SMTeuroparl", 
      ("SMTeuroparl", "surprise.SMTnews"), 
      "SMT"),
-    (("MSRpar", "SMTeuroparl"),
-     ("surprise.OnWN", "surprise.SMTnews"),
+    (train_ids,
+     test_ids,
      "FNWN"),
-    (("MSRpar", "SMTeuroparl"),
-     ("surprise.OnWN", "surprise.SMTnews"),
+    (train_ids,
+     test_ids,
      "OnWN") ]
 
 # features to be used
 # feats = all_feats
-feats = takelab_feats + gleb_feats
+feats = dkpro_feats + takelab_feats + takelab_lsa_feats + gleb_feats
 
-# learning algorithm
-regressor = SVR(C=200)
+# learning algorithm in default setting
+regressor = SVR()
 
 out_dir = "STScore-{}-{}".format(GROUP, APPROACH)
 if not exists(out_dir): mkdir(out_dir)

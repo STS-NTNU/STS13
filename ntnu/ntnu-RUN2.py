@@ -73,12 +73,12 @@ from sts.sts13 import test_input_fnames
 from ntnu.sts12 import read_train_data, train_ids, read_test_data, test_ids
 from ntnu.sts13 import read_blind_test_data
 from ntnu.io import postprocess
-from ntnu.feats import all_feats, takelab_feats, gleb_feats
+from ntnu.feats import all_feats, dkpro_feats, takelab_feats, takelab_lsa_feats, gleb_feats
 
 
 GROUP = "NTNU"
 
-APPROACH = "METHOD1"
+APPROACH = "RUN2"
 
 
 # Please include a description of your submission, following the format
@@ -171,9 +171,9 @@ id_pairs = [
 
 # features to be used
 # feats = all_feats
-feats = takelab_feats + gleb_feats
+feats = dkpro_feats + takelab_feats + takelab_lsa_feats + gleb_feats
 
-# learning algorithm
+# learning algorithm: C=200 tends to spread scores a litlle more
 regressor = SVR(C=200)
 
 out_dir = "STScore-{}-{}".format(GROUP, APPROACH)
