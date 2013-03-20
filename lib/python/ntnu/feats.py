@@ -49,7 +49,7 @@ takelab_lsa_feats = [
 ]    
 
 gleb_feats = [
-    "SemanticWordOrderLeacockAndChodorow",
+    #"SemanticWordOrderLeacockAndChodorow",
     "GateSmartMatchSim"
 ]
 
@@ -62,10 +62,22 @@ lars_feats = [
     #"GraphEditDistance"
     ]
 
+hans_feats = [
+    "MultisenseRI_CentroidTermTerm_Measure",
+    "MultisenseRI_ContextTermTerm_Measure",
+    "MultisenseRI_HASensesTermTerm_Measure",
+    "MultisenseRI_MaxSenseTermTerm_Measure",
+    "RI_AvgTermTerm_Measure",
+    "RI_HungarianAlgorithm_Measure",
+    "RI_SentVectors_Norm_Measure",
+    "RI_SentVectors_TFIDF_Measure"
+    ]
+
 all_feats = (
     dkpro_feats +
     takelab_feats +
     takelab_lsa_feats +
-    gleb_feats #+
-    #lars_feats
+    gleb_feats +
+    hans_feats +
+    lars_feats
     )

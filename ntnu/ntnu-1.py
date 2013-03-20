@@ -16,7 +16,7 @@ from sts.score import correlation
 from sts.sts12 import test_input_fnames
 from ntnu.sts12 import train_ids, read_train_data, read_test_data
 from ntnu.io import postprocess
-from ntnu.feats import all_feats, dkpro_feats, takelab_feats
+from ntnu.feats import all_feats, dkpro_feats, takelab_feats, gleb_feats, hans_feats, lars_feats
 
 # make sure you have sklearn installed
 
@@ -35,7 +35,7 @@ id_pairs = [
 # features to be used
 #feats = dkpro_feats + takelab_feats
 feats = all_feats
-
+#feats = hans_feats + gleb_feats + lars_feats + takelab_feats
 
 # learning algorithms, one per test set, where SVR settings result from
 # grid-search.sh
