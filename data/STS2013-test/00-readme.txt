@@ -9,8 +9,8 @@
 
 			     CORE DATASET
 				   
-			      TEST DATA
-
+		      TEST DATA WITH GOLD LABELS
+				   
 
 This set of files describes the CORE DATASET for the main track of the
 *SEM 2013 SHARED TASK on Semantic Textual Similarity.
@@ -27,6 +27,11 @@ The test dataset contains the following:
   STS.input.OnWN.txt              "
   STS.input.FNWN.txt              "
   STS.input.SMT.txt               "
+
+  STS.gs.headlines.txt            tab separated sample gold standard
+  STS.gs.OnWN.txt                 "
+  STS.gs.FNWN.txt                 "
+  STS.gs.SMT.txt                  "
 
   STS.output.headlines.txt	  tab separated sample output
   STS.output.OnWN.txt	  	  "
@@ -138,6 +143,7 @@ The gold standard has been assembled using mechanical turk, gathering
 several scores per sentence pair. The gold standard score will the
 average of those scores. 
 
+Please check any of STS.*.gs.txt
 
 
 Answer format
