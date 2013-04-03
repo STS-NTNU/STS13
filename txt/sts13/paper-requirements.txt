@@ -1,0 +1,81 @@
+From: Mona Diab <mtdiab@email.gwu.edu>
+Subject: [sts] *SEM Shared Task STS -- Call for Papers: Due April 9th 2013, 23:59 PST
+Date: March 25, 2013 10:45:14 PM GMT+01:00
+To: "sts-semeval@googlegroups.com" <sts-semeval@googlegroups.com>
+Cc: Eneko Agirre <e.agirre@ehu.es>, "danielcer@stanford.edu Cer" <danielcer@stanford.edu>, "weiwei@cs.columbia.edu Guo" <weiwei@cs.columbia.edu>, Aitor Gonzalez Agirre <aitor.gonzalezagirre@gmail.com>
+Reply-To: sts-semeval@googlegroups.com
+
+Dear All, 
+
+Thanks for participating in and submitting system runs for the *SEM Shared task. We have a very healthy submission rate. We had 35 teams submitting a total of 86 runs. 
+
+Each team should plan to submit a paper corresponding to their system(s).
+
+
+*SEM-ST-2013 invites papers that describe system description papers of participating systems.  The only accepted format for submitted papers is PDF. The papers must be submitted no later than April 9, 2013 (23:59 pm PST).
+
+
+Papers should be submitted using the START system:
+
+     https://www.softconf.com/naacl2013/STARSEM2013/
+
+
+Papers should follow the *SEM 2013 guidelines:
+
+     http://clic2.cimec.unitn.it/starsem2013/
+
+with the exception that :
+
+       paper reviewing will not be blind, so you can include authors' names, affiliations and references in the submitted paper.
+
+Additionally, the please note the following restrictions and requirements when writing the paper.
+
+
+*SEM Shared Task 2013: Semantic Textual Similarity: System Description Paper
+
+
+Paper Title:  The title of your paper should be of the form "<ID>-<TASK>: <Paper Title>"  where <ID> is the team ID used when registering with *SEM ST 2013, <TASK> is either CORE or TYPED, or CORE_TYPED (assuming you participated in both evaluations,  and <Paper Title> is the title of your paper.
+
+Page Limit:  For each team paper, 4 pages for the first system corresponding to the first task and 2 extra pages for the second task, then 1 page extra for each additional system, up to a maximum of 8 pages + 2 pages for references.
+
+
+Papers should clearly describe the methods used in sufficient detail to ensure it is reproducible.
+
+Papers will be reviewed by other task participants. We expect that task participants are happy to review papers in the *SEM Shared Task.
+
+
+The schedule is very tight and deadlines will be strictly followed.
+
+Deadlines:
+
+   April 9, 2013 (23:59 UTC-12) Paper submission deadline
+   April 20, 2012 Paper reviews due
+   April 29 1, 2012  Camera ready papers due
+
+Please don't hesitate to ask us for further clarification. 
+Thank you all for making the Shared Task a great success!
+
+Aitor, Dan, Eneko, Mona, Weiwei
+
+Mona T. Diab, PhD
+
+Associate Professor
+Department of Computer Science 
+School of Eng. & Applied Science
+The George Washington University
+http://www.seas.gwu.edu/~mtdiab
+Tel.: 202 994.8109
+
+
+-- 
+-- 
+Website of task, http://ixa2.si.ehu.es/sts
+To post to this group, send email to sts-semeval@googlegroups.com
+To unsubscribe, send email to sts-semeval+unsubscribe@googlegroups.com
+For more options, http://groups.google.com/group/sts-semeval?hl=en?hl=en
+--- 
+You received this message because you are subscribed to the Google Groups "STS SemEval" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to sts-semeval+unsubscribe@googlegroups.com.
+For more options, visit https://groups.google.com/groups/opt_out.
+ 
+ 

@@ -17,3 +17,12 @@ dkpro/.idea/workspace.xml
 *.pdf
 *.png
 *.zip
+*.gz
+!naaclhlt2013.pdf
+txt/sts13/*.aux
+txt/sts13/*.log
+txt/sts13/*.bbl
+txt/sts13/*.blg
+
+
+
