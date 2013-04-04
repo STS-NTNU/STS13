@@ -1,9 +1,37 @@
-\section{Gleb feats}
+\section{Word Matching Similarity}
+GateMatch is based on a one-to-one alignment of tokens from the two sentences. The alignment is obtained by maximal weighted bipartite matching using several word similarity measures. In addition, we utilize named entity recognition and matching tools. In general, the approach is similar to the one described in \cite{Karnick2012}, with a different set of tools used. Our implementation relies on ANNIE components in GATE \cite{Cunningham}. The workflow is as follows:
 
+\begin{enumerate}
+\item
+Tokenization (ANNIE English Tokeniser)
+\item
+POS tagging (ANNIE POS Tagger)
+\item
+Lemmatization (GATE Morphological Analyser)
+\item
+Stopword removal
+\item
+Named entity recognition based on lists (ANNIE Gazetteer)
+\item
+Named entity recognition based on JAPE grammar (ANNIE NE Transducer)
+\item
+Matching of named entities (ANNIE Ortho Matcher) based on annotations from step 5 and 6
+\item
+Computing WordNet and Levenstein similarity between words
+\item
+Calculating maximum weighted bipartite graph matching based on similarities from 7 and 8
+\end{enumerate}
 
+Steps 1-4 are standard preprocessing routines. In step 5, named entities are recognized based on lists that contain locations, organizations, companies, newspapers, person names as well date, time and currency units. In step 6, JAPE grammar rules are applied to recognize entities such as addresses, emails, dates, job titles and person names  based on basic syntactic and morphological features. Matching of named entities in step 7 is based on matching rules that check the type of named entity and lists with aliases to identify entities as "US", "United States", "USA" as the same entity. 
 
+In step 8, similarity is computed for each pair of tokens from the two sentences. Tokens that are matched as entities in step 7 get a similarity value of 1.0. For the rest of entities and non-entity words we use \emph{LCH} \cite{Leacock1998} similarity, which is based on a shortest path between the corresponding senses in WordNet. Since word sense disambiguation is not used, the we obtain the similarity between the nearest senses of two words. \emph{LCH} measure is limited to nouns and verbs and doesn't support cross-POS similarity. For cases when the WordNet-based similarity can't be obtained, a similarity based on Levenshtein distance \cite{Levenshtein1966} is used instead:
 
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "sts13-ntnu-core"
-%%% End: 
+\begin{equation}
+sim_{lev}(w_1, w_2) = 1 - \frac{dist_{lev}(w_1, w_2)}{|w_1|, |w_2|}
+\end{equation}
+
+In step 9, a complete bipartite graph is constructed and the maximum weighted bipartite matching is computed using the Hungarian Algorithm \cite{Kuhn1955}. Nodes in this bipartite graph represent tokens from the sentences and edges have weights that correspond to similarities between tokens obtained in step 8.  Maximum weighted bipartite matching finds the one-to-one alignment that maximizes the total similarity of the matching  $sim_{total}$, which is the sum of similarites between aligned tokens. Normalized total similarity is used as the final value for the similarity between sentences:
+
+\begin{equation}
+sim(s_1, s_2) = 2 * \frac{sim_{total}(s_1, s_2)}{|s_1| + |s_2|}
+\end{equation}
