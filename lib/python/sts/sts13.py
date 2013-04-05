@@ -15,4 +15,4 @@ repos_dir = normpath(join(__file__, "../../../.."))
 test_dir = join(repos_dir, "data/STS2013-test")
 test_ids = "FNWN", "headlines", "OnWN", "SMT"
 test_input_fnames = id2filenames(test_dir, "input", test_ids)
-#test_gs_fnames = id2filenames(test_dir, "gs", test_ids)
+test_gs_fnames = id2filenames(test_dir, "gs", test_ids)

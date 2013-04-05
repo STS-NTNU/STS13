@@ -1,0 +1,108 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{naaclhlt2013}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{todonotes}
+\setlength\titlebox{6.5cm}    % Expanding the titlebox
+
+\title{NTNU-CORE: title}
+
+\author{Authors\\
+  Norwegian University of Science and Technology\\
+  Department of Computer and Information and Science\\
+  Sem S{\ae}lands vei 7-9 \\
+  NO-7491 Trondheim, Norway\\
+  {\tt author1@idi.ntnu.no}}
+
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+ABSTRACT
+\end{abstract}
+
+\section{Introduction}
+
+
+
+\section{Reused features}
+
+The TakeLab system for measuring semantic text similarity
+\cite{vsaric2012takelab} was one of the most succesful systems in the
+STS 2012 shared task. There were two variants called the \emph{simple}
+and \emph{syntax} system. The \emph{simple} system obtained 3rd place
+for overall Pearson and 1st for normalized Pearson. We used the source
+code\footnote{\url{http://takelab.fer.hr/sts/}} to generate the
+features for the STS 2012 data as well as the STS 2013 test data. The
+later required LSA vector space models, which were kindly provided by
+the TakeLab team, and word counts, which were obtained from Google
+Books Ngrams (version 20120701, 468,491,999,592
+words)\footnote{\url{http://storage.googleapis.com/books/ngrams/books/datasetsv2.html}}.
+
+Since the TakeLab features are described in\cite{vsaric2012takelab},
+they will be reviewed only briefly here. The\emph{ n-gram overlap
+  features} measure overlap in unigrams, bigrams and trigrams of
+lower-cased words and lemmas, filtering stopwords and non-words (we
+did not use content n-gram overlap or skip n-grams). The\emph{
+  WordNet-augmented word overlap feature} measures unigram overlap
+where the similarity between word pairs is defined as the harmonic
+mean of their WordNet path length similarities \cite{}. The weighted
+word overlap features measure unigram overlap for lower-cased words
+and lemmas, where each word is weighted according to its Information
+Content calculated on the basis of unigram counts from Google Books
+Ngrams. The \emph{vector space sentence similarity features} capture
+distributional similarity between words of both sentences. Vector
+space models are derived from two corpora -- the New York Times
+Annotated Corpus (NYT) and Wikipedia (wiki) -- using Latent Semantic
+Analysis \cite{DeerwesterDumaisFurnas:1990}. A sentence vector is
+obtained by summing the vector of each word in the sentence.  A
+weighted variant uses IC to weight the vector of each word before
+summation. Vector space sentence similarity is then computed as the
+cosine similarity between the sentence vectors. The \emph{normalized
+  difference} features measure measure the normalized differences in
+sentence length (in lower-cased stopword-filtered words) and in
+aggregated information content (sum of IC over all lower-cased
+words). The \emph{shallow NE similarity feature} expresses unigram
+overlap in named entities, treating each capitalized word longer than
+one character as a named entity (excluding the first word in the
+sentence). Finally, the\emph{ numbers overlap} features and the
+\emph{stock index} features measure the overlap and count of numerals
+and stock index symbols respectively. 
+% EM: provide more details if space allows
+
+DKPro system \cite{bar2012ukp}
+
+
+\input{gleb-feats}
+
+
+\input{hans-feats}
+
+
+\input{lars-feats}
+
+
+\section{Results}
+
+
+\section{Discussion}
+
+
+\section{Conlusion}
+
+
+\section*{Acknowledgements}
+
+Thanks to the TakeLab team from the University of Zagreb for making
+the code of the \emph{simple} system publicly available as well as
+providing us with the full-scale LSA models. Thanks to the team from
+Ubiquitous Knowledge Processing Lab in Darmstadt for releasing the
+code of the DKPro Similarity system.
+
+
+\bibliographystyle{naaclhlt2013.bst}
+\bibliography{sts13-ntnu-core}
+
+\end{document}

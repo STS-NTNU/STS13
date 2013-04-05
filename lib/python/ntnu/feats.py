@@ -55,11 +55,11 @@ gleb_feats = [
 
 lars_feats = [
     #"ParseConfidence",
-    "RelationSimilarityFrameTypeMeasure",
+    #"RelationSimilarityFrameTypeMeasure",
     "RelationSimilarityMeasure",
-    "RelationSimilarityMeasureOneConstituent",
+    #"RelationSimilarityMeasureOneConstituent",
     #"RelationSimilarityNegationMeasure",
-    #"GraphEditDistance"
+    "GraphEditDistance"
     ]
 
 hans_feats = [
