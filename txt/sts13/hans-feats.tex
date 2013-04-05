@@ -1,9 +1,36 @@
 \section{Hans feats}
 
-
-
-
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "sts13-ntnu-core"
 %%% End: 
+
+A group of our features were based on building statistical language models of semantic information from large amounts of text. For building these models we used two variations of Random Indexing (RI) \cite{ first RI }. One is the classic \emph{sliding window} method with one ``context vector'' per unique term \cite{ Sahlgren ... }. The other one is a novel method, inspired by the works of <name>~\cite{ sense clustering paper ...  }, which attempts to capture and model one or more ``\emph{senses}'' per unique term in an unsupervised manner, where each sense is represented as individual vectors in the model. This differ from the classic method which restricts each term to have only one vector or ``sense'' per term.
+
+
+\subsection{Random Indexing}
+
+Random Indexing (RI) can be regarded as a method for modeling higher order co-occurrence similarities among terms, and is thus comparable to latent semantic indexing (LSI) \cite{ First: Dumais ... } and similar methods. LSI takes a full co-occurrence matrix, derived from a document corpus, as input and performs a decomposition step on the matrix. The output is a matrix of reduces dimensionality where higher order co-occurrence similarities among terms, represented as rows, can be retrieved by calculating the \emph{cosine similarity} of term pairs (i.e. vector pairs). 
+
+RI models a similar co-occurrence matrix of reduced dimensionality, but builds it fully incremental, thus avoiding the separate decomposition step used by LSI. The way this is done is by first assigning \emph{index vectors} to each unique term, these are of a predefined size, typically around 1000 in size and consists of a few randomly placed 1s and -1s (e.g. 4). A \emph{context vector} is also assigned to each term, these has the same size as the index vectors, but initially consists of only zeros. Then, when traversing a document corpus using a sliding window of a fixed size (e.g. 5 terms on the left and 5 terms on the right), each term get their context vectors updated in the following way: A term in the center of a sliding window, i.e. target term, has the index vector of its neighboring terms inside the sliding window added to its context vector using vector summation. Then the cosine similarity measure can be used for term pairs to calculate their similarity. This similarity is often referred to as ``contextual similarity'', but also ``semantic similarity''.
+
+
+\subsection{Multi-sense Random Indexing}
+
+As an alternative approach to building a semantic vector space model we tested an novel method that we have called ``Multi-sense Random Indexing''.
+This method includes the same steps as those found in classic (sliding window) RI, but with some added sub-steps. 
+The main difference lays in the way context vectors are updated.
+To start with, each term has one index vector and an empty context vector.
+The first time a target term has its context vector updated, this is done in the same way as for classic RI.
+However, the next time this term is observed/targeted in the corpus, instead of directly adding the index vector of the neighboring terms in the window to its context vector, the system first computes a separate \emph{window vector} -- consisting of the sum of these index vectors.
+Then the system calculates the cosine similarity between this window vector and the context vector(s) belonging to the target term. 
+To begin with, since the term only has one context vector, one similarity score is calculated.
+This score is then compared to a predefined \emph{similarity threshold}, if the score is higher than the similarity threshold, the window vector is added to the context vector. But if the score is lower than the threshold value, the window vector is added as a separate context vector of this term, resulting in this term now having two context vectors. We call these context vectors \emph{sense vectors}.
+
+With training, there is a chance that a term can acquire multiple sense vectors. 
+When updating a term of multiple senses, the to-be-added window vector is compared to all the sense vectors of a word, and in those cases where this window vector is similar to more than one sense vector -- i.e. similar above the given similarity threshold -- each of these senses are merged into one sense vector together with the window vector. In this way the goal is to do incremental clustering of senses in an unsupervised way. This way of creating clusters of separate sentences for each term is somewhat similar to what is done in \cite{ sense clustering paper ...  }, however, here they store every ``window vector'' for all terms from the entire corpus separately before they perform a clustering step on these to generate ``centroid vectors'' (what we here call sense vectors) for each term. The incremental clustering that we apply is similar to what is used in \cite{ IBM? paper om incremental clustering}.
+
+Now there are multiple ways of calculating the similarity between two terms, and we point the reader to \cite{ sense clustering paper ...  } for more information about this.
+
+\subsection{Calculating sentence similarity using Multi-sense Random Indexing}
+something something ...
