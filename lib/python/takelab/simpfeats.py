@@ -12,7 +12,7 @@ from numpy.linalg import norm
 import nltk
 from nltk.corpus import wordnet
 
-from ntnu.sts12 import takelab_feats, takelab_lsa_feats
+from ntnu.feats import takelab_feats, takelab_lsa_feats
 
 
 # global variables to be defined
