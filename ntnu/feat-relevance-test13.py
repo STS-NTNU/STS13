@@ -49,13 +49,13 @@ regressor = LinearRegression()
 
 # TODO: this approach is brain dead, because it keeps reading features from files
 
-print "{:64s}".format("Features:"),
+print "{:64s}\t".format("Features:"),
 
-print " ".join(["{:>16s}".format(p[2]) for p in id_pairs])
+print " ".join(["{:>16s}\t".format(p[2]) for p in id_pairs])
 
 
 for feat in feats:
-    print "{:64s}".format(feat),
+    print "{:64s}\t".format(feat),
     
     for sts12_train_id, sts12_test_id, sts13_test_id in id_pairs:
         # combine 2012 training and test data 
@@ -72,6 +72,6 @@ for feat in feats:
         sys_input = read_system_input(test_input_fnames[sts13_test_id])
         postprocess(sys_input,  sys_scores)
         
-        print "{:16.2f}".format(correlation(sys_scores, y_test)),
+        print "{:16.2f}\t".format(correlation(sys_scores, y_test)),
     print
     

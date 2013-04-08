@@ -42,13 +42,13 @@ regressor = LinearRegression()
 
 # TODO: this approach is brain dead, because it keeps reading features from files
 
-print "{:64s}".format("Features:"),
+print "{:64s}\t".format("Features:"),
 
-print " ".join(["{:>16s}".format(p[1]) for p in id_pairs])
+print "\t".join(["{:>16s}".format(p[1]) for p in id_pairs])
 
 
 for feat in feats:
-    print "{:64s}".format(feat),
+    print "{:64s}\t".format(feat),
     
     for train_id, test_id in id_pairs:
         train_feat, train_scores = read_train_data(train_id, [feat])
@@ -63,6 +63,6 @@ for feat in feats:
         if isinstance(train_id, tuple):
             train_id = "+".join(train_id)
         
-        print "{:16.2f}".format(correlation(sys_scores, test_scores)),
+        print "{:16.2f}\t".format(correlation(sys_scores, test_scores)),
     print
     
