@@ -1,7 +1,31 @@
 \section{Lars feats}
 
+Two deep strategies were employed to accompany shallow-processed feature sets.  Two systems were used to provide the basis for such feature, namely the Relex system \cite{bioinflmu-254} from the OpenCog initiative \cite{Hart:2008:OSF:1566174.1566223}, and a graph-based edit-distance system from a recent M.Sc thesis \cite{rokenes13}.
+
+Relex outputs semantic relations found in sentences 
+
+\subsection{Relex}
+
+Relex outputs syntatic trees, dependency parses as well as semantic \emph{frames} exemplified (in part) below for the sentence \emph{Indian air force to buy 126 Rafale fighter jets}
+ 
+\begin{list}{}{}
+\item Commerce\_buy:Goods(buy,jet)
+\item Entity:Entity(jet,jet)
+\item Entity:Name(jet,Rafale)
+\item Entity:Name(jet,fighter)
+\item Possibilities:Event(hyp,buy)
+\item Request:Addressee(air,you)
+\item Request:Message(air,air)
+\item Transitive\_action:Beneficiary(buy,jet)
+\end{list}
 
 
+
+Based on this information, three features were extracted.  First, if there was as full (exact) match of the frame found in S1 in S2.  Second if there was a partial match until the first argument (i.e \emph{Categorization:Category(jet} and third if there was a match of the frame category (i.e \emph{Entity:Name}).
+
+\subsection{Graph-edit distance}
+
+The second deep feature was extracted by using the above-mentioned system for extracting the graph-edit distance betweeen the dependency (Maltparser)  output of the two sentences.  Both absolute and normalized scores were output by the system.
 
 %%% Local Variables: 
 %%% mode: latex
