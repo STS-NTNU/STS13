@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Combination of all TakeLab and DKPro features, plus Gleb feature
+Combination of all features
 """
 
 # make sure have numpy installed 
@@ -16,7 +16,7 @@ from sts.score import correlation
 from sts.sts12 import test_input_fnames
 from ntnu.sts12 import train_ids, read_train_data, read_test_data
 from ntnu.io import postprocess
-from ntnu.feats import dkpro_feats, takelab_feats, takelab_lsa_feats, gleb_feats
+from ntnu.feats import all_feats
 
 # make sure you have sklearn installed
 
@@ -33,7 +33,7 @@ id_pairs = [
 
 
 # features to be used
-feats = dkpro_feats + takelab_feats + takelab_lsa_feats + gleb_feats
+feats = all_feats
 
 # learning algorithms, one per test set, where SVR settings result from
 # grid-search.sh
@@ -49,7 +49,6 @@ regressors = [SVR() for i in range(5)]
 
 total = 0.0
 
-
 for (train_id, test_id), regressor in zip(id_pairs, regressors):
     train_feat, train_scores = read_train_data(train_id, feats)
     regressor.fit(train_feat, train_scores)
@@ -62,10 +61,12 @@ for (train_id, test_id), regressor in zip(id_pairs, regressors):
     
     if isinstance(train_id, tuple):
         train_id = "+".join(train_id)
-    
+
     r = correlation(sys_scores, test_scores)
     total += r
     
     print "{:32s} {:32s} {:2.4f}".format(train_id, test_id, r)
         
 print "{:2.4f}".format(total / len(id_pairs))
+
+    

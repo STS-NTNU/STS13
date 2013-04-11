@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Combination of all TakeLab and DKPro features, plus Gleb feature
+Combination of all TakeLab and DKPro features, plus Gleb feature, with C=200
 """
 
 # make sure have numpy installed 
@@ -45,7 +45,7 @@ feats = dkpro_feats + takelab_feats + takelab_lsa_feats + gleb_feats
     #SVR(C=10,  epsilon=0.5, gamma=0.02)
     #]
 
-regressors = [SVR() for i in range(5)]
+regressors = [SVR(C=200) for i in range(5)]
 
 total = 0.0
 
