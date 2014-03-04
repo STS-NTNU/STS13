@@ -1,0 +1,11 @@
+\section{Conclusion and Future Work}
+
+
+The NTNU system can be regarded as continuation of the most successful systems from the STS'12 shared task,  combining shallow textual, distributional and knowledge-based features into a support vector regression model. It reuses features from the TakeLab and DKPro systems, resulting in a very strong baseline. 
+
+Adding new features to further improve performance turned out to be hard: 
+only \texttt{GateWordMatch} yielded improved performance. 
+Similarity features based on both classical and innovative variants of Random Indexing were shown to correlate with semantic textual similarity, but did not complement the existing distributional features. Likewise, features designed to reveal deeper syntactic (graph edit distance) and semantic relations (RelEx) did not add to the score. 
+
+As future work, we would aim to explore a vertical feature composition approach similar 
+to \texttt{GateWordMatch} and contrast it with the ``flat'' composition currently used in our systems. 

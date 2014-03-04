@@ -1,0 +1,84 @@
+\section{Reused Features}
+\label{reused}
+
+The TakeLab `\emph{simple\/}' system \citep{vsaric2012takelab} 
+obtained 3rd place in overall Pearson correlation 
+and 1st for normalized Pearson in STS'12.
+The source code\footnote{\url{http://takelab.fer.hr/sts/}} was used to generate 
+all its features, that is,
+%which comprises 
+\emph{n-gram overlap}, 
+\emph{WordNet-augmented word overlap}, 
+\emph{vector space sentence similarity}, 
+\emph{normalized difference}, 
+\emph{shallow NE similarity}, 
+\emph{numbers overlap}, and 
+\emph{stock index} features.%
+\footnote{We did not use content n-gram overlap or skip n-grams.} 
+This required the full LSA vector space models, which were kindly provided by the TakeLab team. 
+The word counts required for computing Information Content were obtained from Google Books Ngrams.%
+\footnote{\url{http://storage.googleapis.com/books/ngrams/books/datasetsv2.html}, 
+version 20120701, with 468,491,999,592 words}
+
+%The TakeLab system for measuring semantic text similarity
+%\citep{vsaric2012takelab} was one of the most succesful systems in the
+%STS 2012 shared task. There were two variants called the \emph{simple}
+%and \emph{syntax} system. The \emph{simple} system obtained 3rd place
+%for overall Pearson and 1st for normalized Pearson. We used the source
+%code\footnote{\url{http://takelab.fer.hr/sts/}} to generate the
+%features for the STS 2012 data as well as the STS 2013 test data~\citep{AgirreEA:13}. 
+%The later required LSA vector space models, which were kindly provided by
+%the TakeLab team, and word counts, which were obtained from Google
+%Books Ngrams (version 20120701, with 468,491,999,592 words).%
+%\footnote{\url{http://storage.googleapis.com/books/ngrams/books/datasetsv2.html}}
+
+%Since the TakeLab features are described by \citet{vsaric2012takelab},
+%they will be reviewed only briefly here. The\emph{ n-gram overlap
+%  features} measure overlap in unigrams, bigrams and trigrams of
+%lower-cased words and lemmas, filtering stopwords and non-words (we
+%did not use content n-gram overlap or skip n-grams). The\emph{
+%  WordNet-augmented word overlap feature} measures unigram overlap
+%where the similarity between word pairs is defined as the harmonic
+%mean of their WordNet path length similarities \cite{}. The weighted
+%word overlap features measure unigram overlap for lower-cased words
+%and lemmas, where each word is weighted according to its Information
+%Content (IC) calculated on the basis of unigram counts from Google Books
+%Ngrams. The \emph{vector space sentence similarity features} capture
+%distributional similarity between words of both sentences. Vector
+%space models are derived from two corpora --- the New York Times
+%Annotated Corpus (NYT) and Wikipedia (wiki) --- using Latent Semantic
+%Analysis \citep{DeerwesterDumaisFurnas:1990}. A sentence vector is
+%obtained by summing the vector of each word in the sentence.  A
+%weighted variant uses IC to weight the vector of each word before
+%summation. Vector space sentence similarity is then computed as the
+%cosine similarity between the sentence vectors. The \emph{normalized
+%difference} features measure the normalized differences in
+%sentence length (in lower-cased stopword-filtered words) and in
+%aggregated information content (sum of IC over all lower-cased
+%words). The \emph{shallow NE similarity feature} expresses unigram
+%overlap in named entities, treating each capitalized word longer than
+%one character as a named entity (excluding the first word in the
+%sentence). Finally, the \emph{numbers overlap} features and the
+%\emph{stock index} features measure the overlap and count of numerals
+%and stock index symbols respectively. 
+% EM: provide more details if space allows
+
+The DKPro system \citep{bar2012ukp} obtained first place in STS'12 with the second run. 
+We used the source code\footnote{\url{http://code.google.com/p/dkpro-similarity-asl/}} 
+to generate features for the STS'12 and STS'13 data. 
+Of the string-similarity features, we reused the
+\emph{Longest Common Substring}, 
+\emph{Longest Common Subsequence} (with and without normalization), and
+\emph{Greedy String Tiling\/} measures. 
+From the character/word n-grams features, we used 
+\emph{Character n-grams} ($n=2,3,4$), 
+\emph{Word n-grams by Containment w/o Stopwords} ($n=1,2$),  
+\emph{Word n-grams by Jaccard} ($n=1,3,4$), and  
+\emph{Word n-grams by Jaccard w/o Stopwords} ($n=2,4$). 
+Semantic similarity measures include 
+\emph{WordNet Similarity\/} based on the Resnik measure (two variants) and 
+\emph{Explicit Semantic Similarity\/} based on WordNet, Wikipedia or Wiktionary. 
+This means that we reused all features from DKPro run~1 
+%of \citet{bar2012ukp}, 
+except for \emph{Distributional Thesaurus}.
+% EM: The two variants of the Wordnet features are not clearly described in the DKPro paper. What does "variants: complete texts + difference only" mean? Anyway, looking at the feature relevance scores, the two variants give exactly the same score, both on the 2012 and 2013 data.

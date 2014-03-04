@@ -1,0 +1,146 @@
+
+
+\section{Results}
+\label{results}
+
+\begin{table}[t!]
+\small
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr}
+\toprule
+Data & NTNU1 & NTNU2 & NTNU3  \\
+\midrule
+MSRpar      & 0.7262 & 0.7507 & 0.7221 \\
+MSRvid      & 0.8660 & 0.8882 & 0.8662 \\
+SMTeuroparl & 0.5843 & 0.3386 & 0.5503 \\
+SMTnews     & 0.5840 & 0.5592 & 0.5306 \\
+OnWN        & 0.7503 & 0.6365 & 0.7200 \\
+\midrule
+mean & 0.7022 & 0.6346 & 0.6779 \\ 
+\bottomrule
+\end{tabular*}
+\caption{Correlation score on 2012 test data}
+\vspace{4mm}
+\label{tab:test-results12}
+\end{table}
+
+System performance is evaluated using the Pearson product-moment correlation coefficient ($r$)
+between the system scores and the human scores.
+Results on the 2012 test data (i.e., 2013 development data) are listed in Table~\ref{tab:test-results12}. 
+This basically shows that except for the \feat{GateWordMatch}, 
+adding our other features tends to give slightly lower scores (cf. NTNU1 vs NTNU3). 
+In addition, the table illustrates that optimizing the SVR according to cross-validated grid search on 2012 training data 
+(here $C=200$), rarely pays off when testing on unseen data (cf. NTNU1 vs NTNU2).   
+%\todo{Why does parameter optimisation of the SVR reduce the correlation? /Rev1}
+
+Table~\ref{tab:test-results13} shows the official results on the test data. 
+These are generally in agreement with the scores on the development data, although substantially lower. 
+Our systems did particularly well on SMT, holding first and second position, 
+reasonably good on headlines, but not so well on the ontology alignment data, 
+resulting in overall 9th (NTNU1) and 12th (NTNU3) system positions 
+(5th best team).
+%
+Table~\ref{tab:features} lists the correlation score and rank of the ten best individual features per  STS'13 test data set, and those among the top-20 overall,
+resulting from linear regression on a single feature. 
+Features in boldface are genuinely new (i.e., described in Sections~\ref{gleb-feats}--\ref{lars-feats}).
+%\todo{Add all our features to the table? /BG}
+
+%Some interesting patterns can be observed here. 
+Overall the character n-gram features are the most 
+informative, particularly for HeadLine and SMT. The reason may be that these not only capture word overlap \citep{ahn2011automatically}, but also inflectional forms and spelling variants. 
+
+The (weighted) distributional similarity features based on NYT are important for HeadLine and SMT, which obviously contain sentence pairs from the news genre, whereas the Wikipedia based feature is more important for OnWN and FNWN. 
+WordNet-based measures are highly relevant too, with variants relying on path length outperforming those based on Resnik similarity, except for SMT. 
+
+\begin{table}%[t!]
+\small
+\centering
+%\resizebox{\linewidth}{!}{
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrrrr}
+\toprule
+& \multicolumn{2}{c}{NTNU1} & \multicolumn{2}{c}{NTNU2} &  \multicolumn{2}{c}{NTNU3}  \\
+% EM: change "$\rho$" back to "r", because the former is used for population correlations and the latter for sample correlation, and this is clearly a sample
+Data & \multicolumn{1}{c}{$r$} & \multicolumn{1}{c}{\footnotesize n} & \multicolumn{1}{c}{$r$} 
+& \multicolumn{1}{c}{\footnotesize n} & \multicolumn{1}{c}{$r$} & \multicolumn{1}{c}{\footnotesize n} \\
+\midrule
+Head & 0.7279 & \rank{11} & 0.5909 & \rank{59} & 0.7274 & \rank{12} \\
+OnWN & 0.5952 & \rank{31} & 0.1634 & \rank{86} & 0.5882 & \rank{32} \\
+FNWN & 0.3215 & \rank{45} & 0.3650 & \rank{27} & 0.3115 & \rank{49} \\
+SMT & 0.4015 & \rank{2} & 0.3786 & \rank{9} & {\bf 0.4035} & {\bf \rank{1}} \\
+\midrule
+mean & 0.5519 & \rank{9} & 0.3946 & \rank{68} & 0.5498 & \rank{12} \\
+\bottomrule
+\end{tabular*}
+%}
+\caption{Correlation score and rank on 2013 test data}
+\vspace{4mm}
+\label{tab:test-results13}
+\end{table}
+
+\begin{table*}
+\small
+\centering
+%\resizebox{\linewidth}{!}{
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrrrrrr}
+\toprule
+& \multicolumn{2}{c}{HeadLine} & \multicolumn{2}{c}{OnWN} &  \multicolumn{2}{c}{FNWN} & \multicolumn{2}{c}{SMT}  & \multicolumn{2}{c}{Mean} \\
+Features & \multicolumn{1}{c}{$r$} & \multicolumn{1}{c}{\footnotesize n} & \multicolumn{1}{c}{$r$} 
+& \multicolumn{1}{c}{\footnotesize n} & \multicolumn{1}{c}{$r$} & \multicolumn{1}{c}{\footnotesize n} & \multicolumn{1}{c}{$r$} & \multicolumn{1}{c}{\footnotesize n} & \multicolumn{1}{c}{$r$} & \multicolumn{1}{c}{\footnotesize n}\\
+\midrule
+\feat{CharacterNGramMeasure-3}             & 0.72	  & \rank{2} &     0.39    & \rank{2} & 	0.44    & \rank{3} & 	{\bf 0.70}    & {\bf \rank{1}} & 	{\bf 0.56}    & {\bf \rank{1}} \\
+\feat{CharacterNGramMeasure-4}             & 0.69    & \rank{3} & 	0.38    & \rank{5} & 	0.45    & \rank{2} & 	0.67    & \rank{6} & 	0.55    & \rank{2} \\
+\feat{CharacterNGramMeasure-2}             & {\bf 0.73}	  & {\bf \rank{1}} &     0.37    & \rank{9} & 	0.34    & \rank{10} & 	0.69    & \rank{2} & 	0.53    & \rank{3} \\
+\feat{tl.weight-dist-sim-wiki}             & 0.58    & \rank{14} & 	0.39    & \rank{3} & 	{\bf 0.45}    & {\bf \rank{1}} & 	0.67    & \rank{5} & 	0.52    & \rank{4} \\
+\feat{tl.wn-sim-lem}                       & 0.69    & \rank{4} & 	{\bf 0.40}    & {\bf \rank{1}} & 	0.41    & \rank{5} & 	0.59    & \rank{10} & 	0.52    & \rank{5} \\
+{\bf\feat{GateWordMatch}}                 & 0.67    & \rank{8} & 	0.37    & \rank{11} & 	0.34    & \rank{11} & 	0.60    & \rank{9} & 	0.50    & \rank{6} \\
+\feat{tl.dist-sim-nyt}                     & 0.69    & \rank{5} & 	0.34    & \rank{28} & 	0.26    & \rank{23} & 	0.65    & \rank{8} & 	0.49    & \rank{7} \\
+\feat{tl.n-gram-match-lem-1}               & 0.68    & \rank{6} & 	0.36    & \rank{16} & 	0.37    & \rank{8} & 	0.51    & \rank{14} & 	0.48    & \rank{8} \\
+\feat{tl.weight-dist-sim-nyt}              & 0.57    & \rank{17} & 	0.37    & \rank{14} & 	0.29    & \rank{18} & 	0.66    & \rank{7} & 	0.47    & \rank{9} \\
+\feat{tl.n-gram-match-lc-1}                & 0.68    & \rank{7} & 	0.37    & \rank{10} & 	0.32    & \rank{13} & 	0.50    & \rank{17} & 	0.47    & \rank{10} \\
+\feat{MCS06-Resnik-WordNet}                & 0.49    & \rank{26} &     0.36	& \rank{22} &   0.28	& \rank{19} &   0.68	& \rank{3} &   0.45    & \rank{11} \\
+\feat{TWSI-Resnik-WordNet}                 & 0.49	  & \rank{27} &     0.36	& \rank{23} &   0.28	& \rank{20} &   0.68	& \rank{4} &   0.45    & \rank{12} \\
+\feat{tl.weight-word-match-lem}            & 0.56    & \rank{18} &     0.37    & \rank{16} &    0.37	& \rank{7} &   0.50	& \rank{16} &   0.45    & \rank{13} \\
+{\bf\feat{MSRI-Centroid}}                 & 0.60	  & \rank{13} &     0.36	& \rank{17} &   0.37	& \rank{9} &   0.45	& \rank{19} &   0.45    & \rank{14} \\
+\feat{tl.weight-word-match-olc}            & 0.56    & \rank{19} &     0.38	& \rank{8} &   0.32	& \rank{12} &   0.51	& \rank{15} &   0.44    & \rank{15} \\
+{\bf\feat{MSRI-MaxSense}}                 & 0.58    & \rank{15}  &   0.36	& \rank{15} &  0.31    & \rank{14} &  0.45	& \rank{20} &   0.42    & \rank{16} \\
+\feat{GreedyStringTiling-3}                & 0.67	  & \rank{9} &     0.38	& \rank{6} &   0.31	& \rank{15} &   0.34	& \rank{29} &   0.43    & \rank{17} \\
+\feat{ESA-Wikipedia}                       & 0.50 &    \rank{25} &	0.30    & \rank{38} &  0.32	& \rank{14} &  0.54    & \rank{12} &	0.42    & \rank{18} \\
+\feat{WordNGramJaccard-1}                  & 0.64	  & \rank{10} &     0.37	& \rank{12} &   0.25	& \rank{25} &   0.33	& \rank{30} &   0.40    & \rank{19} \\
+\feat{WordNGramContainment-1-stopword}    & 0.64	  & \rank{25} &     0.38	& \rank{7} &   0.25	& \rank{24} &   0.32	& \rank{31} &   0.40    & \rank{20} \\                                     
+{\bf\feat{RI-Hungarian}}                  & 0.58    & \rank{16} &     0.33	& \rank{31} &   0.10    & \rank{34} &   0.42  & \rank{22} &	0.36    & \rank{24} \\ 
+
+{\bf\feat{RI-AvgTermTerm}}                & 0.56     & \rank{20} &     0.33    & \rank{32} &   0.11    & \rank{33} &   0.37	& \rank{28} &   0.34    & \rank{25} \\
+\feat{LongestCommonSubstring}             & 0.40	  & \rank{29} &     0.30	& \rank{39} &   0.42	& \rank{4} &   0.37	& \rank{27} &   0.37    & \rank{26} \\
+\feat{ESA-WordNet}                        & 0.11	  & \rank{43}&     0.30	& \rank{40}      &   0.41	& \rank{6} &   0.49	& \rank{18} &   0.33    & \rank{29} \\
+\feat{LongestCommonSubsequenceNorm}       & 0.53    & \rank{21} &     0.39	& \rank{4}       &   0.19	& \rank{27} &   0.18	& \rank{37} &   0.32    & \rank{30} \\   
+{\bf\feat{MultisenseRI-ContextTermTerm}}  & 0.39     & \rank{31} &     0.33    & \rank{33}    &   0.28	& \rank{21} &   0.15	& \rank{38} &   0.29    & \rank{33} \\
+{\bf\feat{MultisenseRI-HASensesTermTerm}}  & 0.39     & \rank{32} &     0.33    & \rank{34} &   0.28	& \rank{22} &   0.15	& \rank{39} &   0.29    & \rank{34} \\
+{\bf\feat{RI-SentVectors-Norm}}            & 0.34     & \rank{35} &     0.35    & \rank{26} &   -0.01	& \rank{51} &   0.24	& \rank{35} &   0.23    & \rank{39} \\
+{\bf\feat{RelationSimilarity}}            & 0.31      & \rank{39} &     0.35	& \rank{27} &   0.24	& \rank{26} &    0.02	& \rank{41} &   0.23    & \rank{40} \\
+{\bf\feat{RI-SentVectors-TFIDF}}          & 0.27     & \rank{40} &     0.15    & \rank{50} &   0.08    & \rank{40} &   0.23    & \rank{36} &   0.18    & \rank{41} \\
+{\bf\feat{GraphEditDistance}}             & 0.33	  & \rank{38} &     0.25	& \rank{46} &   0.13	& \rank{31} &   -0.11	& \rank{49} &   0.15    & \rank{42} \\
+\bottomrule
+\end{tabular*}
+%}
+\caption{Correlation score and rank of the best features}
+\label{tab:features}
+\vspace{5mm}
+\end{table*}
+
+As is to be expected, basic word and lemma unigram overlap prove to be informative, with overall unweighted variants resulting in higher correlation. 
+Somewhat surprisingly, higher order n-gram overlaps ($n>1$) seem to be less relevant.
+Longest common subsequence and substring appear to work particularly well for OnWN and FNWN,
+respectively. 
+
+\feat{GateWordMatch} is highly relevant too, in agreement with earlier results on the development data. Although treated as a single feature, it is actually a combination of similarity features where an appropriate feature is selected for each word pair. This ``vertical'' way of combining features can potentially provide a more fine-grained feature selection, resulting in less noise. Indeed, if two words are matching as named entities or as close synonyms, less precise types of features such as character-based and data-driven similarity should  not dominate the overall similarity score. 
+
+It is interesting to find that MSRI outperforms both classical RI and ESA~\citep{Gabrilovich2007} on this task.
+Still, the more advanced features, such as \feat{MSRI-Context}, gave inferior results compared to \feat{MSRI-Centroid}. This suggests that more research on MSRI is needed to understand how both training and retrieval can be optimised.
+%When it comes to the novel method MSRI, it performs better than both classic RI and ESA~\citep{Gabrilovich2007}, but is inferior to the LSA-based features.
+%\todo[inline]{EM: but aren't the LSA models trained on larger and more diverse data sets?}
+Also, LSA-based features (see \feat{tl.weight-dist-sim-wiki}) achieve better results than both MSRI, RI and ESA.
+Then again, larger corpora were used for training the LSA models.
+RI has been shown to be comparable to LSA 
+%at capturing similarity relations between words 
+\citep{Karlgren2001}, and since a relatively small corpus was used for training the RI/MSRI models, there are reasons to believe that better scores can be achieved by both RI- and MSRI-based features by using more training data.
+

@@ -1,9 +1,38 @@
-\section{Gleb feats}
+\section{Compositional Word Matching}
+\label{gleb-feats}
 
+Compositional word matching similarity is based on a one-to-one alignment of words from the two sentences. The alignment is obtained by maximal weighted bipartite matching using several word similarity measures. In addition, we utilise named entity recognition and matching tools. In general, the approach is similar to the one described by \citet{Karnick2012}, with a different set of tools used. 
+Our implementation relies on the ANNIE components in GATE~\citep{CunninghamEA:02} 
+and will thus be referred to as \feat{GateWordMatch}.
 
+The processing pipeline for \feat{GateWordMatch} is:  
+(1)~tokenization by ANNIE English Tokeniser, 
+(2)~part-of-speech tagging by ANNIE POS Tagger, 
+(3)~lemmatization by GATE Morphological Analyser, 
+(4)~stopword removal, 
+(5)~named entity recognition based on lists by ANNIE Gazetteer, 
+(6)~named entity recognition based on the JAPE grammar by the ANNIE NE Transducer, 
+(7)~matching of named entities by ANNIE Ortho Matcher, 
+(8)~computing WordNet and Levenstein similarity between words, 
+(9)~calculation of a maximum weighted bipartite graph matching based on similarities from 7~and~8. 
 
+Steps 1--4 are standard preprocessing routines. 
+In step~5, named entities are recognised based on lists that contain locations, organisations, companies, newspapers, and person names, as well as date, time and currency units. 
+In step~6, JAPE grammar rules are applied to recognise entities such as addresses, emails, dates, job titles, and person names based on basic syntactic and morphological features. 
+Matching of named entities in step~7 is based on matching rules that check the type of named entity, and lists with aliases to identify entities as ``US'', ``United State'', and ``USA'' as the same entity. 
 
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "sts13-ntnu-core"
-%%% End: 
+In step~8, similarity is computed for each pair of words from the two sentences. Words that are matched as entities in step~7 get a similarity value of $1.0$. 
+For the rest of the entities and non-entity words we use \emph{LCH\/} \citep{Leacock1998} similarity, which is based on a shortest path between the corresponding senses in WordNet. Since word sense disambiguation is not used, we take the similarity between the nearest senses of two words.
+%The \emph{LCH\/} measure is limited to nouns and verbs and does not support cross-POS (part of speech) similarity. 
+For cases when the WordNet-based similarity cannot be obtained, a similarity based on the Levenshtein distance \citep{Levenshtein:66} is used instead. It is normalised by the length of the longest word in the pair. For the STS'13 test data set, named entity matching contributed to 4\% of all matched word pairs; LCH similarity to 61\%, and Levenshtein distance to 35\%.
+
+In step~9, 
+%a complete bipartite graph is constructed and the 
+maximum weighted bipartite matching is computed using the Hungarian Algorithm \citep{Kuhn1955}. 
+Nodes in the bipartite graph represent words from the sentences, 
+and edges have weights that correspond to similarities between tokens obtained in step~8.
+Weighted bipartite matching finds the one-to-one alignment that maximizes 
+%the total similarity of the matching, which is 
+the sum of similarities between aligned tokens. 
+Total similarity normalised by the number of words in both sentences 
+is used as the final sentence similarity measure.

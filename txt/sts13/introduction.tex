@@ -1,0 +1,59 @@
+\section{Introduction}
+
+Intuitively, two texts are semantically similar if they roughly mean the same thing.
+The task of formally establishing semantic textual similarity clearly is more complex. For a start,
+it implies that we have a way to formally represent the intended meaning of all texts in all possible
+contexts, and furthermore a way to measure the degree of equivalence between two such representations.
+This goes far beyond the state-of-the-art for arbitrary sentence pairs, and several restrictions must be imposed.
+The Semantic Textual Similarity (STS) task~\citep{AgirreEA:12,AgirreEA:13} limits the
+comparison to isolated sentences only (rather than complete texts), and defines similarity
+of a pair of sentences as the one assigned by human judges %using Amazon Mechanical Turk,
+on a 0--5 scale (with 0 implying no relation and 5 complete semantic equivalence).
+%
+It is unclear, however, to what extent two judges would agree
+on the level of similarity between sentences;
+%$s_1$ and $s_2$: even if exposed to the sentences in the same order. 
+\citet{AgirreEA:12} report figures on the agreement between the authors 
+themselves of about 87--89\%.
+%, but include no calculation of inter-annotator agreement
+%in the form of, e.g., Krippendorff's {\em alpha\/} \citep{Krippendorff:04}.
+%Notably, the (graded) semantic equivalence relation between two sentences is assumed to be 
+%symmetrical, which implies that human judges always would assign the same degree of similarity
+%to the sentence pair regardless of whether they read $s_1$ or $s_2$ first. 
+%This is a quite strong assumption, and as far as we know, it has not been evaluated.
+%\todo[inline]{EM: Personally, I don't care to much for above paragraph. It's criticism of the task rather than description of our system.} 
+
+As in most language processing tasks, there are two overall ways to measure sentence similarity,
+either by data-driven (distributional) methods or by knowledge-driven methods; 
+in the STS'12 task the two approaches were used nearly equally much.
+%\todo[inline]{EM: how does e.g. character n-gram fit in? Can you call that knowledge-based?}
+Distributional models normally measure similarity in terms of word or word co-occurrence statistics, 
+or through concept relations extracted from a corpus.
+The basic strategy taken by NTNU in the STS'13 task was to use something of a 
+``feature carpet bombing approach'' in the way of first automatically extracting as many 
+potentially useful features as possible, using both knowledge and data-driven methods,
+and then evaluating feature combinations on the data sets provided by the organisers of the shared task.
+
+To this end, four different types of features were extracted.
+The first (Section~\ref{gleb-feats}) aggregates similarity based on named entity recognition with
+WordNet and Levenshtein distance by calculating maximum weighted bipartite graphs.
+%
+The second set of features (Section~\ref{hans-feats}) models higher order co-occurrence 
+similarity relations using Random Indexing \citep{Kanerva2000}, 
+both in the form of a (standard) sliding window approach and 
+through a novel method called ``Multi-sense Random Indexing'' which aims to
+separate the representation of different senses of a term from each other.
+%
+The third feature set (Section~\ref{lars-feats}) aims to capture deeper semantic relations using 
+either the output of the RelEx semantic dependency relationship extraction system \citep{bioinflmu-254} 
+or an in-house graph edit-distance matching system.
+%
+The final set (Section~\ref{reused}) is a straight-forward gathering of features from the systems
+that fared best in STS'12: TakeLab from University of Zagreb~\citep{vsaric2012takelab}
+and DKPro from Darmstadt's Ubiquitous Knowledge Processing Lab~\citep{bar2012ukp}.
+
+As described in Section~\ref{system}, Support Vector Regression~\citep{VapnikEA:97} was used
+for solving the multi-dimensional regression problem of combining all the extracted feature values.
+Three different systems were created based on feature performance on 
+the supplied development data. %supplied by the task organisers.
+Section~\ref{results} discusses scores on the STS'12 and STS'13 test data.

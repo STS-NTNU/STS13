@@ -1,33 +1,52 @@
-\section{Lars feats}
+\section{Deeper Semantic Relations}
+\label{lars-feats}
 
-Two deep strategies were employed to accompany shallow-processed feature sets.  Two systems were used to provide the basis for such feature, namely the Relex system \cite{bioinflmu-254} from the OpenCog initiative \cite{Hart:2008:OSF:1566174.1566223}, and a graph-based edit-distance system from a recent M.Sc thesis \cite{rokenes13}.
+Two deep strategies were employed to accompany the shallow-processed feature sets.  
+Two existing systems were used to provide the basis for these features, namely the 
+RelEx system~\citep{bioinflmu-254} from the OpenCog initiative~\citep{Hart:2008:OSF:1566174.1566223}, 
+and an in-house graph-edit distance system
+developed for plagiarism detection~\citep{rokenes13}.
 
-Relex outputs semantic relations found in sentences 
+%\subsection{RelEx}
 
-\subsection{Relex}
+RelEx outputs syntactic trees, dependency graphs, and \emph{semantic frames\/} as this one
+for the sentence \linebreak
+``\emph{Indian air force to buy 126 Rafale fighter jets\/}'':
+\vspace*{-2.5ex}
+%\begin{quote}
+{\footnotesize\texttt{
+\begin{mdframed}[linewidth=2pt]
+Commerce\_buy:Goods(buy,jet)\\
+Entity:Entity(jet,jet)\\
+Entity:Name(jet,Rafale)\\
+Entity:Name(jet,fighter)\\
+Possibilities:Event(hyp,buy)\\
+Request:Addressee(air,you)\\
+Request:Message(air,air)\\
+Transitive\_action:Beneficiary(buy,jet)
+\end{mdframed}}}
+%\end{quote}
+\vspace*{2.5ex}
+\noindent
+Three features were extracted from this:
+first, if there was an exact match of the frame found in $s_1$ with $s_2$;
+second, if there was a partial match until the first argument (\texttt{Commerce\_buy:Goods(buy});
+and third if there was a match of the frame category (\texttt{Commerce\_buy:Goods}).
 
-Relex outputs syntatic trees, dependency parses as well as semantic \emph{frames} exemplified (in part) below for the sentence \emph{Indian air force to buy 126 Rafale fighter jets}
- 
-\begin{list}{}{}
-\item Commerce\_buy:Goods(buy,jet)
-\item Entity:Entity(jet,jet)
-\item Entity:Name(jet,Rafale)
-\item Entity:Name(jet,fighter)
-\item Possibilities:Event(hyp,buy)
-\item Request:Addressee(air,you)
-\item Request:Message(air,air)
-\item Transitive\_action:Beneficiary(buy,jet)
-\end{list}
+%\subsection{Graph-edit distance}
 
-
-
-Based on this information, three features were extracted.  First, if there was as full (exact) match of the frame found in S1 in S2.  Second if there was a partial match until the first argument (i.e \emph{Categorization:Category(jet} and third if there was a match of the frame category (i.e \emph{Entity:Name}).
-
-\subsection{Graph-edit distance}
-
-The second deep feature was extracted by using the above-mentioned system for extracting the graph-edit distance betweeen the dependency (Maltparser)  output of the two sentences.  Both absolute and normalized scores were output by the system.
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "sts13-ntnu-core"
-%%% End: 
+In STS'12, \citet{singh-bhattacharya-bhattacharyya:2012:STARSEM-SEMEVAL} 
+matched Universal Networking Language (UNL) graphs against each other 
+by counting matches of relations and universal words, while
+\citet{bhagwani-satapathy-karnick:2012:STARSEM-SEMEVAL} calculated
+WordNet-based word-level similarities and created a weighted bipartite graph 
+(see Section~\ref{gleb-feats}).
+%
+The method employed here instead looked at the graph edit distance 
+between dependency graphs obtained with the
+Maltparser dependency parser \citep{Nivre06maltparser:a}.
+Edit distance is the defined as the minimum of the sum of the costs of the edit operations (insertion, deletion and substitution of nodes) required to transform one graph into the other.
+It is approximated with a fast but suboptimal algorithm based on bipartite graph matching through the Hungarian algorithm~\citep{RiesenBunke:2009}.
+%Edit cost was calculated between two dependency graphs obtained with.  
+%The nodes in the two graphs were then assigned to each other using the Hungarian algorithm.  
+%The cost was determined by looking at the number of additions, deletions and substitutions needed to transform one node to the other (having the same dependencies).

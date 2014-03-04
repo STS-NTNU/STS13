@@ -1,9 +1,119 @@
-\section{Hans feats}
+\section{Distributional Similarity}
+\label{hans-feats}
+% old: Datadriven Semantic Models
+%\todo[inline]{EM: Why not simply call this section Distributional Similarity?}
+
+%A group of our features were based on building statistical language models of semantic information using 
+ %which was also the case for several of the contestants last year
+%also employed in STS'12 by \citep{Tovar2012,Sokolov2012,Semeraro2012}.
+
+%One variant used  the classical \emph{sliding window\/} RI method with one ``context vector'' per unique term \citep{Sahlgren2005}. A novel variant, inspired by \citet{Reisinger2010}, attempts to capture one or more ``\emph{senses\/}'' per unique term in an unsupervised manner, where each sense is represented as individual vector in the model. 
+%This differs from the classical method which restricts each term to have only one vector or ``sense'' per term.
+
+%\subsection{Random Indexing}
+%\todo[inline]{EM: I suggest replacing this whole section on RI by one or two refs}
 
 
 
 
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "sts13-ntnu-core"
-%%% End: 
+%The way this is done is by first assigning \emph{index vectors\/}. 
+%The vectors are of a predefined size (typically around 1000) 
+%and consist of a few randomly placed 1s and -1s. %(e.g., four).
+%\emph{Context vectors\/} of the same size are also assigned to each term, 
+%initially consisting of only zeros.
+%When traversing a document corpus using a sliding window of a fixed size 
+%(e.g., 5 terms on the left and 5 terms on the right), 
+%each term gets its context vector updated in the following way: 
+%The term in the center of a sliding window (the target term), has the index vectors of its 
+%neighboring terms inside the sliding window added to its context vector using vector summation. 
+%Then the \emph{cosine similarity measure} can be used on term pairs to calculate their similarity. This similarity is often referred to as ``contextual similarity'' or ``semantic similarity''.
+
+%\subsection{Multi-sense Random Indexing}
+
+Our distributional similarity features use Random Indexing (RI; \citealp{Kanerva2000, Sahlgren2005}), also employed in STS'12 by \cite{Tovar2012,Sokolov2012,Semeraro2012}. 
+It is an efficient method for modelling higher order co-occurrence similarities among terms, 
+% --- often referred to as ``contextual similarity'' or ``semantic similarity''.
+comparable to Latent Semantic Analysis (LSA; \citealp{DeerwesterDumaisFurnas:1990}).
+It incrementally builds a term co-occurrence matrix of reduced dimensionality through the use of a sliding window and fixed size \emph{index vectors\/} used for training \emph{context vectors\/}, one per unique term.
+
+A novel variant, which we have called ``Multi-sense Random Indexing'' (MSRI), inspired by \citet{Reisinger2010}, attempts to capture one or more ``\emph{senses\/}'' per unique term in an unsupervised manner, each sense represented as an individual vector in the model. 
+The method is similar to classical sliding window RI, but each term can have multiple context vectors 
+(referred to as ``\emph{sense vectors\/}'' here) which are updated individually.
+When updating a term vector, instead of directly adding the index vectors of the neighbouring terms in the window to its context vector, the system first computes a separate \emph{window vector\/} 
+consisting of the sum of the index vectors.
+Then cosine similarity is calculated between the window vector and each of the term's sense vectors.
+Each similarity score is in turn compared to a set \emph{similarity threshold\/}: 
+if no score exceeds the threshold, the sentence vector is added as a new separate sense vector for the term;
+if exactly one score is above the threshold, the window vector is added to that sense vector;
+and if multiple scores are above the threshold, all the involved senses are merged into one sense vector, together with the window vector. 
+This accomplishes an incremental clustering of senses in an unsupervised manner 
+while retaining the efficiency of classical RI.
+
+%To start with, each term has one index vector and an empty context vector.
+%When a term is observed/targeted in the corpus, instead of directly adding the index vector of the neighboring terms in the window to its context vector, the system first computes a separate \emph{window vector} --- consisting of the sum of these index vectors.
+%The first time a target term has its context vector updated, as it is now empty, the sentence vector is added to this context vector, similar to how classic RI works.
+%However, the next time this term is observed/targeted in the corpus, the system calculates the cosine similarity between the to-be-added window vector and the context vector(s) belonging to the target term.
+%Since the term only has one context vector, one similarity score is calculated.
+%This score is then compared to a predefined \emph{similarity threshold}. If the score is higher than the similarity threshold, the window vector is simply added to the context vector. But if the score is lower than the threshold value, the window vector is added as a separate context vector of this term, resulting in this term now having two context vectors. We refer to these context vectors as \emph{sense vectors}.
+%With training a term can acquire multiple sense vectors depending on the contexts it is used in throughout the training corpus.
+%When updating a term of multiple senses, the to-be-added window vector is first compared to all the sense vectors of the term. 
+%In those cases where this window vector is similar to more than one sense vector --- i.e., similar above the given similarity threshold --- each of these senses are merged into one sense vector together with the window vector.
+
+%\todo[inline]{We should probably add a note about this method being ``research in progress ..''}
+
+%As an example, when using the model to calculate the top 5 similar terms to a query term, we find that %``rock'' has one sense that retrieves ``band'', ``pop'', ``folk'', ``singer'' and ``music'', and another sense that retrieves ``jimi'', ``hendrix'', ``blue'', ``joplin'' and ``encore''.
+%Table~\ref{tab:senses} shows an example of two different senses of the term  ``rock''  from the MSRI model.
+
+%\begin{table}
+%\small
+%\centering
+%\medskip
+%\begin{tabular}{ll}
+%\toprule
+%Sense 1 & Sense 2  \\
+%\midrule
+%band        & jimi      \\
+%pop         & hendrix   \\
+%folk 	    & blue      \\
+%singer 	    & joplin    \\
+%music 	    & encore    \\
+%\bottomrule
+%\end{tabular}
+%\caption{Example showing the top-5 most similar terms to two different senses of the term ``rock''.}
+%\label{tab:senses}
+%\end{table}
+
+
+%Creating clusters of separate senses for each term is somewhat similar to the method presented by \citet{Reisinger2010}; however, they initially store every ``window vector'' for all terms from the entire corpus before a clustering step is applied to generate ``prototype vectors'' (what we call sense vectors) for each term. 
+%The incremental clustering that we apply is somewhat similar to what is used by \citet{Lughofer2008}.
+%Unlike classic RI, there are multiple ways of calculating the similarity between two terms, 
+%but due to paper size restrictions we point the reader to \citet{Reisinger2010} for more information on this.
+
+%\subsection{Calculating sentence similarity using classic and Multi-sense Random Indexing}
+
+As data for training the models we used the CLEF 2004--2008 English corpus (approx. 130M words). 
+Our implementation of RI and MSRI is based on JavaSDM~\citep{Hassel2004}.
+For classical RI, we used stopword removal (using a customised versions of the English stoplist from the Lucene project), 
+%\todo{Which stopwords? Coming from where? /BG}
+window size of 4+4, dimensionality set to 1800, 4 non-zeros, and unweighted index vector in the sliding window. For MSRI, we used a similarity threshold of 0.2, a vector dimensionality of 800, a non-zero count of 4, and window size of 5+5.
+%\todo{These choices should be motivated / explained. /BG}
+The index vectors in the sliding window were shifted to create \emph{direction vectors}~\citep{Sahlgren2008}, and weighted by distance to the target term. Rare senses with a frequency below 10 were excluded. 
+%\todo{Contradiction: did you or didn't you use direction vectors weighted by distance? /Rev1}
+Other sliding-window schemes, including unweighted non-shifted vectors and \emph{Random Permutation} \citep{Sahlgren2008}, were tested, but none outperformed the sliding-window schemes used.% on training data.
+
+%\footnote{Similarity threshold and frequency limit is not used}.
+%RI and MSRI features were produced from these models.
+
+Similarity between sentence pairs was calculated as the normalised maximal bipartite similarity between term pairs in each sentence, resulting in the following features: 
+(1)~\feat{MSRI-Centroid}: each term is represented as the sum of its sense vectors;
+(2)~\feat{MSRI-MaxSense}: for each term pair, the sense-pair with max similarity is used;
+(3)~\feat{MSRI-Context}: for each term, its neighbouring terms within a window of 2+2 is used as context for picking a single, max similar, sense from the target term to be used as its representation;
+(4)~\feat{MSRI-HASenses}: similarity between two terms is computed by applying the Hungarian Algorithm to all their possible sense pair mappings;
+(5)~\feat{RI-Avg}: classical RI, each term is represented as a single context vector;
+(6)~\feat{RI-Hungarian}: similarity between two sentences is calculated using the Hungarian Algorithm.
+Alternatively, sentence level similarity was computed as the cosine similarity between sentence vectors composed of their terms' vectors. The corresponding features are 
+(1)~\feat{RI-SentVectors-Norm}: sentence vectors are created by summing their constituent terms 
+(i.e., context vectors), which have first been normalized; 
+(2)~\feat{RI-SentVectors-TFIDF}: same as before, but TF*IDF weights are added.
+
+% Results: https://docs.google.com/spreadsheet/ccc?key=0AuAZhYCIwtLEdGR0ZlU5Zk5BOFgtbVM3dmF2NzRqVEE&usp=sharing

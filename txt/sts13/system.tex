@@ -1,0 +1,45 @@
+\section{Systems}
+\label{system}
+
+Our systems follow previous submissions to the STS task \citep[e.g.,][]{vsaric2012takelab,Banea2012}
+in that feature values are extracted for each sentence pair and combined with a gold standard score 
+in order to train a Support Vector Regressor on the resulting regression task. 
+A postprocessing step guarantees that all scores are in the $[0,5]$ range and equal~5 if the two sentences are identical. 
+%
+SVR has been shown to be a powerful technique for predictive data analysis when the primary goal is to approximate 
+a {\em function}, since the learning algorithm is applicable to continuous classes.
+Hence support vector {\em regression\/} differs from support vector machine {\em classification\/}
+where the goal rather is to take a {\em binary\/} decision.
+%; deciding on which of two classes a given data point belongs to.
+The key idea in SVR is to use a cost function for building the model which tries to ignore noise in
+training data (i.e., data which is too close to the prediction), so that the produced model in essence 
+only depends on a more robust subset of the extracted features. 
+%EM: If we need a ref to support that VSM are good for NLP: joachims1998tex 
+
+%The task organisers supplied training material
+%mainly from STS'12 which contained data from the Microsoft Research Paraphrase and 
+%Video Description corpora, statistical machine translation system output (Europarl and news), 
+%and mappings between senses in OntoNotes and WordNet.
+%In addition the organisers supplied sample data from the core test datasets, consisting of
+%news headlines %mined from several news sources by European Media Monitor 
+%(\texttt{HeadLine}),
+%mappings of senses from WordNet and OntoNotes (\texttt{OnWN})
+%as well as from WordNet and FrameNet (\texttt{FNWN}),
+%and an evaluation of statistical machine translation (\texttt{SMT}) 
+%giving the output of an MT system and a corresponding human reference translation.
+%All the data files consist of lines with two sentences and their manually assigned similarity score.
+
+%Participants could send a maximum of three system runs.
+%Participants will also provide a confidence score indicating their confidence level for the result returned for each pair.
+%The output of the systems performance is evaluated using the Pearson product-moment correlation coefficient
+%between the system scores and the human scores (Rubenstein and Goodenough, 1965). 
+
+Three systems were created using the supplied annotated data based on Microsoft Research Paraphrase and Video description corpora (MSRpar and MSvid), statistical machine translation system output (SMTeuroparl and SMTnews), and sense mappings between OntoNotes and WordNet (OnWN).
+The first system (NTNU1) includes all TakeLab and DKPro features 
+plus the \feat{GateWordMatch} feature with the SVR in its default setting.%
+\footnote{RBF kernel, $\epsilon=0.1$, $C=\#samples$, $\gamma=\frac{1}{\#features}$}  
+The training material consisted of all annotated data available, 
+except for the SMT test set, where it was limited to SMT\-europarl and SMT\-news. 
+The NTNU2 system is similar to NTNU1, except that the training material for OnWN and FNWN 
+excluded MSRvid and that the SVR parameter $C$ was set to 200. 
+NTNU3 is similar to NTNU1 except that {\em all\/} features available are included.

@@ -4,105 +4,98 @@
 \usepackage{latexsym}
 \usepackage{url}
 \usepackage{todonotes}
+% To hide all todo notes, simply do
+%\usepackage[disable]{todonotes}
+\usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{balance}
+
 \setlength\titlebox{6.5cm}    % Expanding the titlebox
 
-\title{NTNU-CORE: title}
+% Citations
+\RequirePackage{natbib}
 
-\author{Authors\\
+\newcommand{\rank}[1]{\footnotesize{#1}}
+\newcommand{\feat}[1]{\texttt{#1}}
+
+\hyphenation{Sem-Eval uni-gram uni-grams bi-gram bi-grams tri-gram tri-grams}
+
+\title{NTNU-CORE: Combining strong features for semantic similarity}
+% Paper Title: The title of your paper should be of the form "<ID>-<TASK>: <Paper Title>" where <ID> is the team ID used when registering with *SEM ST 2013, <TASK> is either CORE or TYPED, or CORE_TYPED (assuming you participated in both evaluations, and <Paper Title> is the title of your paper.
+
+\author{Erwin Marsi, Hans Moen, Lars Bungum, Gleb Sizov, Bj\"orn Gamb\"ack, Andr\'e Lynum\\
   Norwegian University of Science and Technology\\
   Department of Computer and Information and Science\\
   Sem S{\ae}lands vei 7-9 \\
-  NO-7491 Trondheim, Norway\\
-  {\tt author1@idi.ntnu.no}}
+  NO-7491 Trondheim, Norway \\
+  {\tt \{emarsi,hansmoe,bungum,sizov,gamback,andrely\}@idi.ntnu.no}}
 
 \date{}
+
+
+ %------------begin Float Adjustment
+%two column float page must be 90% full
+\renewcommand\dblfloatpagefraction{.90}
+%two column top float can cover up to 80% of page
+\renewcommand\dbltopfraction{.80}
+%float page must be 90% full
+\renewcommand\floatpagefraction{.90}
+%top float can cover up to 80% of page
+\renewcommand\topfraction{.80}
+%bottom float can cover up to 80% of page
+\renewcommand\bottomfraction{.80}
+%at least 10% of a normal page must contain text
+\renewcommand\textfraction{.1}
+%separation between floats and text
+\setlength\dbltextfloatsep{9pt plus 5pt minus 3pt }
+%separation between two column floats and text
+\setlength\textfloatsep{4pt plus 2pt minus 1.5pt}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-ABSTRACT
+The paper outlines the work carried out at NTNU as part of the 
+*SEM'13 shared task on Semantic Textual Similarity,
+using an approach which combines shallow textual, distributional 
+and knowledge-based features by a support vector regression model. 
+Feature sets include 
+(1)~aggregated similarity based on named entity recognition with WordNet and
+Levenshtein distance through the calculation of maximum weighted bipartite graphs; 
+(2)~higher order word co-occurrence similarity using a novel method called 
+``Multi-sense Random Indexing''; 
+(3)~deeper semantic relations based on the RelEx semantic dependency relationship extraction system; 
+(4)~graph edit-distance on dependency trees; 
+(5)~reused features of the TakeLab and DKPro systems from the STS'12 shared task. 
+The NTNU systems obtained 9th place overall (5th best team) and 1st place on the SMT data set.
 \end{abstract}
 
-\section{Introduction}
-
-
-
-\section{Reused features}
-
-The TakeLab system for measuring semantic text similarity
-\cite{vsaric2012takelab} was one of the most succesful systems in the
-STS 2012 shared task. There were two variants called the \emph{simple}
-and \emph{syntax} system. The \emph{simple} system obtained 3rd place
-for overall Pearson and 1st for normalized Pearson. We used the source
-code\footnote{\url{http://takelab.fer.hr/sts/}} to generate the
-features for the STS 2012 data as well as the STS 2013 test data. The
-later required LSA vector space models, which were kindly provided by
-the TakeLab team, and word counts, which were obtained from Google
-Books Ngrams (version 20120701, 468,491,999,592
-words)\footnote{\url{http://storage.googleapis.com/books/ngrams/books/datasetsv2.html}}.
-
-Since the TakeLab features are described in\cite{vsaric2012takelab},
-they will be reviewed only briefly here. The\emph{ n-gram overlap
-  features} measure overlap in unigrams, bigrams and trigrams of
-lower-cased words and lemmas, filtering stopwords and non-words (we
-did not use content n-gram overlap or skip n-grams). The\emph{
-  WordNet-augmented word overlap feature} measures unigram overlap
-where the similarity between word pairs is defined as the harmonic
-mean of their WordNet path length similarities \cite{}. The weighted
-word overlap features measure unigram overlap for lower-cased words
-and lemmas, where each word is weighted according to its Information
-Content calculated on the basis of unigram counts from Google Books
-Ngrams. The \emph{vector space sentence similarity features} capture
-distributional similarity between words of both sentences. Vector
-space models are derived from two corpora -- the New York Times
-Annotated Corpus (NYT) and Wikipedia (wiki) -- using Latent Semantic
-Analysis \cite{DeerwesterDumaisFurnas:1990}. A sentence vector is
-obtained by summing the vector of each word in the sentence.  A
-weighted variant uses IC to weight the vector of each word before
-summation. Vector space sentence similarity is then computed as the
-cosine similarity between the sentence vectors. The \emph{normalized
-  difference} features measure measure the normalized differences in
-sentence length (in lower-cased stopword-filtered words) and in
-aggregated information content (sum of IC over all lower-cased
-words). The \emph{shallow NE similarity feature} expresses unigram
-overlap in named entities, treating each capitalized word longer than
-one character as a named entity (excluding the first word in the
-sentence). Finally, the\emph{ numbers overlap} features and the
-\emph{stock index} features measure the overlap and count of numerals
-and stock index symbols respectively. 
-% EM: provide more details if space allows
-
-DKPro system \cite{bar2012ukp}
-
+\input{introduction}
 
 \input{gleb-feats}
 
-
 \input{hans-feats}
-
 
 \input{lars-feats}
 
+\input{reused}
 
-\section{Results}
+\input{system}
 
+\input{results}
 
-\section{Discussion}
-
-
-\section{Conlusion}
-
+\input{conclusion}
 
 \section*{Acknowledgements}
 
-Thanks to the TakeLab team from the University of Zagreb for making
-the code of the \emph{simple} system publicly available as well as
-providing us with the full-scale LSA models. Thanks to the team from
-Ubiquitous Knowledge Processing Lab in Darmstadt for releasing the
-code of the DKPro Similarity system.
+Thanks to TakeLab for source code of their `\emph{simple\/}' system and the full-scale LSA models. 
+Thanks to the team from Ubiquitous Knowledge Processing Lab for source code of their DKPro Similarity system.
 
+\vfill
+\pagebreak
+\balance
+%\bibliographystyle{naaclhlt2013} %EM: official bibtex style seems not to work...
+\bibliographystyle{apa}
 
-\bibliographystyle{naaclhlt2013.bst}
 \bibliography{sts13-ntnu-core}
 
 \end{document}
