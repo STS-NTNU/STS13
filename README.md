@@ -1,7 +1,29 @@
 STS13
 =====
 
-Semantic Textual Similarity task 2013.
+Semantic Textual Similarity task 2012/2013/2014
+
+
+
+
+------------------------------------------------------------------------------
+Dependencies
+------------------------------------------------------------------------------
+
+* numpy
+* sklearn (scikit-learn)
+* nltk (may require X11 under OS X)
+
+* Google n-gram word counts and Takelab LSA models under directory _data
+
+
+------------------------------------------------------------------------------
+Python path
+------------------------------------------------------------------------------
+
+Make sure you have lib/python in your PYTHONPATH, e.g. in Bash use
+
+$ export PYTHONPATH=$PYTHONPATH:~/Projects/SemTextSim/github/STS13/lib/python
 
 
 
@@ -33,12 +55,19 @@ Example: generating Takelab features for new STS14 trial data
    New features appear in files out/STS2014-trial/<dataset-id>/<feat-name>.txt
    
 
-              
-              
+------------------------------------------------------------------------------
+Example: testing a new feature
+------------------------------------------------------------------------------
 
+Suppose we have a new feature called "my_feat" that we want to try on the
+MSRpar dataset from STS12.
 
+1. Add the feature to the training and test data as files
 
+   out/STS2012-train/MSRpar/my_feat.txt
+   out/STS2012-test/MSRpar/my_feat.txt
+   
+2. Run a script ntnu/my_feat.py
 
-
-
-
+   Check comments in the script 
+   
