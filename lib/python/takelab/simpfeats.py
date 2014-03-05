@@ -59,6 +59,8 @@ def load_data(path):
     r1 = re.compile(r'\<([^ ]+)\>')
     r2 = re.compile(r'\$US(\d)')
     for l in open(path):
+        if not l.strip():
+            continue
         l = l.decode('utf-8')
         l = l.replace(u'’', "'")
         l = l.replace(u'``', '"')
@@ -72,7 +74,7 @@ def load_data(path):
         l = r2.sub(r'$\1', l)
         s = l.strip().split('\t')
         sa, sb = tuple(nltk.word_tokenize(s)
-                          for s in l.strip().split('\t'))
+                          for s in l.strip().split('\t') if s) # ignore double \t
         sa, sb = ([x.encode('utf-8') for x in sa],
                   [x.encode('utf-8') for x in sb])
 
