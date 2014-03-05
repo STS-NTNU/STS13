@@ -2,17 +2,18 @@
 define dirs, ids and filenames for STS13 test data
 """
 
-from os.path import join, normpath
+from os.path import join
 
-def id2filenames(dir, type, ids):
-    return {id: join(dir, "STS.{}.{}.txt".format(type, id)) 
-            for id in ids}
+from sts.io import data_dir, id2filenames
 
-# find root of Git repos
-repos_dir = normpath(join(__file__, "../../../.."))
+# directory containing original STS 2103 test files
+test_dir = join(data_dir, "STS2013-test")
 
-
-test_dir = join(repos_dir, "data/STS2013-test")
+# identifiers for different categories of test data
 test_ids = "FNWN", "headlines", "OnWN", "SMT"
+
+# mapping from test identifiers to corresponding input filenames
 test_input_fnames = id2filenames(test_dir, "input", test_ids)
+
+# mapping from test identifiers to corresponding gold standard filenames
 test_gs_fnames = id2filenames(test_dir, "gs", test_ids)
