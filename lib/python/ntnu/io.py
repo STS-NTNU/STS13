@@ -3,38 +3,123 @@ common code for reading and writing features
 """
 
 from glob import glob
-from os.path import join, normpath, basename, splitext
+from os.path import join, basename, splitext
 
 import numpy as np
 
-from sts.io import read_gold_standard
+from sts.io import read_gold_standard, repos_dir
 
 
-# find root of Git repos
-repos_dir = normpath(join(__file__, "../../../.."))
+# main directory for feature files
+feat_dir = join(repos_dir, "out")
 
 
-def feat2filename(dir, id):
+
+def map_id_to_feat_files(dir, ids):
     """
-    create dict mapping feature names to their filenames
+    Create a mapping from dataset identifiers and feature names to the
+    corresponding feature files.
+    
+    Parameters
+    ----------
+    dir: str
+        main directory containing subdirs for dataset identifiers
+    ids: list of str
+        identifiers/subdirs for datasets
+        
+    Returns
+    -------
+    dict:
+         mapping from dataset identifiers to mapping from feature names to 
+         their files
+         
+         
+    Example
+    -------
+    >>> ntnu.io.map_id_to_feat_files("out/STS2012-test", ["MSRpar", "MSRvid"])
+    {'MSRpar': {'CharacterNGramMeasure_2':
+                'out/STS2012-test/MSRpar/CharacterNGramMeasure_2.txt',
+                 'CharacterNGramMeasure_3':
+                 'out/STS2012-test/MSRpar/CharacterNGramMeasure_3.txt',
+                 ...
+            }
+     'MSRvid': {'CharacterNGramMeasure_2':
+                'out/STS2012-test/MSRvid/CharacterNGramMeasure_2.txt',
+                'CharacterNGramMeasure_3': 
+                'out/STS2012-test/MSRvid/CharacterNGramMeasure_3.txt',
+                ...
+            }            
+    }
+     
     """
-    # a hack, beacuse dir "out/SMTnews" should have been "out/surprise.SMTnews"
+    return {id: map_feat_to_files(dir, id) 
+            for id in ids}
+    
+    
+
+def map_feat_to_files(dir, id):
+    """
+    Create a mapping from feature names to their files.
+    
+    Parameters
+    ----------
+    dir: str
+        main directory containing feature files
+    id: str
+        identifier/subdir for dataset
+        
+    Returns
+    -------
+    dict:
+         mapping from feature names to their files
+         
+    Example
+    -------
+    >>> feat2filename("out/STS2012-test","MSRpar")
+    {'tl.n_gram_match_lem_3': 
+     'out/STS2012-test/MSRpar/tl.n_gram_match_lem_3.txt',  
+     'tl.n_gram_match_lem_2': 
+     'out/STS2012-test/MSRpar/tl.n_gram_match_lem_2.txt', 
+     'tl.n_gram_match_lem_1': 
+     'out/STS2012-test/MSRpar/tl.n_gram_match_lem_1.txt', 
+     'RI_HungarianAlgorithm_Measure': 
+     'out/STS2012-test/MSRpar/RI_HungarianAlgorithm_Measure.txt', 
+     'tl.stocks_match_len': 
+     'out/STS2012-test/MSRpar/tl.stocks_match_len.txt', 
+     ...
+    }
+    """
+    # a hack, because dir "out/SMTnews" should have been "out/surprise.SMTnews"
     if id.startswith("surprise."):
         id = id[9:]
     pattern = join(dir, id, "*")
-    return {splitext(basename(fname))[0]: fname for fname in glob(pattern)}
-
-
-
-def read_features(feat_fnames, num_vals, dtype="f"):
-    num_feats = len(feat_fnames)
-    X = np.empty((num_vals, num_feats), dtype)
-    for n, fname in enumerate(feat_fnames):
-        X[:,n] = np.fromfile(fname, dtype, num_vals, "\n")
-    return X
+    return {splitext(basename(fname))[0]: fname 
+            for fname in glob(pattern)}
 
 
 def read_data(ids, feat_fnames, gs_fnames, features=[], convert_nan=True):
+    """
+    Create feature vectors and labels. 
+    
+    Parameters
+    ----------
+    ids: str or list of str
+        dataset identifier(s)
+    feat_names: list of str
+        mapping from feature nams to feature files
+    gs_fnames: list of str
+        gold standard filenames
+    features:
+        feature names
+    convert_nan: True or False
+        replace nan with zero and inf with finite numbers in feature values
+    
+    Returns
+    -------
+    X, y: numpy.array, numpy.array
+        2-dimesional array of feature values and 1-dimensional array of labels,
+        intended for use with sklearn     
+    """
     if isinstance(ids, basestring):
         ids = [ids]
 
@@ -61,6 +146,15 @@ def read_data(ids, feat_fnames, gs_fnames, features=[], convert_nan=True):
     return X, y
 
 
+def read_features(feat_fnames, num_vals, dtype="f"):
+    num_feats = len(feat_fnames)
+    X = np.empty((num_vals, num_feats), dtype)
+    for n, fname in enumerate(feat_fnames):
+        X[:,n] = np.fromfile(fname, dtype, num_vals, "\n")
+    return X
+
+
+# FIXME: replace with read_data(..., blind=True)
 def read_blind_data(ids, feat_fnames, features=[], convert_nan=True):
     """
     read data without gold standard

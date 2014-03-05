@@ -3,9 +3,17 @@ support for reading/writing files in STS format
 """
 
 from codecs import open
-from os.path import join
+from os.path import join, normpath
 import numpy as np
 from numpy.lib.recfunctions import merge_arrays 
+
+
+# find root of Git repos
+repos_dir = normpath(join(__file__, "../../../.."))
+
+# directory containing original STS files
+data_dir = join(repos_dir, "data")
+
 
 
 # default for maximum size of sentences in chars 
@@ -61,6 +69,39 @@ def write_scores(filename, scores, confidence=None):
         outf.write("{:f}\t{:f}\n".format(s, c)) 
         
     outf.close()
+    
+    
+def id2filenames(dir, type, ids):
+    """
+    Create mapping from  STS identifiers to corresponding filenames.
+    
+    Parameters
+    ----------
+    dir: str
+        directory containing files
+    type: str
+        "input" or "gs"
+    ids: list of str
+        identifiers
+        
+    Returns
+    -------
+    dict
+        dictionary that maps STS ids to corresponding filenames
+        
+    Note
+    ----
+    Does not check if the files really exist
+    
+    Example
+    -------
+    >>> id2filenames("data/STS2012-test", "input", ["MSRpar", "MSRvid"])
+    {'MSRpar': 'data/STS2012-test/STS.input.MSRpar.txt', 
+     'MSRvid': 'data/STS2012-test/STS.input.MSRvid.txt'}
+        
+    """
+    return {id: join(dir, "STS.{}.{}.txt".format(type, id)) 
+            for id in ids}    
         
 
     

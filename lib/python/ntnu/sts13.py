@@ -1,32 +1,34 @@
 """
 define dirs and filenames of features for STS13 data
 """
+
 from os.path import join
 
 from sts.sts13 import test_ids, test_gs_fnames
 
-from ntnu.io import repos_dir, read_data, read_blind_data, feat2filename
+from ntnu.io import feat_dir, read_data, read_blind_data, map_id_to_feat_files
 
 
-#train_dir = join(repos_dir, "out/STS2013-train")
-test_dir = join(repos_dir, "out/STS2013-test")
+# top directory containing test feature files
+test_dir = join(feat_dir, "STS2013-test")
 
-#train_feat_fnames = {id: feat2filename(train_dir, id) for id in train_ids}
-test_feat_fnames = {id: feat2filename(test_dir, id) for id in test_ids}
+# mapping from test dataset identifiers and feature names 
+# to the corresponding feature files
+test_feat_fnames = map_id_to_feat_files(test_dir, test_ids)
 
 
-#def read_train_data(ids, features=[], convert_nan=True):
-#    return read_data(ids, train_feat_fnames, train_gs_fnames,
-#                     features=features, convert_nan=convert_nan)
+def read_test_data(ids, features=[], convert_nan=True):    
+    """
+    Create feature vectors and labels for given dataset identifiers and
+    features from STS13 test data
+    """    
+    return read_data(ids, test_feat_fnames, test_gs_fnames,
+                     features=features, convert_nan=convert_nan)
 
 
 def read_blind_test_data(ids, features=[], convert_nan=True):
     return read_blind_data(ids, test_feat_fnames, features=features,
                            convert_nan=convert_nan )
-
-def read_test_data(ids, features=[], convert_nan=True):
-    return read_data(ids, test_feat_fnames, test_gs_fnames, 
-                     features=features, convert_nan=convert_nan)
 
 
     
