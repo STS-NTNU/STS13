@@ -63,7 +63,7 @@ def write_scores(filename, scores, confidence=None):
     outf = open(filename, "w")
     
     if not confidence:
-        confidence = np.zeros(scores.shape[0])
+        confidence = np.ones(scores.shape[0])
         
     for s, c in zip(scores, confidence):
         outf.write("{:f}\t{:f}\n".format(s, c)) 
