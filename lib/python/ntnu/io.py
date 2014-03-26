@@ -191,7 +191,9 @@ def postprocess(sys_inp, sys_scores):
     sys_scores[sys_inp["s1"] == sys_inp["s2"]] = 5.0 
     # trim scores to range [0,5]
     sys_scores[sys_scores > 5.0] = 5.0 
-    sys_scores[sys_scores < 0.0] = 0.0     
+    sys_scores[sys_scores < 0.0] = 0.0
+
+    return sys_scores
     
     
     
