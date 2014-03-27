@@ -3,28 +3,28 @@
 """
 make Takelab's features for STS training and test data
 """
-
+import os
 from os.path import join, exists
 from os import makedirs
 
 import sts
-import ntnu
 import takelab.simpfeats as tl
 
 
 # requires Takelab LSA models
+TL_DATA_DIR = '_data'
 with_lsa = True
 
 # load word counts for IC weighting
-tl.wweight = tl.load_wweight_table("../_data/wordfreq/wordfreq-STS.txt")
+tl.wweight = tl.load_wweight_table(os.path.join(TL_DATA_DIR, "wordfreq/wordfreq-STS.txt"))
 tl.minwweight = min(tl.wweight.values())
     
 if with_lsa:    
     # load vector spaces    
-    tl.nyt_sim = tl.Sim('../_data/lsa-matrices/nyt-words-sts.txt', 
-                        '../_data/lsa-matrices/nyt-matrix-sts.txt')
-    tl.wiki_sim = tl.Sim('../_data/lsa-matrices/wiki-words-sts.txt', 
-                         '../_data/lsa-matrices/wiki-matrix-sts.txt')
+    tl.nyt_sim = tl.Sim(os.path.join(TL_DATA_DIR, 'lsa-matrices/nyt-words.txt'),
+                        os.path.join(TL_DATA_DIR, 'lsa-matrices/nyt-matrix.txt'))
+    tl.wiki_sim = tl.Sim(os.path.join(TL_DATA_DIR, 'lsa-matrices/wiki-words.txt'),
+                         os.path.join(TL_DATA_DIR, 'lsa-matrices/wiki-matrix.txt'))
 
     
 def make_feats(ids2fnames, dest_dir, with_lsa=True):
@@ -54,6 +54,8 @@ def make_feats(ids2fnames, dest_dir, with_lsa=True):
            #with_lsa)
 
 
-make_feats(sts.sts14.trial_input_fnames, 
-           ntnu.sts14.trial_dir,
-           with_lsa)
+# make_feats(sts.sts14.trial_input_fnames,
+#            ntnu.sts14.trial_dir,
+#            with_lsa)
+
+make_feats(sts.sts14.test_input_fnames, sts.sts14.test_dir, with_lsa)
