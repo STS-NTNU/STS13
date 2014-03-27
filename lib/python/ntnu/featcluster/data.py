@@ -41,7 +41,11 @@ def frame_for_id(features, feat_path='out', data_ids=sts.sts12.train_ids, data_d
         new_frame['data_id'] = data_id
 
         gs_fn = os.path.join(repos_dir, 'data', data_dir, "STS.gs.%s.txt" % data_id)
-        new_frame['gs'] = Series(loadtxt(gs_fn))
+
+        if os.path.exists(gs_fn):
+            new_frame['gs'] = Series(loadtxt(gs_fn))
+        else:
+            new_frame['gs'] = None
 
         frame = frame.append(new_frame)
 
