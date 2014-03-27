@@ -1,5 +1,4 @@
 import logging
-from operator import itemgetter
 
 from numpy import mean
 from sklearn.grid_search import GridSearchCV
@@ -9,8 +8,12 @@ from ntnu.featcluster.cluster import DatasetRelevanceClassifier
 from ntnu.featcluster.data import read_data
 from ntnu.feats import takelab_feats, takelab_lsa_feats
 from ntnu.io import feat_dir
+from sts import sts14
 from sts.score import correlation
 
+# Dataset relevance search using clustering.
+
+# Parameter search results are cool, but held out results are disappointing.
 
 # Parameter search for the DatasetRelevanceClassifier
 
@@ -70,6 +73,76 @@ from sts.score import correlation
 # 0.5530	0.3327	0.4133	0.6945	0.7716	agglomerative-15-medoid-top-n
 # 0.5522	0.3327	0.4133	0.6911	0.7716	agglomerative-15-centroid-top-n
 
+# Results with Takelab and subsem-lsitfidf-wiki8-n4-c2000-min5-raw-cos features. No param grid.
+
+# Mean	FNWN	OnWN	SMT	headlines
+# 0.5770	0.3565	0.4679	0.7078	0.7756	k-means-1-medoid-top
+# 0.5637	0.3548	0.4172	0.7065	0.7763	k-means-1-medoid-max_ratio_gap
+# 0.5495	0.3565	0.4679	0.6658	0.7078	k-means-1-centroid-top
+# 0.5486	0.3505	0.4172	0.7086	0.7180	k-means-1-centroid-max_ratio_gap
+# 0.5564	0.3565	0.4590	0.7023	0.7078	k-means-3-medoid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-3-medoid-max_ratio_gap
+# 0.5495	0.3565	0.4679	0.6658	0.7078	k-means-3-centroid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-3-centroid-max_ratio_gap
+# 0.5757	0.3603	0.4590	0.7078	0.7756	k-means-5-medoid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-5-medoid-max_ratio_gap
+# 0.5596	0.3603	0.4679	0.7023	0.7078	k-means-5-centroid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-5-centroid-max_ratio_gap
+# 0.5619	0.3603	0.4679	0.7078	0.7116	k-means-9-medoid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-9-medoid-max_ratio_gap
+# 0.5485	0.3840	0.4679	0.5663	0.7756	k-means-9-centroid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-9-centroid-max_ratio_gap
+# 0.5151	0.3603	0.4679	0.5663	0.6658	k-means-15-medoid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-15-medoid-max_ratio_gap
+# 0.5770	0.3565	0.4679	0.7078	0.7756	k-means-15-centroid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-15-centroid-max_ratio_gap
+# 0.5252	0.3430	0.3921	0.6538	0.7121	k-means-3-medoid-top-n
+# 0.5282	0.3548	0.3921	0.6538	0.7121	k-means-3-centroid-top-n
+# 0.5614	0.3586	0.3921	0.7186	0.7763	k-means-5-medoid-top-n
+# 0.5617	0.3549	0.3921	0.7186	0.7813	k-means-5-centroid-top-n
+# 0.5668	0.3501	0.4172	0.7186	0.7813	k-means-9-medoid-top-n
+# 0.5730	0.3549	0.4372	0.7186	0.7813	k-means-9-centroid-top-n
+# 0.5638	0.3501	0.4172	0.7065	0.7813	k-means-15-medoid-top-n
+# 0.5717	0.3501	0.4372	0.7180	0.7813	k-means-15-centroid-top-n
+# 0.5816	0.3840	0.4590	0.7078	0.7756	agglomerative-3-medoid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-3-medoid-max_ratio_gap
+# 0.5633	0.3840	0.4590	0.7023	0.7078	agglomerative-3-centroid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-3-centroid-max_ratio_gap
+# 0.5393	0.3565	0.4590	0.5663	0.7756	agglomerative-5-medoid-top
+# 0.5564	0.3501	0.3921	0.7021	0.7813	agglomerative-5-medoid-max_ratio_gap
+# 0.5220	0.3603	0.4590	0.5663	0.7023	agglomerative-5-centroid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-5-centroid-max_ratio_gap
+# 0.5444	0.3448	0.4590	0.6658	0.7078	agglomerative-9-medoid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-9-medoid-max_ratio_gap
+# 0.5747	0.3565	0.4590	0.7078	0.7756	agglomerative-9-centroid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-9-centroid-max_ratio_gap
+# 0.5279	0.3840	0.4590	0.5663	0.7023	agglomerative-15-medoid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-15-medoid-max_ratio_gap
+# 0.5656	0.3840	0.4590	0.7078	0.7116	agglomerative-15-centroid-top
+# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-15-centroid-max_ratio_gap
+# 0.5493	0.3581	0.3921	0.7180	0.7291	agglomerative-3-medoid-top-n
+# 0.5340	0.3720	0.3921	0.6538	0.7180	agglomerative-3-centroid-top-n
+# 0.5582	0.3549	0.3921	0.7096	0.7763	agglomerative-5-medoid-top-n
+# 0.5493	0.3549	0.3921	0.7186	0.7317	agglomerative-5-centroid-top-n
+# 0.5285	0.3501	0.3921	0.6538	0.7180	agglomerative-9-medoid-top-n
+# 0.5605	0.3549	0.3921	0.7186	0.7763	agglomerative-9-centroid-top-n
+# 0.5717	0.3501	0.4372	0.7180	0.7813	agglomerative-15-medoid-top-n
+# 0.5667	0.3501	0.4172	0.7180	0.7813	agglomerative-15-centroid-top-n
+
+# Held out evaluation scores
+# OnWN	0.6459
+# headlines	0.7194
+# FNWN	0.2620
+# SMT	0.3646
+# Mean	0.4979
+# Data set predictions for STS2014-test
+#     deft-news	['surprise.OnWN']
+# deft-forum	['MSRpar']
+# OnWN	['MSRvid']
+# tweet-news	['MSRpar']
+# images	['MSRvid']
+# headlines	['surprise.SMTnews']
+
 
 FEATS = takelab_feats + takelab_lsa_feats
 ALL_TRAIN_IDS = ['MSRpar', 'MSRvid', 'SMTeuroparl', 'surprise.SMTnews', 'surprise.OnWN']
@@ -124,8 +197,10 @@ def run_experiment(frame, test_ids, train_ids=ALL_TRAIN_IDS, feats=FEATS, svm_gr
 
         x_train = frame[frame.data_id.isin(train_sets)][feats].as_matrix()
         y_train = frame[frame.data_id.isin(train_sets)]['gs'].values
-        x_test = frame[frame.data_id == data_id][feats].as_matrix()
-        y_test = frame[frame.data_id == data_id]['gs'].values
+        x_test = frame[frame.data_set == 'STS2013-test']
+        x_test = x_test[x_test.data_id == data_id][feats].as_matrix()
+        y_test = frame[frame.data_set == 'STS2013-test']
+        y_test = y_test[y_test.data_id == data_id]['gs'].values
 
         # reserve second half of test sets for final evaluation
         x_test = x_test[0:len(y_test)/2, :]
@@ -217,16 +292,86 @@ EXPERIMENTS = [
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
 
-    df = read_data(FEATS, feat_dir)
+    feats = FEATS + ['subsem-lsitfidf-wiki8-n4-c2000-min5-raw-cos']
+    df = read_data(feats, feat_dir)
 
-    print "Mean\t%s\t%s\t%s\t%s" % tuple(sorted(ALL_TEST_IDS))
+    # print "Mean\t%s\t%s\t%s\t%s" % tuple(sorted(ALL_TEST_IDS))
+    #
+    # for exp in EXPERIMENTS:
+    #     exp_descr = '-'.join([str(val[1]) for val in sorted(exp.items(), key=itemgetter(0))])
+    #
+    #     result = run_experiment(df, ALL_TEST_IDS, svm_grid=None, feats=feats, **exp)
+    #
+    #     result = sorted(result, key=itemgetter(1))
+    #     mean_score = mean([x[1] for x in result])
+    #
+    #     print "%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%s" % tuple([mean_score] + [x[1] for x in result] + [exp_descr])
 
-    for exp in EXPERIMENTS:
-        exp_descr = '-'.join([str(val[1]) for val in sorted(exp.items(), key=itemgetter(0))])
+    # Held out eval
+    print "Held out evaluation scores"
+    keyed_train_data = {}
 
-        result = run_experiment(df, ALL_TEST_IDS, svm_grid=None, **exp)
+    for data_id in ALL_TRAIN_IDS:
+        m = df[df.data_id == data_id][feats].as_matrix()
+        keyed_train_data[data_id] = m
 
-        result = sorted(result, key=itemgetter(1))
-        mean_score = mean([x[1] for x in result])
+    keyed_test_data = {}
 
-        print "%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%s" % tuple([mean_score] + [x[1] for x in result] + [exp_descr])
+    for data_id in ALL_TEST_IDS:
+        m = df[df.data_id == data_id][feats].as_matrix()
+        keyed_test_data[data_id] = m
+
+    drc = DatasetRelevanceClassifier(method='agglomerative', selection='top', representative='medoid', n_clusters=3)
+    drc.fit(keyed_train_data)
+
+    scores = []
+
+    for data_id, X in keyed_test_data.items():
+        train_sets = drc.predict(X)
+
+        x_train = df[df.data_id.isin(train_sets)][feats].as_matrix()
+        y_train = df[df.data_id.isin(train_sets)]['gs'].values
+        x_test = df[df.data_set == 'STS2013-test']
+        x_test = x_test[x_test.data_id == data_id][feats].as_matrix()
+        y_test = df[df.data_set == 'STS2013-test']
+        y_test = y_test[y_test.data_id == data_id]['gs'].values
+
+        # use second half of test sets for final evaluation
+        x_test = x_test[len(y_test)/2:, :]
+        y_test = y_test[len(y_test)/2:]
+
+        model = SVR()
+        model.fit(x_train, y_train)
+
+        pred = model.predict(x_test)
+        score = correlation(y_test, pred)
+
+        scores.append(score)
+
+        print "%s\t%.04f" % (data_id, score)
+
+    print "Mean\t%.04f" % mean(scores)
+
+    # 2014 predictions
+    print "Data set predictions for STS2014-test"
+
+    keyed_train_data = {}
+
+    for data_id in ALL_TRAIN_IDS:
+        m = df[df.data_id == data_id][feats].as_matrix()
+        keyed_train_data[data_id] = m
+
+    keyed_test_data = {}
+
+    for data_id in sts14.test_ids:
+        m = df[df.data_set == 'STS2014-test']
+        m = df[df.data_id == data_id][feats].as_matrix()
+        keyed_test_data[data_id] = m
+
+    drc = DatasetRelevanceClassifier(method='k-means', selection='top', representative='medoid', n_clusters=9)
+    drc.fit(keyed_train_data)
+
+    for data_id, X in keyed_test_data.items():
+        train_sets = drc.predict(X)
+
+        print "%s\t%s" % (data_id, train_sets)
