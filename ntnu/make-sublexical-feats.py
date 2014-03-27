@@ -9,6 +9,7 @@ from scipy.sparse import issparse
 from scipy.spatial.distance import cosine
 
 from ntnu.subsem.brown_cluster_vectorizer import BrownClusterVectorizer
+from ntnu.subsem.lsi_vectorizer import LsiVectorizer
 from ntnu.subsem.preprocessing import make_preprocessor
 from ntnu.subsem.w2v_vectorizer import Word2VecVectorizer
 import sts
@@ -116,6 +117,8 @@ if __name__ == '__main__':
         vectorizer = BrownClusterVectorizer(model_fn).fit([])
     elif opts.model_type == 'w2v':
         vectorizer = Word2VecVectorizer(model_fn).fit([])
+    elif opts.model_type == 'lsi':
+        vectorizer = LsiVectorizer(model_fn).fit([])
     else:
         raise ValueError('invalid --model-type')
 
