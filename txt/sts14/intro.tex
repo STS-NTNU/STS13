@@ -1,0 +1,20 @@
+\section{Introduction}
+\label{intro}
+
+\blfootnote{
+     % final paper: en-us version (to licence, a license)
+    
+    \hspace{-0.65cm}  % space normally used by the marker
+    This work is licenced under a Creative Commons
+    Attribution 4.0 International License.
+    Page numbers and proceedings footer are added by
+    the organizers.
+    License details:
+    \url{http://creativecommons.org/licenses/by/4.0/}
+}
+
+This paper describes the NTNU submission to the SemEval 2014 Semantic Textual Similarity (STS) shared task. It is based on the earlier NTNU 2013 submission, which again is based on the baseline Takelab system from the 2012 shared task. The 2014 system improves on it's predecessor in three aspects. It adds two new categories of features and it uses a bagging regression model to predict similarity scores. The shared task results indicates that these improvements gives a substantial boost to the system performance.
+
+% something about Parthas features
+
+Based on our impression that character n-gram features has been a strong driver of system performance in many of the systems submitted to the 2013 shared task, we have incorperated semantic similarity metrics basedon character n-gram feature representations. These representations replace character n-gram features with clusters or vectors based on the n-gram collocational structure learned in an unsupervised manner from text data. Three different techniques are used to induce such representations: Brown clustering \cite{brown1992class}, log linear skip-gram representations \cite{mikolov2013efficient} and Latent Semantic Indexing (LSI) topic vectors \cite{deerwester1990indexing}. We trained a variety of such feature representations on subsets of Wikipedia and used the best performing ones in our new similarity measures, which is a simple cosine similarity between the document vectors derived from each sentence of the given pair.

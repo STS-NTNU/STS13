@@ -1,0 +1,6 @@
+\section{Sublexical feature representation measures}
+\label{subrep-features}
+
+The model includes a set of features based on induced representations of character n-grams. The text were preprocessed by removing punctuation and extra whitespace, replacing numbers with their single digit word (one, two etc.) and lowercasing all text. Character n-grams including whitespace were generated from this text. The representations used are based on Brown Clustering \cite{}, Latent Semantic Indexing (LSI) \cite{} and loglinear skip-gram models \cite{}. The representations were trained on subsets of Wikipedia consisting of the first 12 million words (or $10^8$ characters) referred to as {\it Wiki8} and 125 million words ($10^9$ characters) referred to as {\it Wiki9}. The representations were trained with various parameters;  n-gram size, cluster size and term frequency cutoffs for all models.
+
+The feature representations are obtained by Brown clustering \cite{brown1992class}

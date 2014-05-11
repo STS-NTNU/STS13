@@ -1,0 +1,30 @@
+
+\section{Submitted systems}
+\label{sec:systems}
+
+The three submitted systems consists of one using negation measures alone (NTNU-run1), one using a baseline set of lexical measures and WordNet augmented similarity in addition to the new sublexical representation measures (NTNU-run2) and one which combines the measures of the two other systems (NTNU-run3).
+
+NTNU-run2 uses the following baseline features adapted from the Takelab 2012 system submission \cite{saric2012takelab}.
+
+\begin{itemize}
+\item Simple lexical features: Relative document length differences, number overlab, case overlap and stock symbol named entity recognition.
+\item Lemma and word n-gram overlap of orders 1-3.
+\item Frequency weighted lemma and word overlap.
+\item WordNet augmented overlap.
+\item Cosine similarity between the summed word representation vectors from each sentence using LSI models based on large corpora with or without frequency weighhting.
+\end{itemize}
+
+In addition the systems uses the following new measures based on sublexical word representations generated as described in \ref{subrep-measures}.
+
+\begin{itemize}
+\item Loglinear skip-gram representations of character 3- and 4-grams of size 1000 and 2000 respectively. Trained on the Wiki8 corpus using a skip gram window of size 25 and 50 and frequency cutoff of 5 .
+\item Brown clusters of character 4-grams with cluster size 1024 using a frequency cutoff of 20.
+\item Brown clusters of character 3-, 4- and 5-grams with cluster sizes of respectively 1024, 2048 and 1024. Representations are trained on the Wiki9 corpus with successively increasing frequency cutoffs of 20, 320 and 1200.
+\item LSI topic vectors based on character 4-grams of size 2000.   Trained on the Wiki8 corpus using a frequency cutodff of 5.
+\item LSI topic vectors based on character 4-grams of size 1000. Trained on the Wiki9 corpus using a frequency cutodff of 80.
+\end{itemize}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "sts14-ntnu"
+%%% End: 
