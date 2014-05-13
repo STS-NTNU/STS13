@@ -24,6 +24,10 @@ In addition the systems uses the following new measures based on sublexical word
 \item LSI topic vectors based on character 4-grams of size 1000. Trained on the Wiki9 corpus using a frequency cutodff of 80.
 \end{itemize}
 
+The system composes a feature set of scores from these 20 baseline measures and nine sublexical representation measures and trains a bagged SVM regressor as described in \ref{sec:regression} in order to predict the semantic similarity score for new sentence pairs.
+
+NTNU-run3 is identical to NTNU-run2, but incorporates the measures from NTNU-run1 as features. As such this system represents a combination of the new measures and methods introduced by NTNU-run1 and NTNU-run2.
+
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "sts14-ntnu"
