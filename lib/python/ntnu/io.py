@@ -135,6 +135,13 @@ def read_data(ids, feat_fnames, gs_fnames, features=[], convert_nan=True):
     X = read_features(filenames, num_vals=len(y))
     
     for id in ids[1:]:
+        if features:
+            # select filenames for desired features
+            filenames = [feat_fnames[id][f] for f in features]
+        else:
+            # default to using all features for dataset
+            filenames = feat_fnames[id].values()
+
         y2 = read_gold_standard(gs_fnames[id])["gold"]
         y = np.hstack([y, y2])
         X2 = read_features(filenames, num_vals=len(y2))

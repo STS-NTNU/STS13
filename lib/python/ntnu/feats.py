@@ -73,6 +73,15 @@ hans_feats = [
     "RI_SentVectors_TFIDF_Measure"
     ]
 
+subsem_best_feats = ['subsem-w2v-n4-c2000-w50-min5-raw-cos',
+                     'subsem-wiki8-n4-c1024-min20-p16-raw-cos',
+                     'subsem-wiki9-n4-c2048-min20-p16-raw-cos',
+                     'subsem-wiki9-n5-c1024-min320-p16-raw-cos',
+                     'subsem-wiki9-n6-c2048-min1200-p16-raw-cos',
+                     'subsem-lsitfidf-wiki8-n4-c2000-min5-raw-cos',
+                     'subsem-lsitfidf-wiki9-n4-c1000-min80-raw-cos',
+                     'subsem-w2v-n3-c1000-w25-min5-raw-cos']
+
 all_feats = (
     dkpro_feats +
     takelab_feats +

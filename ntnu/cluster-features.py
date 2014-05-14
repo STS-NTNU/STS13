@@ -6,7 +6,7 @@ from sklearn.svm import SVR
 
 from ntnu.featcluster.cluster import DatasetRelevanceClassifier
 from ntnu.featcluster.data import read_data
-from ntnu.feats import takelab_feats, takelab_lsa_feats
+from ntnu.feats import takelab_feats, takelab_lsa_feats, subsem_best_feats
 from ntnu.io import feat_dir
 from sts import sts14
 from sts.score import correlation
@@ -73,78 +73,78 @@ from sts.score import correlation
 # 0.5530	0.3327	0.4133	0.6945	0.7716	agglomerative-15-medoid-top-n
 # 0.5522	0.3327	0.4133	0.6911	0.7716	agglomerative-15-centroid-top-n
 
-# Results with Takelab and subsem-lsitfidf-wiki8-n4-c2000-min5-raw-cos features. No param grid.
+# Results with Takelab and subsem features. No param grid.
 
 # Mean	FNWN	OnWN	SMT	headlines
-# 0.5770	0.3565	0.4679	0.7078	0.7756	k-means-1-medoid-top
-# 0.5637	0.3548	0.4172	0.7065	0.7763	k-means-1-medoid-max_ratio_gap
-# 0.5495	0.3565	0.4679	0.6658	0.7078	k-means-1-centroid-top
-# 0.5486	0.3505	0.4172	0.7086	0.7180	k-means-1-centroid-max_ratio_gap
-# 0.5564	0.3565	0.4590	0.7023	0.7078	k-means-3-medoid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-3-medoid-max_ratio_gap
-# 0.5495	0.3565	0.4679	0.6658	0.7078	k-means-3-centroid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-3-centroid-max_ratio_gap
-# 0.5757	0.3603	0.4590	0.7078	0.7756	k-means-5-medoid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-5-medoid-max_ratio_gap
-# 0.5596	0.3603	0.4679	0.7023	0.7078	k-means-5-centroid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-5-centroid-max_ratio_gap
-# 0.5619	0.3603	0.4679	0.7078	0.7116	k-means-9-medoid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-9-medoid-max_ratio_gap
-# 0.5485	0.3840	0.4679	0.5663	0.7756	k-means-9-centroid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-9-centroid-max_ratio_gap
-# 0.5151	0.3603	0.4679	0.5663	0.6658	k-means-15-medoid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-15-medoid-max_ratio_gap
-# 0.5770	0.3565	0.4679	0.7078	0.7756	k-means-15-centroid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	k-means-15-centroid-max_ratio_gap
-# 0.5252	0.3430	0.3921	0.6538	0.7121	k-means-3-medoid-top-n
-# 0.5282	0.3548	0.3921	0.6538	0.7121	k-means-3-centroid-top-n
-# 0.5614	0.3586	0.3921	0.7186	0.7763	k-means-5-medoid-top-n
-# 0.5617	0.3549	0.3921	0.7186	0.7813	k-means-5-centroid-top-n
-# 0.5668	0.3501	0.4172	0.7186	0.7813	k-means-9-medoid-top-n
-# 0.5730	0.3549	0.4372	0.7186	0.7813	k-means-9-centroid-top-n
-# 0.5638	0.3501	0.4172	0.7065	0.7813	k-means-15-medoid-top-n
-# 0.5717	0.3501	0.4372	0.7180	0.7813	k-means-15-centroid-top-n
-# 0.5816	0.3840	0.4590	0.7078	0.7756	agglomerative-3-medoid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-3-medoid-max_ratio_gap
-# 0.5633	0.3840	0.4590	0.7023	0.7078	agglomerative-3-centroid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-3-centroid-max_ratio_gap
-# 0.5393	0.3565	0.4590	0.5663	0.7756	agglomerative-5-medoid-top
-# 0.5564	0.3501	0.3921	0.7021	0.7813	agglomerative-5-medoid-max_ratio_gap
-# 0.5220	0.3603	0.4590	0.5663	0.7023	agglomerative-5-centroid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-5-centroid-max_ratio_gap
-# 0.5444	0.3448	0.4590	0.6658	0.7078	agglomerative-9-medoid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-9-medoid-max_ratio_gap
-# 0.5747	0.3565	0.4590	0.7078	0.7756	agglomerative-9-centroid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-9-centroid-max_ratio_gap
-# 0.5279	0.3840	0.4590	0.5663	0.7023	agglomerative-15-medoid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-15-medoid-max_ratio_gap
-# 0.5656	0.3840	0.4590	0.7078	0.7116	agglomerative-15-centroid-top
-# 0.5677	0.3501	0.4372	0.7021	0.7813	agglomerative-15-centroid-max_ratio_gap
-# 0.5493	0.3581	0.3921	0.7180	0.7291	agglomerative-3-medoid-top-n
-# 0.5340	0.3720	0.3921	0.6538	0.7180	agglomerative-3-centroid-top-n
-# 0.5582	0.3549	0.3921	0.7096	0.7763	agglomerative-5-medoid-top-n
-# 0.5493	0.3549	0.3921	0.7186	0.7317	agglomerative-5-centroid-top-n
-# 0.5285	0.3501	0.3921	0.6538	0.7180	agglomerative-9-medoid-top-n
-# 0.5605	0.3549	0.3921	0.7186	0.7763	agglomerative-9-centroid-top-n
-# 0.5717	0.3501	0.4372	0.7180	0.7813	agglomerative-15-medoid-top-n
-# 0.5667	0.3501	0.4172	0.7180	0.7813	agglomerative-15-centroid-top-n
+# 0.5643	0.3738	0.4662	0.6975	0.7198	k-means-1-medoid-top
+# 0.5616	0.3618	0.4359	0.7227	0.7258	k-means-1-medoid-max_ratio_gap
+# 0.5643	0.3738	0.4662	0.6975	0.7198	k-means-1-centroid-top
+# 0.5527	0.3534	0.4086	0.7227	0.7258	k-means-1-centroid-max_ratio_gap
+# 0.5660	0.3561	0.4722	0.7159	0.7198	k-means-3-medoid-top
+# 0.5697	0.3458	0.4299	0.7191	0.7840	k-means-3-medoid-max_ratio_gap
+# 0.5660	0.3561	0.4722	0.7159	0.7198	k-means-3-centroid-top
+# 0.5393	0.3458	0.4299	0.6771	0.7046	k-means-3-centroid-max_ratio_gap
+# 0.5277	0.3561	0.4722	0.5031	0.7796	k-means-5-medoid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	k-means-5-medoid-max_ratio_gap
+# 0.5118	0.3561	0.4722	0.5031	0.7159	k-means-5-centroid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	k-means-5-centroid-max_ratio_gap
+# 0.5863	0.3738	0.4722	0.7198	0.7796	k-means-9-medoid-top
+# 0.5676	0.3458	0.4359	0.7046	0.7840	k-means-9-medoid-max_ratio_gap
+# 0.5819	0.3561	0.4722	0.7198	0.7796	k-means-9-centroid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	k-means-9-centroid-max_ratio_gap
+# 0.5205	0.3907	0.4722	0.5031	0.7159	k-means-15-medoid-top
+# 0.5157	0.3458	0.4299	0.5031	0.7840	k-means-15-medoid-max_ratio_gap
+# 0.5205	0.3907	0.4722	0.5031	0.7159	k-means-15-centroid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	k-means-15-centroid-max_ratio_gap
+# 0.5306	0.3566	0.3805	0.6771	0.7080	k-means-3-medoid-top-n
+# 0.5333	0.3566	0.3805	0.6771	0.7191	k-means-3-centroid-top-n
+# 0.5316	0.3534	0.3805	0.6771	0.7153	k-means-5-medoid-top-n
+# 0.5386	0.3534	0.4086	0.6771	0.7153	k-means-5-centroid-top-n
+# 0.5392	0.3458	0.4086	0.6771	0.7252	k-means-9-medoid-top-n
+# 0.5411	0.3534	0.4086	0.6771	0.7252	k-means-9-centroid-top-n
+# 0.5685	0.3458	0.4359	0.7083	0.7840	k-means-15-medoid-top-n
+# 0.5538	0.3458	0.4359	0.7076	0.7258	k-means-15-centroid-top-n
+# 0.5658	0.3738	0.4722	0.6975	0.7198	agglomerative-3-medoid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	agglomerative-3-medoid-max_ratio_gap
+# 0.5704	0.3738	0.4722	0.7159	0.7198	agglomerative-3-centroid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	agglomerative-3-centroid-max_ratio_gap
+# 0.5906	0.3907	0.4722	0.7198	0.7796	agglomerative-5-medoid-top
+# 0.5649	0.3805	0.3907	0.7046	0.7840	agglomerative-5-medoid-max_ratio_gap
+# 0.5746	0.3907	0.4722	0.7159	0.7198	agglomerative-5-centroid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	agglomerative-5-centroid-max_ratio_gap
+# 0.5364	0.3907	0.4722	0.5031	0.7796	agglomerative-9-medoid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	agglomerative-9-medoid-max_ratio_gap
+# 0.5364	0.3907	0.4722	0.5031	0.7796	agglomerative-9-centroid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	agglomerative-9-centroid-max_ratio_gap
+# 0.5113	0.3630	0.4722	0.5031	0.7069	agglomerative-15-medoid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	agglomerative-15-medoid-max_ratio_gap
+# 0.5162	0.3738	0.4722	0.5031	0.7159	agglomerative-15-centroid-top
+# 0.5660	0.3458	0.4299	0.7046	0.7840	agglomerative-15-centroid-max_ratio_gap
+# 0.5306	0.3566	0.3805	0.6771	0.7080	agglomerative-3-medoid-top-n
+# 0.5257	0.3372	0.3805	0.6771	0.7080	agglomerative-3-centroid-top-n
+# 0.5423	0.3548	0.3805	0.7080	0.7258	agglomerative-5-medoid-top-n
+# 0.5298	0.3534	0.3805	0.6771	0.7080	agglomerative-5-centroid-top-n
+# 0.5435	0.3458	0.4359	0.6771	0.7153	agglomerative-9-medoid-top-n
+# 0.5690	0.3458	0.4359	0.7102	0.7840	agglomerative-9-centroid-top-n
+# 0.5702	0.3458	0.4359	0.7153	0.7840	agglomerative-15-medoid-top-n
+# 0.5607	0.3458	0.4086	0.7046	0.7840	agglomerative-15-centroid-top-n
 
 # Held out evaluation scores
-# OnWN	0.6459
-# headlines	0.7194
-# FNWN	0.2620
-# SMT	0.3646
-# Mean	0.4979
+# OnWN	0.6689
+# headlines	0.6672
+# FNWN	0.3117
+# SMT	0.3420
+# Mean	0.4974
 # Data set predictions for STS2014-test
-#     deft-news	['surprise.OnWN']
-# deft-forum	['MSRpar']
-# OnWN	['MSRvid']
-# tweet-news	['MSRpar']
-# images	['MSRvid']
-# headlines	['surprise.SMTnews']
+# deft-news	['OnWN']
+# deft-forum	['OnWN']
+# OnWN	['OnWN']
+# tweet-news	['headlines']
+# images	['OnWN']
+# headlines	['headlines']
 
 
-FEATS = takelab_feats + takelab_lsa_feats
+FEATS = takelab_feats + takelab_lsa_feats + subsem_best_feats
 ALL_TRAIN_IDS = ['MSRpar', 'MSRvid', 'SMTeuroparl', 'surprise.SMTnews', 'surprise.OnWN']
 ALL_TEST_IDS = ['FNWN', 'headlines', 'OnWN', 'SMT']
 
@@ -292,7 +292,7 @@ EXPERIMENTS = [
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
 
-    feats = FEATS + ['subsem-lsitfidf-wiki8-n4-c2000-min5-raw-cos']
+    feats = FEATS
     df = read_data(feats, feat_dir)
 
     # print "Mean\t%s\t%s\t%s\t%s" % tuple(sorted(ALL_TEST_IDS))
@@ -321,7 +321,7 @@ if __name__ == '__main__':
         m = df[df.data_id == data_id][feats].as_matrix()
         keyed_test_data[data_id] = m
 
-    drc = DatasetRelevanceClassifier(method='agglomerative', selection='top', representative='medoid', n_clusters=3)
+    drc = DatasetRelevanceClassifier(method='k-means', selection='top', representative='medoid', n_clusters=3)
     drc.fit(keyed_train_data)
 
     scores = []
@@ -357,7 +357,7 @@ if __name__ == '__main__':
 
     keyed_train_data = {}
 
-    for data_id in ALL_TRAIN_IDS:
+    for data_id in ALL_TRAIN_IDS + ALL_TEST_IDS:
         m = df[df.data_id == data_id][feats].as_matrix()
         keyed_train_data[data_id] = m
 
@@ -368,7 +368,7 @@ if __name__ == '__main__':
         m = df[df.data_id == data_id][feats].as_matrix()
         keyed_test_data[data_id] = m
 
-    drc = DatasetRelevanceClassifier(method='k-means', selection='top', representative='medoid', n_clusters=9)
+    drc = DatasetRelevanceClassifier(method='agglomerative', selection='top', representative='medoid', n_clusters=5)
     drc.fit(keyed_train_data)
 
     for data_id, X in keyed_test_data.items():
