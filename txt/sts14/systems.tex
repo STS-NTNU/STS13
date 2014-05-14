@@ -32,7 +32,7 @@ The specific measures used in the submitted systems were found by by training th
 
 The system composes a feature set of similarity scores from these 20 baseline measures and the nine sublexical representation measures, and uses these to train a bagged SVM regressor as described in \ref{sec:regression} in order to predict the final semantic similarity score for new sentence pairs.
 
-NTNU-run3 is identical to NTNU-run2, but incorporates the measures from NTNU-run1 as features. As such this system represents a combination of the new measures and methods introduced by NTNU-run1 and NTNU-run2.
+NTNU-run3 combines the output from NTNU-run1 and NTNU-run2 by takeing the mean og the two sets of predictions. As such this system represents a combination of the new measures and methods introduced by NTNU-run1 and NTNU-run2.
 
 
 %%% Local Variables: 
