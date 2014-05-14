@@ -4,9 +4,9 @@
 
 The three submitted systems consists of one using only the soft cardinality features (NTNU-run1), one using a baseline set of lexical measures and WordNet augmented similarity in addition to the new sublexical representation measures (NTNU-run2) and one which combines the measures of the two other systems (NTNU-run3).
 
-NTNU-run1 uses only the features and scoring algorithm described in section \ref{sec:softcard}.
+{\bf NTNU-run1} uses only the features and scoring algorithm described in section \ref{sec:softcard}.
 
-NTNU-run2 uses the following baseline features adapted from the Takelab 2012 system submission \cite{saric2012takelab}.
+{\bf NTNU-run2} uses the following baseline features adapted from the Takelab 2012 system submission \cite{saric2012takelab}.
 
 \begin{itemize}
 \item Simple lexical features: Relative document length differences, number overlab, case overlap and stock symbol named entity recognition.
@@ -16,7 +16,7 @@ NTNU-run2 uses the following baseline features adapted from the Takelab 2012 sys
 \item Cosine similarity between the summed word representation vectors from each sentence using LSI models based on large corpora with or without frequency weighting.
 \end{itemize}
 
-In addition the systems uses the following new measures based on sublexical word representations generated as described in \ref{subrep-measures}.
+In addition the systems uses the following new measures based on sublexical word representations generated as described in section \ref{subrep-features}.
 
 \begin{itemize}
 \item Loglinear skip-gram representations of character 3- and 4-grams of size 1000 and 2000 respectively. Trained on the Wiki8 corpus using a skip gram window of size 25 and 50 and frequency cutoff of 5 .
@@ -30,9 +30,9 @@ In addition the systems uses the following new measures based on sublexical word
 
 The specific measures used in the submitted systems were found by by training the regression model on the STS 2012 shared task data and evaluating on the STS 2013 test data. We used a stepwise foreward feature selection method by comparing mean (but unweighted) correlation on the four test categories in order to identify the subset of measures to include in the final system.
 
-The system composes a feature set of similarity scores from these 20 baseline measures and the nine sublexical representation measures, and uses these to train a bagged SVM regressor as described in \ref{sec:regression} in order to predict the final semantic similarity score for new sentence pairs.
+The system composes a feature set of similarity scores from these 20 baseline measures and the nine sublexical representation measures, and uses these to train a bagged SVM regressor as described in section \ref{sec:regression} in order to predict the final semantic similarity score for new sentence pairs.
 
-NTNU-run3 combines the output from NTNU-run1 and NTNU-run2 by takeing the mean og the two sets of predictions. As such this system represents a combination of the new measures and methods introduced by NTNU-run1 and NTNU-run2.
+{\bf NTNU-run3} combines the output from NTNU-run1 and NTNU-run2 by taking the mean of the two sets of predictions. As such this system represents a combination of the measures and methods introduced by NTNU-run1 and NTNU-run2.
 
 
 %%% Local Variables: 
