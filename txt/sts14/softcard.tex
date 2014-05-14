@@ -2,7 +2,185 @@
 \section{Soft cardinality measures}
 \label{sec:softcard}
 
+A set of features, based only on surface text information,
+were extracted using soft cardinality \cite{chavez_text_2010}, which
+have been used successfully for the STS task in previous SemEval editions
+\cite{jimenez_soft_2012,jimenez_softcardinality-core:_2013}. Soft
+cardinality resembles classical set cardinality as it is a method
+for counting the number of elements in a set but differs from the
+later in that similarities among elements are being considered for
+that ``soft counting''. The expression for the soft cardinality of a set of words $A=\{a_{1},a_{2},..,a_{|A|}\}$
+(i.e. a text sentence) is as follows:
 
+\begin{equation}
+|A|_{sim}=\sum_{i=1}^{|A|}\frac{w_{a_{i}}}{\sum_{j=1}^{|A|}sim(a_{i},a_{j})^{p}}\label{eq:soft_card}
+\end{equation}
+
+
+Where $sim(a_{i},a_{j})$ is a similarity function between two words,
+$w_{a_{i}}$ are weights for each word and $p$ is the softness control
+parameter of the soft cardinality ($p$'s default value is 1). The
+similarity function $sim$ compares two words $a_{i}$ and $a_{j}$
+using the symmetrized Tversky's index \cite{tversky_features_1977,jimenez_softcardinality-core:_2013}
+representing them as sets of 3-grams of characters. That is, $a_{i}=\{a_{i,1},a_{i,2},...,a_{i,|a_{i}|}\}$
+where $a_{i,n}$ is the $n$-th character trigram in the word $a_{i}$
+in $A$. Thus, the proposed word-to-word similarity function is given
+by:
+
+\begin{center}
+\begin{equation}
+sim(a_{i},a_{j})=\frac{|c|}{\beta(\alpha|a_{min}|+(1-\alpha)|a_{max}|)+|c|}\label{eq:symm_tversky}
+\end{equation}
+
+\par\end{center}
+
+\begin{center}
+$|c|=|a_{i}\cap a_{j}|+bias_{sim}$,
+\par\end{center}
+
+\begin{center}
+$|a_{min}|=\min[|a_{i}\setminus a_{j}|,|a_{j}\setminus a_{i}|]$,
+\par\end{center}
+
+\begin{center}
+$|a_{max}|=\max[|a_{i}\setminus a_{j}|,|a_{j}\setminus a_{i}|]$.
+\par\end{center}
+
+The parameters of this model are: $\alpha$, $\beta$ and $bias$,
+whose default values $\alpha=0.5$, $\beta=1$ and $bias=0$ makes
+the $sim$ function equivalent to the Dice's coefficient. The word
+weights $w_{a_{i}}$ for each word were obtained using the well-known
+\emph{idf} weighting schema.
+
+Now, the soft cardinalities of any pair of text sentences $A$, $B$
+and $A\cup B$ can be obtained using eq.\ref{eq:soft_card}. The soft
+cardinality of the intersection is approximated by $|A\cap B|_{sim}=|A|_{sim}+|B|_{sim}-|A\cup B|$.
+These 4 basic soft cardinalities are algebraically recombined to produce
+an extended set of 18 features as shown in Table \ref{tab:features}. 
+
+The feature \#1, $\mathbf{STS_{sim}}$ were used to optimize the 4
+parameters $\alpha$, $\beta$, $bias$ and $p$ in the following
+way. First, we build a text similarity function reusing eq.\ref{eq:symm_tversky}
+for comparing two sets of words (instead of two sets of character
+3-grams) and replacing the classic cardinality $|*|$ by the soft
+cardinality $|*|_{sim}$ from eq.\ref{eq:soft_card}. This text similarity
+function adds 3 parameters ($\alpha'$, $\beta'$, and $bias'$) to
+the initial set of 4 parameters $\alpha$, $\beta$, $bias$ and $p$.
+Second, these 7 parameters where set to their default values and the
+scores obtained from this function for each pair of texts were compared
+with their gold standard in the training data using Pearson's correlation.
+Finally, iteratively, the parameters search space was explored using
+hill-climbing until optimal Pearson's correlation is reached. As no
+training data was explicitly provided for the STS evaluation campaign
+this year, we used different training sets from past campaigns for
+the new test sets. The criteria for the assignment of training-test
+sets pairs was by their closeness of average character length. The
+selected training-test sets pairs are shown in Table \ref{tab:training-test-sets}
+and the optimal training parameters are shown in Table \ref{tab:Optimal-parameters}.
+
+Before using extracting the proposed features, all texts were preprocessed
+by: \emph{i)} tokenization and stop-word removal (provided by NLTK%
+\footnote{http://www.nltk.org/%
+}), \emph{ii)} conversion to lowercase characters, \emph{iii)} punctuation
+and special character removal (e.g. ``.'', ``;'', ``\$'', ``\&''),
+and \emph{iv) }stemming using Porter's algorithm. Next, this preprocessed
+output is used to obtain the \emph{idf} weights and the features described
+above.
+
+\begin{table}
+\begin{centering}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+{\footnotesize \#1} & $\mathbf{STS_{sim}}$ & {\footnotesize \#10} & $\nicefrac{|A|-|A\cap B|}{|A|}$\tabularnewline
+\hline 
+{\footnotesize \#2} & {\small $|A|$} & {\footnotesize \#11} & $\nicefrac{|A|-|A\cap B|}{|A\cup B|}$\tabularnewline
+\hline 
+{\footnotesize \#3} & {\small $|B|$} & {\footnotesize \#12} & $\nicefrac{|B|}{|A\cup B|}$\tabularnewline
+\hline 
+{\footnotesize \#4} & {\small $|A\cap B|$} & {\footnotesize \#13} & $\nicefrac{|B|-|A\cap B|}{|B|}$\tabularnewline
+\hline 
+{\footnotesize \#5} & {\small $|A\cup B|$} & {\footnotesize \#14} & $\nicefrac{|B|-|A\cap B|}{|A\cup B|}$\tabularnewline
+\hline 
+{\footnotesize \#6} & {\small $|A|-|A\cap B|$} & {\footnotesize \#15} & $\nicefrac{|A\cap B|}{|A|}$\tabularnewline
+\hline 
+{\footnotesize \#7} & {\small $|B|-|A\cap B|$} & {\footnotesize \#16} & $\nicefrac{|A\cap B|}{|B|}$\tabularnewline
+\hline 
+{\footnotesize \#8} & {\small $|A\cap B|-|A\cap B|$} & {\footnotesize \#17} & $\nicefrac{|A\cap B|}{|A\cup B|}$\tabularnewline
+\hline 
+{\footnotesize \#9} & $\nicefrac{|A|}{|A\cup B|}$ & {\footnotesize \#18} & $\nicefrac{|A\cup B|-|A\cap B|}{|A\cap B|}$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\begin{centering}
+Note: for short, only in this table $|*|$ stands for $|*|_{sim}$
+\par\end{centering}
+
+\caption{Soft cardinality features\label{tab:features}}
+\end{table}
+
+
+\begin{table}
+\begin{centering}
+\begin{tabular}{|c|c|}
+\hline 
+{\scriptsize 2014 Test set} & {\scriptsize Training set}\tabularnewline
+\hline 
+\hline 
+{\scriptsize OnWN} & {\scriptsize OnWN 2012 and 2013 test}\tabularnewline
+\hline 
+{\scriptsize headlines} & {\scriptsize headlines 2013 test}\tabularnewline
+\hline 
+{\scriptsize images} & {\scriptsize MSRvid 2012 train + test}\tabularnewline
+\hline 
+{\scriptsize deft-news} & {\scriptsize MSRvid 2012 train + test}\tabularnewline
+\hline 
+\multirow{2}{*}{{\scriptsize deft-forum}} & {\scriptsize MSRvid 2012 train and test +}\tabularnewline
+ & {\scriptsize OnWN 2012 and 2013 test}\tabularnewline
+\hline 
+\multirow{2}{*}{{\scriptsize tweet-news}} & {\scriptsize SMTeuroparl 2012 test +}\tabularnewline
+ & {\scriptsize SMTnews 2012 test }\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\centering{}\caption{Used training-test sets pairs\label{tab:training-test-sets}}
+\end{table}
+
+
+\begin{table}
+\centering{}%
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+{\footnotesize dataset} & {\footnotesize $\alpha$} & {\footnotesize $\beta$} & {\footnotesize $bias$} & {\footnotesize $p$} & {\footnotesize $\alpha'$} & {\footnotesize $\beta$} & {\footnotesize $bias'$}\tabularnewline
+\hline 
+\hline 
+{\scriptsize OnWN} & {\scriptsize 0.53} & {\scriptsize -0.53} & {\scriptsize 1.01} & {\scriptsize 1.00} & {\scriptsize -4.89} & {\scriptsize 0.52} & {\scriptsize 0.46}\tabularnewline
+\hline 
+{\scriptsize headlines} & {\scriptsize 0.36} & {\scriptsize -0.29} & {\scriptsize 4.17} & {\scriptsize 0.85} & {\scriptsize -4.50} & {\scriptsize 0.43} & {\scriptsize 0.19}\tabularnewline
+\hline 
+{\scriptsize images} & {\scriptsize 1.12} & {\scriptsize -1.11} & {\scriptsize 0.93} & {\scriptsize 0.64} & {\scriptsize -0.98} & {\scriptsize 0.50} & {\scriptsize 0.11}\tabularnewline
+\hline 
+{\scriptsize deft-news} & {\scriptsize 3.36} & {\scriptsize -0.64} & {\scriptsize 1.37} & {\scriptsize 0.44} & {\scriptsize 2.36} & {\scriptsize 0.72} & {\scriptsize 0.02}\tabularnewline
+\hline 
+{\scriptsize deft-forum} & {\scriptsize 1.01} & {\scriptsize -1.01} & {\scriptsize 0.24} & {\scriptsize 0.93} & {\scriptsize -2.71} & {\scriptsize 0.42} & {\scriptsize 1.63}\tabularnewline
+\hline 
+{\scriptsize tweet-news} & {\scriptsize 0.13} & {\scriptsize 0.14} & {\scriptsize 2.80} & {\scriptsize 0.01} & {\scriptsize 2.66} & {\scriptsize 1.74} & {\scriptsize 0.45}\tabularnewline
+\hline 
+\end{tabular}\caption{Optimal parameters used for each dataset\label{tab:Optimal-parameters}}
+\end{table}
+This method for obtaining features from pairs of texts was also used
+successfully in other SemEval tasks such as \emph{cross-lingual textual
+entailment }and \emph{student response analysis} \cite{jimenez_soft_2012-1,jimenez_sergio_softcardinality:_2013,jimenez_softcardinality:_2013}.
+Although, this method is based purely in string matching, the soft
+cardinality have shown to be a very strong baseline for semantic textual
+comparison. Clearly, the word-to-word similarity $sim$ in eq.\ref{eq:soft_card}
+could be replaced by other similarity function based on semantic networks
+or any distributional representation making this method able to capture
+more complex semantic relations among words. Similarly, Croce et al.
+used soft cardinality representing text as a bag of dependencies (syntactic
+soft cardinality \cite{croce_distributional_2012}) obtaining the
+best results in the typed-similarity task \cite{croce_unitor-core_2013}. 
 
 %%% Local Variables: 
 %%% mode: latex
