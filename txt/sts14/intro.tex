@@ -13,13 +13,38 @@
     \url{http://creativecommons.org/licenses/by/4.0/}
 }
 
-The Semantic Textual Similarity (STS) shared task aims at providing a unified framework for evaluating textual semantic similarity, ranging from exact semantic equivalence to completely unrelated texts. In the shared task this is represented by the prediction of a similarity score between two sentences, drawn from a particular category of text, which ranges from 0 (different topics) to 5 (exactly equivalent) through six grades of semantic similarity \cite{agirre-EtAl:2013:*SEM1}.
-This paper describes the NTNU submission to the SemEval 2014 STS shared task. It is based on the lexical and distributional features of the baseline Takelab system from the 2012 shared task and improving it in three aspects. It adds two new categories of features and uses a bagging regression model to predict similarity scores. In the shared task evaluation these improvements gives a substantial boost to the baseline system performance.
+The Semantic Textual Similarity (STS) shared task aims at providing a unified framework for evaluating textual semantic similarity, ranging from exact semantic equivalence to completely unrelated texts. This is represented by the prediction of a similarity score between two sentences, drawn from a particular category of text, which ranges from 0 (different topics) to 5 (exactly equivalent) through six grades of semantic similarity \cite{agirre-EtAl:2013:*SEM1}.
+This paper describes the NTNU submission to the SemEval 2014 STS shared task (Task~10). 
+The appraoch is based on the lexical and distributional features of the baseline TakeLab system 
+from the 2012 shared task \cite{saric2012takelab} and improves on it in three ways,
+by adding two new categories of features and by using a bagging regression model to predict similarity scores. 
+In the shared task evaluation, these improvements gave a substantial boost to the baseline system performance.
 
 % something about Parthas features
-Based on earlier results in this shared task we have added features based on soft cardinality and character n-grams. Soft cardinality similarity measures has shown themselves to be strong features in earlier submissions \cite{jimenez_softcardinality-core:_2013} and the NTNU system uses an ensemble of 18 such measures using different similarity functions.
-We have also incorporated similarity measures based on character n-gram feature representations. These representations replace character n-gram features with cluster frequencies or vector values based on the n-gram collocational structure learned in an unsupervised manner from text data. Three different techniques are used to induce such representations: Brown clustering \cite{brown1992class}, log linear skip-gram representations \cite{mikolov2013efficient} and Latent Semantic Indexing (LSI) topic vectors \cite{deerwester1990indexing}. We trained a variety of such feature representations on subsets of Wikipedia and used the best performing ones in our new similarity measures, which is a simple cosine similarity between the document vectors derived from each sentence of the given pair.
-Combined with the baseline features these new measures shows competitive performance in the final evaluation results of the shared task.
+The two new feature categories added are based on soft cardinality and on character n-grams. 
+A set of features, based only on surface text information,
+were extracted using soft cardinality \cite{chavez_text_2010}, which
+have been used successfully for the STS task in previous SemEval editions
+\cite{jimenez_soft_2012,jimenez_softcardinality_core:_2013}. 
+The NTNU systems utilise an ensemble of 18 such measures with different similarity functions,
+as further described in Section~\ref{sec:softcard}.
+
+The similarity measures based on character n-gram feature representations are then
+described in Section~\ref{subrep-features}.
+These replace character n-gram features with cluster frequencies or vector values 
+based on the n-gram collocational structure learned in an unsupervised manner from text data. 
+Three different techniques are used to induce such representations: 
+Brown clustering \cite{brown1992class}, log linear skip-gram representations \cite{mikolov2013efficient}, 
+and Latent Semantic Indexing (LSI) topic vectors \cite{deerwester1990indexing}. 
+A variety of such feature representations were trained on subsets of Wikipedia and the best performing ones 
+were used for the new  measures, which are based on cosine similarity between the document vectors 
+derived from each sentence in a given pair.
+
+The two new feature categories are combined with the baseline features
+through support vector machine regression (Section~\ref{sec:regression})
+to create the actual NTNU systems (Section~\ref{sec:systems}).
+As shown in Section~\ref{sec:results}, these new measures give competitive performance 
+in the final evaluation results of the shared task.
 
 %%% Local Variables:  
 %%% mode: latex 

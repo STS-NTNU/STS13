@@ -25,6 +25,8 @@
 \usepackage{units}
 \usepackage{multirow}
 \usepackage{paralist}
+\usepackage{amsmath}
+
 
 %\setlength\titlebox{5cm}
 
@@ -37,34 +39,43 @@
 \newcommand{\submissionpage}{\url{http://alt.qcri.org/semeval2014/index.php?id=cfp}}
 \newcommand{\filename}{semeval2014}
 \newcommand{\contact}{pnakov qf.org.qa}
+\newcommand{\rank}[1]{\footnotesize{#1}}
 
 \title{NTNU: Measuring semantic similarity with sublexical feature representations and soft cardinality}
 
-\author{Andr\'{e} Lynum \\
-  \\
-  \\
-  \\
-  \\
-  \And
-  Partha Pakray \\
-  {\tt \{andrely,parthap,gamback\}@idi.ntnu.no} \\
+
+\author{Andr\'{e} Lynum, Partha Pakray, Bj\"{o}rn Gamb\"{a}ck\\
+  {\tt \{andrely,parthap,gamback\}} \\
+  {\tt  @idi.ntnu.no} \\
   Norwegian University of Science and Technology \\
   Sem S{\ae}landsvei 7-9 \\
   Trondheim, Norway \\
   \And
-  Bj\"{o}rn Gamb\"{a}ck \\
+  Sergio Jimenez \\
+  {\tt sgjimenezv@unal.edu.co}\\
   \\
-  \\
-  \\
-  \\
+  Ciudad Universitaria \\
+  edificio 453, oficina 114\\
+  Bogot{\' a}, Colombia \\
 }
 
 \date{}
 
 \begin{document}
 \maketitle
+
 \begin{abstract}
-  This paper describes the system submitted by the NTNU team to the SemEval 2014 shared task 10 (Semantic Textual Similarity). It combines baseline lexical distance metrics from the 2013 Takelab baseline system with measures based on lexical soft cardinality and character n-gram feature representations. The final system is based on bagged support vector machine (SVM) regression on earlier shared task datasets and shows competetive performance in the shared task evaluation.
+The paper describes the approaches taken by the NTNU team
+to the SemEval 2014  Semantic Textual Similarity  shared task.
+%  (Task~10).
+The solutions combine measures based on lexical soft cardinality 
+and character n-gram feature representations
+with  lexical distance metrics from TakeLab's baseline system. 
+The final NTNU system is based on bagged support vector machine regression
+over the datasets from previous shared tasks and shows highly
+competitive performance, being the
+best  system on three of the datasets and third
+best overall (on weighted mean over all six datasets).
 \end{abstract}
 
 \input{intro}

@@ -4,27 +4,48 @@
 
 \begin{table*}
   \centering
-  \begin{tabular}{|l|c|c|c|c|}
+ \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrcrcrcc}
+& \multicolumn{2}{c}{\bf NTNU-run1} & \multicolumn{2}{c}{\bf NTNU-run2} &  \multicolumn{2}{c}{\bf NTNU-run3} & {\bf  Best} \\
+{\bf Data} & \multicolumn{1}{c}{$r$} & \multicolumn{1}{c}{\footnotesize rank} & \multicolumn{1}{c}{$r$} 
+& \multicolumn{1}{c}{\footnotesize rank} & \multicolumn{1}{c}{$r$} & \multicolumn{1}{c}{\footnotesize rank} & {$r$} \\
+% \begin{tabular}{|l|c|c|c|c|}
+%    \hline
+%   Category & NTNU-run1 & NTNU-run2 & NTNU-run3 & Best \\
+%    \hline
+%    Rank & 21 & 4 & 3 & \\
     \hline
-    Category & NTNU-run1 & NTNU-run2 & NTNU-run3 & Best \\
+    deft-forum & 0.4369 & \rank{16} & 0.5084 & \rank{2} & 0.5305 & \rank{1} & 0.5305 \\
+    deft-news & 0.7138 & \rank{14} & 0.7656 & \rank{6} & 0.7813 & \rank{2} & 0.7850 \\
+    headlines & 0.7219 & \rank{17} & 0.7525 & \rank{13} & 0.7837 & \rank{1} & 0.7837 \\
+    images & 0.8000 & \rank{9} & 0.8129 & \rank{4} & 0.8343 & \rank{1} & 0.8343 \\
+    OnWN & 0.8348 & \rank{7} & 0.7767 & \rank{20} & 0.8502 & \rank{4} & 0.8745 \\
+    tweet-news & 0.4109 & \rank{33} & 0.7921 & \rank{1} & 0.6755	& \rank{13} & 0.7921 \\
     \hline
-    Rank & 21 & 4 & 3 & \\
+    mean & 0.6531 & \rank{20} & 0.7347 & \rank{4} & 0.7426 & \rank{2} & 0.7429 \\
+    weighted mean & 0.6631 & \rank{21} & 0.7491 & \rank{4} & 0.7549 & \rank{3} & 0.7610 \\
     \hline
-    deft-forum & 0.4369 & 0.5084 & 0.5305 & 0.5305 \\
-    deft-news & 0.7138 & 0.7656 & 0.7813 & 0.7850 \\
-    headlines & 0.7219 & 0.7525 & 0.7837 & 0.7837 \\
-    images & 0.8000 & 0.8129 & 0.8343 & 0.8343 \\
-    OnWN & 0.8348 & 0.7767 & 0.8502 & 0.8745 \\
-    tweet-news & 0.4109 & 0.7921 & 0.6755	& 0.7921 \\
-    \hline
-    weighted mean & 0.6631 & 0.7491 & 0.7549 & 0.7610 \\
-    \hline
-  \end{tabular}
+  \end{tabular*}
   \caption{Final evaluation results for the submitted systems.}
   \label{tab:results}
 \end{table*}
 
-The final evaluation results for the three submitted systems are shown in table \ref{tab:results}. The systems using sublexical representation based measures show competitive performance, ranking third and fourth among the submitted systems with a weighted mean correlation of ca. $0.75$. They also produced the best result in four out of the six text categories in the evaluation dataset. The system based solely on soft cardinality features display more modest performance ranking at 21st. place with ca. 0.66 correlation. Out of the results one can note that for most categories the sublexical representation measures shows strong performance in NTNU-run2, with a significantly stronger result for the combined system NTNU-run3. This indicates that while the soft cardinality features are weaker predictors overall, they are complimentary to the sublexical ands lexical features of NTNU-run2. It is also indicative that this is not the case for the tweet-news category, where the text is more ``free form'' and less normative and one would expect sublexical approaches to have stronger performance.
+The final evaluation results for the three submitted systems are shown in Table~\ref{tab:results}. 
+The systems using sublexical representation based measures show competitive performance, 
+ranking third and fourth among the submitted systems with a weighted mean correlation of ${\sim}0.75$. 
+They also produced the best result in four out of the six text categories in the evaluation dataset,
+with NTNU-run3 being the \#1 system on deft-forum, headlines and images, \#2 on deft-news, and \#4 on OnWN.
+It would thus have been the clear winner if it had not been for its sub-par performance on the tweet-news
+dataset, which on the other hand is the category NTNU-run2 was the best of all systems on. 
+
+The system based solely on soft cardinality features, NTNU-run1 displays more modest performance
+ranking at $21^{\rm st}$ place (of the in total 38 submitted systems) with ${\sim}0.66$ correlation. 
+
+From the results it can be noted that for most categories the sublexical representation measures show
+strong performance in NTNU-run2, with a significantly better result for the combined system NTNU-run3. 
+This indicates that while the soft cardinality features are weaker predictors overall, they are complimentary 
+to the sublexical and lexical features of NTNU-run2. 
+It is also indicative that this is not the case for the tweet-news category, where the text is more ``free form'' 
+and less normative, so it would be expected that sublexical approaches should have stronger performance.
 
 %%% Local Variables: 
 %%% mode: latex
