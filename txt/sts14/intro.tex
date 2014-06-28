@@ -15,7 +15,7 @@
 
 The Semantic Textual Similarity (STS) shared task aims at providing a unified framework for evaluating textual semantic similarity, ranging from exact semantic equivalence to completely unrelated texts. This is represented by the prediction of a similarity score between two sentences, drawn from a particular category of text, which ranges from 0 (different topics) to 5 (exactly equivalent) through six grades of semantic similarity \cite{agirre-EtAl:2013:*SEM1}.
 This paper describes the NTNU submission to the SemEval 2014 STS shared task (Task~10). 
-The appraoch is based on the lexical and distributional features of the baseline TakeLab system 
+The approach is based on the lexical and distributional features of the baseline TakeLab system 
 from the 2012 shared task \cite{saric2012takelab} and improves on it in three ways,
 by adding two new categories of features and by using a bagging regression model to predict similarity scores. 
 In the shared task evaluation, these improvements gave a substantial boost to the baseline system performance.
@@ -42,7 +42,7 @@ derived from each sentence in a given pair.
 
 The two new feature categories are combined with the baseline features
 through support vector machine regression (Section~\ref{sec:regression})
-to create the actual NTNU systems (Section~\ref{sec:systems}).
+to create the final NTNU systems (Section~\ref{sec:systems}).
 As shown in Section~\ref{sec:results}, these new measures give competitive performance 
 in the final evaluation results of the shared task.
 

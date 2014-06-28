@@ -13,7 +13,7 @@ In addition to the sublexical feature measures described in Section~\ref{subrep-
 submission \cite{saric2012takelab}.
 
 \begin{itemize}
-\item Simple lexical features: Relative document length differences, number overlab, case overlap and stock symbol named entity recognition.
+\item Simple lexical features: Relative document length differences, number overlap, case overlap and stock symbol named entity recognition.
 \item Lemma and word n-gram overlap of orders 1-3;
 frequency weighted lemma and word overlap; and
 WordNet augmented overlap.
@@ -23,7 +23,7 @@ WordNet augmented overlap.
 The following new measures based on sublexical word representations are used in NTNU-run2:
 
 \begin{itemize}
-\item Loglinear skip-gram representations of character 3- and 4-grams of size 1000 and 2000 respectively. Trained on the Wiki8 corpus using a skip gram window of size 25 and 50 and frequency cutoff of 5 .
+\item Log linear skip-gram representations of character 3- and 4-grams of size 1000 and 2000 respectively. Trained on the Wiki8 corpus using a skip gram window of size 25 and 50 and frequency cutoff of 5 .
 \item Brown clusters of character 4-grams with cluster size 1024 using a frequency cut-off of 20.
 \item Brown clusters of character 3-, 4- and 5-grams with cluster sizes of respectively 1024, 2048 and 1024.
 The representations are trained on the Wiki9 corpus with successively increasing frequency cut-offs of 20, 320 and 1200.
@@ -33,7 +33,7 @@ The representations are trained on the Wiki9 corpus with successively increasing
 
 % from subrep
 
-The specific measures used in the submitted systems were found by by training the regression model on the STS 2012 shared task data and evaluating on the STS 2013 test data. We used a stepwise foreward feature selection method by comparing mean (but unweighted) correlation on the four test categories in order to identify the subset of measures to include in the final system.
+The specific measures used in the submitted systems were found by training the regression model on the STS 2012 shared task data and evaluating on the STS 2013 test data. We used a stepwise forward feature selection method by comparing mean (but unweighted) correlation on the four test categories in order to identify the subset of measures to include in the final system.
 
 The system composes a feature set of similarity scores from these 20 baseline measures and the nine sublexical representation measures, and uses these to train a bagged SVM regressor as described in Section~\ref{sec:regression} in order to predict the final semantic similarity score for new sentence pairs.
 
