@@ -1,0 +1,122 @@
+\section{Feature and parameter optimisation}
+\label{sec:optimisation}
+
+The extracted features and the parameters for the two methods described
+in the previous section were optimised over several sets of training data.
+As no training data was explicitly provided for the STS evaluation campaign
+this year, we used different training sets from past campaigns and from
+Wikipedia for the new test sets.
+
+\subsection{Training data and pre-processing}
+\label{preprocessing}
+
+The selected training-test sets pairs are shown in Table~\ref{tab:training-test-sets}.
+These were used for optimising the parameters of the soft cardinality methods.
+The character n-gram representation vectors were trained in an unsupervised manner on subsets of 
+Wikipedia consisting of the first 12 million words ($10^8$ characters) referred 
+to as {\it Wiki8} and 125 million words ($10^9$ characters; {\it Wiki9}).
+
+\begin{table}[t!]
+\begin{centering}
+\begin{tabular}{|l|l|}
+\hline 
+\multicolumn{1}{|c|}{\bf Test set} & \multicolumn{1}{c|}{\bf Training set}\tabularnewline
+\hline 
+{ OnWN} & { OnWN 2012 and 2013 test}\tabularnewline
+\hline 
+{ headlines} & { headlines 2013 test}\tabularnewline
+\hline 
+{ images} & { MSRvid 2012 train + test}\tabularnewline
+\hline 
+{ deft-news} & { MSRvid 2012 train + test}\tabularnewline
+\hline 
+\multirow{2}{*}{{ deft-forum}} & { MSRvid 2012 train and test +}\tabularnewline
+ & { OnWN 2012 and 2013 test}\tabularnewline
+\hline 
+\multirow{2}{*}{{ tweet-news}} & { SMTeuroparl 2012 test +}\tabularnewline
+ & { SMTnews 2012 test }\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+
+\centering{}\caption{Training-test set pairs\label{tab:training-test-sets}}
+\end{table}
+
+First, however, the training data had to be pre-processed.
+Hence, all texts in Table~\ref{tab:training-test-sets} were passed through
+\emph{i)} tokenization and stop-word removal (provided by NLTK, \newcite{bird2009natural}),
+%\footnote{http://www.nltk.org/ 
+\emph{ii)} conversion to lowercase characters, 
+\emph{iii)} punctuation and special character removal (e.g., ``.'', ``;'', ``\$'', ``\&''),
+and \emph{iv)} Porter stemming.
+The output was used to obtain \emph{idf} weights and the soft cardinality features.
+
+The Wikipedia texts were only pre-processed by 
+\emph{i)} removal of punctuation and extra whitespace, 
+\emph{ii)} replacing numbers with their single digit word (`one', `two', etc.), 
+and \emph{iii)} lowercasing all text. 
+Character n-grams including whitespace were then generated from these texts. 
+
+\subsection{Soft cardinality parameter optimisation}
+\label{softcard-optimisation}
+
+The first feature  in Table~\ref{tab:features}, $\mathbf{STS_{sim}}$, was used
+to optimise the four parameters $\alpha$, $\beta$, $bias$, and $p$ in the following way.
+First, we built a text similarity function reusing Eq.~\ref{eq:symm_tversky}
+for comparing two sets of words (instead of two sets of character
+3-grams) and replacing the classic cardinality $|*|$ by the soft
+cardinality $|*|_{sim}$ from Eq.~\ref{eq:soft_card}. This text similarity
+function adds three parameters ($\alpha'$, $\beta'$, and $bias'$) to
+the initial set of four parameters.
+% $\alpha$, $\beta$, $bias$ and $p$.
+
+Second, these seven parameters were set to their default values and the
+scores obtained from this function for each pair of sentences was compared
+to the gold standard in the training data using Pearson's correlation.
+The parameter search space was then explored iteratively using
+hill-climbing until reaching optimal Pearson's correlation. 
+The criteria for assignment of training-test
+sets pairs was by closeness of average character length.
+The optimal training parameters are shown in Table~\ref{tab:Optimal-parameters}.
+
+\begin{table}[t!]
+\begin{tabular}{|l|ccccccc|}
+\hline 
+{\scriptsize\bf Data} & {\footnotesize $\alpha$} & {\footnotesize $\beta$} & {\footnotesize $bias$} & {\footnotesize $p$} & {\footnotesize $\alpha'$} & {\footnotesize $\beta$} & {\footnotesize $bias'$}\tabularnewline
+\hline 
+{\scriptsize OnWN} & {\scriptsize 0.53} & {\scriptsize -0.53} & {\scriptsize 1.01} & {\scriptsize 1.00} & {\scriptsize -4.89} & {\scriptsize 0.52} & {\scriptsize 0.46}\tabularnewline
+{\scriptsize headlines} & {\scriptsize 0.36} & {\scriptsize -0.29} & {\scriptsize 4.17} & {\scriptsize 0.85} & {\scriptsize -4.50} & {\scriptsize 0.43} & {\scriptsize 0.19}\tabularnewline
+{\scriptsize images} & {\scriptsize 1.12} & {\scriptsize -1.11} & {\scriptsize 0.93} & {\scriptsize 0.64} & {\scriptsize -0.98} & {\scriptsize 0.50} & {\scriptsize 0.11}\tabularnewline
+{\scriptsize deft-news} & {\scriptsize 3.36} & {\scriptsize -0.64} & {\scriptsize 1.37} & {\scriptsize 0.44} & {\scriptsize 2.36} & {\scriptsize 0.72} & {\scriptsize 0.02}\tabularnewline
+{\scriptsize deft-forum} & {\scriptsize 1.01} & {\scriptsize -1.01} & {\scriptsize 0.24} & {\scriptsize 0.93} & {\scriptsize -2.71} & {\scriptsize 0.42} & {\scriptsize 1.63}\tabularnewline
+{\scriptsize tweet-news} & {\scriptsize 0.13} & {\scriptsize 0.14} & {\scriptsize 2.80} & {\scriptsize 0.01} & {\scriptsize 2.66} & {\scriptsize 1.74} & {\scriptsize 0.45}\tabularnewline
+\hline 
+\end{tabular}\caption{Optimal parameters used for each dataset\label{tab:Optimal-parameters}}
+\end{table}
+
+\subsection{Parameters for n-gram feature training}
+\label{ngram-optimisation}
+
+The character n-gram feature representation vectors were trained varying parameters of 
+n-gram size, cluster size, and term frequency cut-offs for all models.
+For log linear skip-gram models our intuition is that a larger skip-gram context is needed than the 5 or 10 wide skip-grams 
+used to train word-based representations due to the smaller term vocabulary and dependency between adjacent n-grams,
+so instead we trained models using skip-gram widths of 25 or 50 terms. 
+Term frequency cut-offs were set to limit the model size, but also potentially serve as a regularization on the resulting measure.
+%
+In detail, the following sublexical representation measures are used:
+
+\begin{itemize}
+\item Log linear skip-gram representations of character 3- and 4-grams of size 1000 and 2000, resp. 
+Trained on the Wiki8 corpus using a skip gram window of size 25 and 50, and frequency cut-off of 5 .
+\item Brown clusters with size 1024 of character 4-grams using a frequency cut-off of 20.
+\item Brown clusters of character 3-, 4- and 5-grams with cluster sizes of resp. 1024, 2048 and 1024.
+The representations are trained on the Wiki9 corpus with successively increasing frequency cut-offs of 20, 320 and 1200.
+\item LSI topic vectors based on character 4-grams of size 2000.   Trained on the Wiki8 corpus using a frequency cut-off of 5.
+\item LSI topic vectors based on character 4-grams of size 1000. Trained on the Wiki9 corpus using a frequency cut-off of 80.
+\end{itemize}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "sts14-ntnu"
+%%% End: 

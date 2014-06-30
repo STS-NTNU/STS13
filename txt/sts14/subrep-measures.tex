@@ -1,21 +1,17 @@
-\section{Sublexical feature representations}
+\subsection{Sublexical feature representations}
 \label{subrep-features}
 
 We have created a set of similarity measures based on induced representations of character n-grams. The measures are based on similarity between document vectors, here the centroid of the individual term vector representations, which are trained on character n-grams rather than full words. The vector representation are induced in an unsupervised manner from large unannotated corpora using word clustering, topic learning and word representation learning methods.
 
-In order to learn the representation vectors, the text was preprocessed by removing punctuation and extra whitespace, replacing numbers with their single digit word (`one', `two', etc.), and lowercasing all text. Character n-grams including whitespace were then generated from this text. We then trained Brown Clusters \cite{brown1992class}, Latent Semantic Indexing (LSI) topics \cite{deerwester1990indexing}, and log linear skip-gram models \cite{mikolov2013efficient} on the resulting character n-grams. The representation vectors were trained on subsets of Wikipedia consisting of the first 12 million words (or $10^8$ characters) referred to as {\it Wiki8} and 125 million words ($10^9$ characters) referred to as {\it Wiki9}. In relation to the overall system pipeline this can be considered an unsupervised training step.
-The representation vectors were trained varying certain parameters: n-gram size, cluster size, and term frequency cut-offs for all models.
-For log linear skip-gram models our intuition is that a larger skip-gram context is needed than the 5 or 10 wide skip-grams 
-used to train word-based representations due to the smaller term vocabulary and dependency between adjacent n-grams.
- For these measures, we trained models using skip-gram widths of 25 or 50 terms. 
-Term frequency cut-offs were set to limit the model size, but also potentially serve as a regularization on the resulting measure.
-
-The Brown clusters were trained using Percy Liangs software implementation \cite{liang2005semi}, while the LSI topic vectors and log linear skip-gram representations were trained using the Gensim topic modelling framework \cite{gensim_lrec}. 
-In addition, TF-IDF (Term-Frequency Inverse Document Frequency) weighting was used when training LSI topic models. 
+In this paper,  three different  methods have been used for creating the character n-gram feature representations: 
+Brown Clusters \cite{brown1992class}, Latent Semantic Indexing (LSI) topics \cite{deerwester1990indexing}, 
+and log linear skip-gram models \cite{mikolov2013efficient}.
+The Brown clusters were trained using the implementation by \newcite{liang2005semi}, while the LSI topic vectors and log linear skip-gram representations were trained using the Gensim topic modelling framework \cite{gensim_lrec}. 
+In addition, {\em tf-idf\/} (Term-Frequency Inverse Document Frequency) weighting was used when training LSI topic models. 
 We used a cosine distance measure between document vectors consisting of the centroid of the term representation vectors. 
 For Brown clusters, the normalized term frequency vectors were used with the cluster ids instead of the terms themselves. 
-For LSI topic representations, the TF-IDF weighted topic mixture for each term was used as the term representation. 
-For the log linear skip-gram model, the word representations were extracted from the model weight matrix.
+For LSI topic representations, the {\em tf-idf\/} weighted topic mixture for each term was used as the term representation. 
+For the log linear skip-grams, the word representations were extracted from the model weight matrix.
 
 %%% Local Variables:  
 %%% mode: latex 

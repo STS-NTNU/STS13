@@ -1,0 +1,28 @@
+\section{Feature generation methods}
+\label{sec:methods}
+
+The methods used for creating new features utilise soft cardinality and character n-grams.
+One set of features
+%, based only on surface text information, 
+were extracted using
+soft cardinality \cite{chavez_text_2010}, which has been used successfully for the STS
+task in previous SemEval editions \cite{jimenez_soft_2012,jimenez_softcardinality_core:_2013}. 
+The NTNU systems utilise an ensemble of 18 such measures with different similarity functions,
+as further described in Section~\ref{sec:softcard}.
+
+Section~\ref{subrep-features} then introduces the similarity measures based on character 
+n-gram feature representations. 
+They replace character n-gram features with cluster frequencies or vector values 
+based on the n-gram collocational structure learned in an unsupervised manner from text data. 
+%Three different techniques are used to induce such representations: 
+%Brown clustering \cite{brown1992class}, log linear skip-gram representations \cite{mikolov2013efficient}, 
+%and Latent Semantic Indexing (LSI) topic vectors \cite{deerwester1990indexing}. 
+A variety of n-gram feature representations were trained on subsets of Wikipedia and the best performing ones 
+were used for the new  measures, which are based on cosine similarity between the document vectors 
+derived from each sentence in a given pair.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "sts14-ntnu"
+%%% End: 

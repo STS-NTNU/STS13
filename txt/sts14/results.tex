@@ -1,5 +1,5 @@
 
-\section{Results}
+\section{Results and discussion}
 \label{sec:results}
 
 \begin{table*}
@@ -39,8 +39,16 @@ dataset, which on the other hand is the category NTNU-run2 was the best of all s
 
 The system based solely on soft cardinality features, NTNU-run1 displays more modest performance
 ranking at $21^{\rm st}$ place (of the in total 38 submitted systems) with ${\sim}0.66$ correlation. 
+This is a bit surprising, since this method for obtaining features from pairs of texts was used
+successfully in other SemEval tasks such as 
+cross-lingual textual entailment \cite{jimenez_soft_2012-1}
+and student response analysis \cite{jimenez_softcardinality:_2013}.
+%\cite{jimenez_soft_2012-1,jimenez_sergio_softcardinality:_2013,jimenez_softcardinality:_2013}.
+Similarly,  \newcite{croce_distributional_2012} used soft cardinality representing 
+text as a bag of dependencies (syntactic soft cardinality) obtaining the
+best results in the typed-similarity task \cite{croce_unitor-core_2013}. 
 
-From the results it can be noted that for most categories the sublexical representation measures show
+From our results it can be noted that for most categories the sublexical representation measures show
 strong performance in NTNU-run2, with a significantly better result for the combined system NTNU-run3. 
 This indicates that while the soft cardinality features are weaker predictors overall, they are complimentary 
 to the sublexical and lexical features of NTNU-run2. 

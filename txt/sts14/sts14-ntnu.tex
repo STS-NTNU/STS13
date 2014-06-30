@@ -26,6 +26,7 @@
 \usepackage{multirow}
 \usepackage{paralist}
 \usepackage{amsmath}
+\usepackage{balance}
 
 
 %\setlength\titlebox{5cm}
@@ -41,22 +42,16 @@
 \newcommand{\contact}{pnakov qf.org.qa}
 \newcommand{\rank}[1]{\footnotesize{#1}}
 
-\title{NTNU: Measuring semantic similarity with sublexical feature representations and soft cardinality}
+\title{NTNU: Measuring semantic similarity with \\ sublexical feature representations and soft cardinality}
 
 
-\author{Andr\'{e} Lynum, Partha Pakray, Bj\"{o}rn Gamb\"{a}ck\\
-  {\tt \{andrely,parthap,gamback\}} \\
-  {\tt  @idi.ntnu.no} \\
-  Norwegian University of Science and Technology \\
-  Sem S{\ae}landsvei 7-9 \\
-  Trondheim, Norway \\
-  \And
-  Sergio Jimenez \\
-  {\tt sgjimenezv@unal.edu.co}\\
-  \\
-  Ciudad Universitaria \\
-  edificio 453, oficina 114\\
-  Bogot{\' a}, Colombia \\
+\author{\begin{tabular}{cccc}
+Andr\'{e} Lynum & Partha Pakray &  Bj\"{o}rn Gamb\"{a}ck &  Sergio Jimenez \\
+\multicolumn{3}{c}{\normalsize\tt \{andrely,parthap,gamback\}@idi.ntnu.no} &  {\normalsize\tt sgjimenezv@unal.edu.co}\\
+\multicolumn{3}{c}{\rm Norwegian University of Science and Technology} & {\rm Universidad Nacional de Colombia} \\
+%\multicolumn{3}{c}{\rm Sem S{\ae}landsvei 7-9} &  {\rm Ciudad Universitaria, edificio 453, oficina 114}\\
+\multicolumn{3}{c}{\rm Trondheim, Norway} &   {\rm Bogot{\' a}, Colombia}
+\end{tabular}
 }
 
 \date{}
@@ -80,9 +75,13 @@ best overall (on weighted mean over all six datasets).
 
 \input{intro}
 
+\input{methods}
+
 \input{softcard}
 
 \input{subrep-measures}
+
+\input{optimisation}
 
 \input{regression}
 
@@ -102,6 +101,6 @@ University of Zagreb.
 
 \bibliographystyle{acl}
 \bibliography{sts14-ntnu}
-
+\balance
 
 \end{document}

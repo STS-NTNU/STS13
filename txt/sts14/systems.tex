@@ -2,14 +2,16 @@
 \section{Submitted systems}
 \label{sec:systems}
 
-The three submitted systems consist of one using only the soft cardinality features and scoring algorithm 
-described in Section \ref{sec:softcard} ({\bf NTNU-run1}), 
+The three submitted systems consist of one using only the soft cardinality features 
+described in Section \ref{softcard-optimisation} ({\bf NTNU-run1}), 
 one system using a baseline set of lexical measures and WordNet augmented similarity 
 in addition to the new sublexical representation measures ({\bf NTNU-run2}), 
-and one system which combines the measures of the two other systems ({\bf NTNU-run3}).
+and one ({\bf NTNU-run3}) which combines the output from the other two systems 
+by taking the mean of the two sets of predictions. 
+NTNU-run3 thus represents a combination of the measures and methods introduced by NTNU-run1 and NTNU-run2.
 
-In addition to the sublexical feature measures described in Section~\ref{subrep-features},
-{\bf NTNU-run2} uses the following baseline features adapted from the TakeLab 2012 system 
+In addition to the sublexical feature measures described in Section~\ref{ngram-optimisation},
+NTNU-run2 uses the following baseline features adapted from the TakeLab 2012 system 
 submission \cite{saric2012takelab}.
 
 \begin{itemize}
@@ -20,25 +22,9 @@ WordNet augmented overlap.
 \item Cosine similarity between the summed word representation vectors from each sentence using LSI models based on large corpora with or without frequency weighting.
 \end{itemize}
 
-The following new measures based on sublexical word representations are used in NTNU-run2:
-
-\begin{itemize}
-\item Log linear skip-gram representations of character 3- and 4-grams of size 1000 and 2000 respectively. Trained on the Wiki8 corpus using a skip gram window of size 25 and 50 and frequency cutoff of 5 .
-\item Brown clusters of character 4-grams with cluster size 1024 using a frequency cut-off of 20.
-\item Brown clusters of character 3-, 4- and 5-grams with cluster sizes of respectively 1024, 2048 and 1024.
-The representations are trained on the Wiki9 corpus with successively increasing frequency cut-offs of 20, 320 and 1200.
-\item LSI topic vectors based on character 4-grams of size 2000.   Trained on the Wiki8 corpus using a frequency cut-off of 5.
-\item LSI topic vectors based on character 4-grams of size 1000. Trained on the Wiki9 corpus using a frequency cut-off of 80.
-\end{itemize}
-
-% from subrep
-
 The specific measures used in the submitted systems were found by training the regression model on the STS 2012 shared task data and evaluating on the STS 2013 test data. We used a stepwise forward feature selection method by comparing mean (but unweighted) correlation on the four test categories in order to identify the subset of measures to include in the final system.
-
+%
 The system composes a feature set of similarity scores from these 20 baseline measures and the nine sublexical representation measures, and uses these to train a bagged SVM regressor as described in Section~\ref{sec:regression} in order to predict the final semantic similarity score for new sentence pairs.
-
-{\bf NTNU-run3} combines the output from NTNU-run1 and NTNU-run2 by taking the mean of the two sets of predictions. 
-As such this system represents a combination of the measures and methods introduced by NTNU-run1 and NTNU-run2.
 
 
 %%% Local Variables: 
